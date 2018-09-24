@@ -31,7 +31,7 @@ Possible Datasets to use: Yelp Dataset, Data provided by country government(Heal
 ** area based analysis to find good/bad restaurants for area
 
 Team 
-Ajay Anand        	: ajayanan@usc.edu
+Ajay Anand        	: ajayanan@usc.edu, anandajay1834@gmail.com
 Devershi Purohit	: dupurohi@usc.edu
 Rajdeep Kaur    	: kaurr@usc.edu
 Rimsha Goomer	: goomer@usc.edu
