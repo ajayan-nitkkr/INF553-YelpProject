@@ -13,8 +13,7 @@ It will be useful for Yelp to collaborate with Businesses to provide better serv
 
 What algorithms do you plan to employ?
 
-Components
-DM algorithms used
+Components and DM algorithms used
 1. Supervised Machine learning: To predict health score (output class) based on input features (such as ratings, reviews, violations, and others): The data for features would be taken from the yelp dataset and online open source data provided by government health agencies. The past data for health score would be collected from an open source data provided by government health agencies. 
 
 2. Find similar items and users, recommendation systems: To fill missing entries in yelp data: There are a lot of features that are available for some restaurants and not for others. Multiple restaurants can be compared to find similarity in restaurants. Multiple features can be compared to derive similarity in features. 
