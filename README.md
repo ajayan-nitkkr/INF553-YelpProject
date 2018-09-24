@@ -30,7 +30,8 @@ Possible Datasets to use: Yelp Dataset, Data provided by country government(Heal
 
 ** area based analysis to find good/bad restaurants for area
 
-Team 
+Team
+
 Ajay Anand        	: ajayanan@usc.edu, anandajay1834@gmail.com
 
 Devershi Purohit	: dupurohi@usc.edu
