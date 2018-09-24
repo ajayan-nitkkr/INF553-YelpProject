@@ -1,5 +1,5 @@
 # INF553-Yelp Dataset Challenge
-Determining Future Health Score for Businesses for Restaurants in the USA
+Determining Future Health Score for Businesses/Restaurants in the USA
 Stakeholders: Yelp, Government
 
 What you plan to do? 
