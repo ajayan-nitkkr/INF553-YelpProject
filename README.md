@@ -5,6 +5,7 @@ Stakeholders: Yelp, Government
 What you plan to do? 
 We plan to predict health score for restaurants in the USA
 
+
 Why it is important? 
 It will be useful for the Government to ensure Public Safety and further allocate resources in the best possible way based on the health score.
 It will be useful for Yelp to collaborate with Businesses to provide better service from their side. 
