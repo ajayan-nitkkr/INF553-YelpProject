@@ -32,7 +32,7 @@ Possible Datasets to use: Yelp Dataset, Data provided by country government(Heal
 
 Team
 
-Ajay Anand        	: ajayanan@usc.edu, anandajay1834@gmail.com
+Ajay Anand        	: ajayanan@usc.edu, anandajay1834@gmail.com, github.com/ajayan-nitkkr
 
 Devershi Purohit	: dupurohi@usc.edu
 
