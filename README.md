@@ -25,8 +25,8 @@ What algorithms do you plan to employ?
 
 
 How you plan to evaluate? 
-Precision and Recall: To create a good Health Score standard.
-Root Mean Squared Error: Improving prediction model using validation and test data.
+1. Precision and Recall: To create a good Health Score standard.
+2. Root Mean Squared Error: Improving prediction model using validation and test data.
 
 
 Possible Datasets to use: Yelp Dataset, Data provided by country government(Health)
