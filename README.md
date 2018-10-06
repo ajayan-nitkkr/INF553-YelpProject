@@ -1,10 +1,13 @@
 
 # INF553-Yelp Dataset Challenge
 Predicting Health Score for Businesses in the USA
+
 Stakeholders: Yelp, Government
 
+
 What you plan to do? 
-Evaluating restaurants is important to keep a check on how a restaurant is performing and what improvements might be needed. One of the standard measure used by US government to evaluate restaurants is Health Score. This project aims to predict health score of restaurants based on available features in yelp and US health government data. The extended goal is to design a solution to allocate limited government officials for health inspection of restaurants. 
+Evaluating restaurants is important to keep a check on how a restaurant is performing and what improvements might be needed. One of the standard measure used by US government to evaluate restaurants is Health Score. This project aims to predict health score of restaurants based on available features in yelp and US government health data. The extended goal (if time permits) is to design a solution to allocate limited government officials for health inspection of restaurants. 
+
 
 Why it is important? 
 1. For government - 
@@ -14,6 +17,7 @@ Why it is important?
 •	They can collaborate with businesses to provide recommendations to improve their business and user needs. This can provide mutual benefit to both yelp and businesses. 
 •	They can collaborate with government to provide health score and health analysis. 
 
+
 What algorithms do you plan to employ?
 1. Supervised Machine learning: To predict health score (output class) based on input features (such as ratings, reviews, violations, and others). The data for features would be taken from the yelp dataset and online open source data provided by government health agencies.
 2. Find similar items and users, recommendation systems: To fill missing entries in yelp data. Multiple restaurants can be compared to find similarity in restaurants. Multiple features can be compared to derive similarity in features.
@@ -21,19 +25,15 @@ What algorithms do you plan to employ?
 
 
 How you plan to evaluate? 
-	Precision
-	Recall
+Precision and Recall: To create a good Health Score standard.
+Root Mean Squared Error: Improving prediction model using validation and test data.
+
 
 Possible Datasets to use: Yelp Dataset, Data provided by country government(Health)
 
-** area based analysis to find good/bad restaurants for area
 
 Team
-
 Ajay Anand        	: ajayanan@usc.edu, anandajay1834@gmail.com
-
 Devershi Purohit	: dupurohi@usc.edu
-
 Rajdeep Kaur    	: kaurr@usc.edu
-
 Rimsha Goomer	        : goomer@usc.edu
