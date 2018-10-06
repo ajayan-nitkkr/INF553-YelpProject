@@ -6,6 +6,7 @@ Stakeholders: Yelp, Government
 
 
 What you plan to do? 
+
 Evaluating restaurants is important to keep a check on how a restaurant is performing and what improvements might be needed. One of the standard measure used by US government to evaluate restaurants is Health Score. This project aims to predict health score of restaurants based on available features in yelp and US government health data. The extended goal (if time permits) is to design a solution to allocate limited government officials for health inspection of restaurants. 
 
 
