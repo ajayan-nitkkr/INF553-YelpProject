@@ -17,6 +17,7 @@ Why it is important?
 
 •	This can help them to allocate limited official resources for restaurant inspection efficiently. This project can provide an efficient strategy based on priority of inspection and distance for reaching out to inspect a restaurant at the much-needed time.  
 2. For yelp – 
+
 •	They can collaborate with businesses to provide recommendations to improve their business and user needs. This can provide mutual benefit to both yelp and businesses. 
 
 •	They can collaborate with government to provide health score and health analysis. 
