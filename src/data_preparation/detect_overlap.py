@@ -1,15 +1,12 @@
 import pandas as pd
 import json
-import codecs
 
-la_govt_data_path = '../../../data/health_dataset/LA_govt_2016-18_dataset.csv'
-yelp_challenge_data_path = '../../../data/yelp_dataset/yelp_academic_dataset_business.json'
+la_govt_data_path = '../../../../data/LA_govt_2016-18_dataset.csv'
+yelp_challenge_data_path = '../../../../data/yelp_dataset/yelp_dataset~/yelp_academic_dataset_business.json'
 
 """load the government data from csv file into dataframe"""
 def load_la_govt_data(file):
     df = pd.read_csv(file)
-    # here column 5 is city
-    # column 0 is restaurant name
     print(len(df))
     df = df.loc[df['City'] == 'LOS ANGELES']
     df = df.rename(columns={'Zip': 'zip'})
@@ -24,12 +21,9 @@ def load_yelp_challenge_data(file):
     with open(file,'rb') as f:
         data = pd.DataFrame(json.loads(line) for line in f)
     print("Yelp Data: "+str(len(data)))
-    # # 9 - name
-    # # 4 - city
     data = data['name'].str.lower().to_frame()
     data = data.rename(columns={'postal_code': 'zip'})
     # df = data.loc[data['City'] == 'Calgary']
-#     print(len(df))
     return data
 
 """find overlap dataset"""
