@@ -2,8 +2,8 @@ import pandas as pd
 import json
 import codecs
 
-la_govt_data_path = 'D:\\USC\\courses\\Fall_2018\\Data_mining\\project\\data\\LA_govt_2016-18_dataset.csv'
-yelp_challenge_data_path = 'D:\\USC\\courses\\Fall_2018\\Data_mining\\project\\data\\yelp_dataset\\yelp_dataset~\\yelp_academic_dataset_business.json'
+la_govt_data_path = '../../../data/health_dataset/LA_govt_2016-18_dataset.csv'
+yelp_challenge_data_path = '../../../data/yelp_dataset/yelp_academic_dataset_business.json'
 
 """load the government data from csv file into dataframe"""
 def load_la_govt_data(file):
@@ -15,20 +15,21 @@ def load_la_govt_data(file):
     df = df.rename(columns={'Zip': 'zip'})
     df = df.rename(columns={'Facility': 'name'})
     df = df['name'].str.lower().to_frame()
-    print(len(df))
+    print("Las Angeles Health Data: "+str(len(df)))
+#     print(len(df))
     return df
 
 """load the yelp challenge data from json file into dataframe"""
 def load_yelp_challenge_data(file):
     with open(file,'rb') as f:
         data = pd.DataFrame(json.loads(line) for line in f)
-    print(len(data))
+    print("Yelp Data: "+str(len(data)))
     # # 9 - name
     # # 4 - city
     data = data['name'].str.lower().to_frame()
     data = data.rename(columns={'postal_code': 'zip'})
     # df = data.loc[data['City'] == 'Calgary']
-    # print(len(df))
+#     print(len(df))
     return data
 
 """find overlap dataset"""
