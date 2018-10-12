@@ -1,0 +1,5 @@
+
+'Average',
+'Loud',
+'Very Loud',
+'Quiet'

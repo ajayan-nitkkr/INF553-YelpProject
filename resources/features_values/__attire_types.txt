@@ -1,0 +1,4 @@
+
+'Formal (Jacket Required)',
+'Dressy',
+'Casual'
