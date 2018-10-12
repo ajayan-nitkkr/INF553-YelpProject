@@ -1,3 +1,5 @@
 Python >= 3.6
 pandas
 requests
+urllib
+BeautifulSoup
