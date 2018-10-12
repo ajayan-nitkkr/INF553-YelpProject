@@ -1,5 +1,6 @@
 import json
 import time
+import pandas as pd
 from collections import defaultdict
 
 ############################################################### File Operations
@@ -55,11 +56,21 @@ def jsonReader(path):
     return lasVegasData 
 
 
-def csvWriter(path):
-    pass
+def load_yelp_challenge_data(file):
+    
+    with open(file,'rb') as jsonFin:
+        data = pd.DataFrame(json.loads(line) for line in jsonFin)
+    
+    data = data[data['city'].map(lambda x: x=="Las Vegas")]
+    data = data[data['state'].map(lambda x: x=="NV")]
+    
+    print("Yelp Data: "+str(len(data))) 
+    return data 
+
+def csvWriter(path, data):
+    data.to_csv(path, encoding = "utf-8")
 
 def jsonWriter(path,lasVegasData):
-    file = "lasVegas.json"
     jsonFout = open(path+file, "w",encoding ="utf-8")
     for element in lasVegasData:
         jsonFout.write(str(element)+"\n")
@@ -72,8 +83,13 @@ def preprocessJson(path):
     filePath = path + "yelp_academic_dataset_business.json"
     #filePath = path + "temp_business.json"
     
-    lasVegasData = jsonReader(filePath)
-    jsonWriter(path, lasVegasData)
+    #lasVegasData = jsonReader(filePath)
+    lasVegasData = load_yelp_challenge_data(filePath)
+    csvWriter(path+"lasVegas.csv", lasVegasData)
+    
+    data = pd.read_csv(path+"lasVegas.csv")
+    
+    #jsonWriter(path+"lasVegas.json", lasVegasData)
     
     
      
