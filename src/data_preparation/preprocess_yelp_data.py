@@ -19,8 +19,9 @@ def clean_yelp_data(data):
                  "WI" : "55", "WY" : "56"}
     
     invalid_data = data[data['state'].map(lambda x: x not in us_states)]
-    data = data[data['state'].map(lambda x: x in us_states)]
+    data = data[data['state'].map(lambda x: (x in us_states.keys()) or (x in us_states.values()))]
     
+    print(len(invalid_data), len(data))
     return data
      
 
