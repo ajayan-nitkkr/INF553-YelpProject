@@ -4,7 +4,9 @@ import json
 la_govt_data_path = '../../../../data/LA_govt_2016-18_dataset.csv'
 yelp_challenge_data_path = '../../../../data/yelp_dataset/yelp_dataset~/yelp_academic_dataset_business.json'
 
-"""load the government data from csv file into dataframe"""
+"""
+load the government data from csv file into dataframe
+"""
 def load_la_govt_data(file):
     df = pd.read_csv(file)
     print(len(df))
@@ -16,7 +18,9 @@ def load_la_govt_data(file):
 #     print(len(df))
     return df
 
-"""load the yelp challenge data from json file into dataframe"""
+"""
+load the yelp challenge data from json file into dataframe
+"""
 def load_yelp_challenge_data(file):
     with open(file,'rb') as f:
         data = pd.DataFrame(json.loads(line) for line in f)
@@ -26,7 +30,9 @@ def load_yelp_challenge_data(file):
     # df = data.loc[data['City'] == 'Calgary']
     return data
 
-"""find overlap dataset"""
+"""
+find overlap dataset
+"""
 def find_overlap(la_govt_df, yelp_df):
     print("finding overlap...")
     # https: // stackoverflow.com / questions / 26921943 / pandas - intersection - of - two - data - frames - based - on - column - entries / 26921975
