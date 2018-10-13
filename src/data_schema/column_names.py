@@ -9,3 +9,5 @@ COL_REVIEW_COUNT = 'review_count'
 COL_RATING = 'rating'
 COL_HEALTH_SCORE = 'health_score'
 COL_DESCRIPTION = 'description'
+
+COl_PRICE = 'price'

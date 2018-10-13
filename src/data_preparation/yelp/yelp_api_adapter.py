@@ -33,6 +33,6 @@ def search_yelp_restaurant(business_id):
     }
     response = requests.request('GET', url, headers=headers)
     json_response = json.loads(response.text)
-    print(json_response)
+    # print(json_response)
     return json_response
 
