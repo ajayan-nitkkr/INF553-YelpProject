@@ -22,7 +22,8 @@ SEARCH_LIMIT = 5
 
 
 """
-https://github.com/Yelp/yelp-fusion/blob/master/fusion/python/sample.py#L116
+Search restaurant in yelp based on business id
+Reference Link: https://github.com/Yelp/yelp-fusion/blob/master/fusion/python/sample.py#L116
 """
 def search_yelp_restaurant(business_id):
     business_path = BUSINESS_PATH + business_id
