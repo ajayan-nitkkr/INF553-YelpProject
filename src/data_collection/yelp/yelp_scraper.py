@@ -1,10 +1,11 @@
-import urllib
 import requests
 import json
-from bs4 import BeautifulSoup
-from src.data_schema.column_names import *
-from src.data_preparation.yelp.yelp_feature_names import *
 
+import requests
+from bs4 import BeautifulSoup
+
+from src.data_collection.yelp.yelp_feature_names import *
+from src.data_schema.column_names import *
 
 """
 Scrap restaurant data from yelp website based on restaurant url

@@ -1,5 +1,6 @@
 from src.data_preparation.yelp.yelp_api_adapter import search_yelp_restaurant
-from src.data_preparation.yelp.yelp_scraper import scrap_yelp_restaurant_data
+
+from src.data_collection.yelp.yelp_scraper import scrap_yelp_restaurant_data
 
 if __name__ == '__main__':
     business_id = 'hTzcHtk4-0QJnFUbkKpd5Q'
