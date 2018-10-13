@@ -25,7 +25,8 @@ def scrap_yelp_restaurant_data(restaurant_url):
         scrap_business_info(business_info, result_data)
 
     json_data = json.dumps(result_data)
-    print(json_data)
+    # print(json_data)
+    return json_data
 
 
 """
