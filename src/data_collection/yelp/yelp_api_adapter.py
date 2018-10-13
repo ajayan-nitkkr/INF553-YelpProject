@@ -1,5 +1,6 @@
-import requests
 import json
+
+import requests
 
 try:
     # For Python 3.0 and later
@@ -13,7 +14,7 @@ except ImportError:
     from urllib import quote
     from urllib import urlencode
 
-from src.configuration.yelp_credential import API_KEY
+from src.data_collection.yelp.yelp_credential import API_KEY
 
 API_HOST = "https://api.yelp.com"
 SEARCH_PATH = "/v3/businesses/search"
