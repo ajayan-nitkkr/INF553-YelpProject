@@ -19,10 +19,14 @@ def scrap_yelp_restaurant_data(restaurant_url):
     basic_data = soup.find('script', type='application/ld+json')
     if basic_data and basic_data.text:
         scrap_basic_info(basic_data.text, result_data)
+    else:
+        print("Basic data not available for restaurant:", restaurant_url)
 
     business_info = soup.find("div", {"class": "short-def-list"})
     if business_info:
         scrap_business_info(business_info, result_data)
+    else:
+        print("Business info not available for restaurant:", restaurant_url)
 
     json_data = json.dumps(result_data)
     # print(json_data)

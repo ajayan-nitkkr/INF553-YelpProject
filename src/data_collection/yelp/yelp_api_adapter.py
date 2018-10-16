@@ -33,7 +33,10 @@ def search_yelp_restaurant(business_id):
         'Authorization': 'Bearer %s' % API_KEY,
     }
     response = requests.request('GET', url, headers=headers)
-    json_response = json.loads(response.text)
-    # print(json_response)
+    if response and response.text:
+        json_response = json.loads(response.text)
+        # print(json_response)
+    else:
+        json_response = None
     return json_response
 
