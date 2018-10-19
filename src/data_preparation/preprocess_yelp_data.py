@@ -1,5 +1,4 @@
 import time
-import pandas as pd
 from INF553_YelpProject.src.utils.inputOutput_utils import load_yelp_data_json, csvWriter
 
 def load_lasVegas_data(data):
@@ -7,6 +6,8 @@ def load_lasVegas_data(data):
     data = data[data['city'].map(lambda x: x=="Las Vegas")]
     data = data[data['state'].map(lambda x: x=="NV")]
     return data 
+
+
 
 def clean_yelp_data(data):
     us_states = {"AL" : "01", "AK" : "02", "AZ" : "04", "AR" : "05" ,"CA" : "06", "CO" : "08", "CT" : "09",
@@ -18,29 +19,40 @@ def clean_yelp_data(data):
                  "TN" : "47", "TX" : "48", "UT" : "49", "VT" : "50", "VA" : "51", "WA" : "53", "WV" : "54",
                  "WI" : "55", "WY" : "56"}
     
-    print(len(data))
+   
     invalid_data = data[data['state'].map(lambda x: x not in us_states)]
-    data = data[data['state'].map(lambda x: (x in us_states.keys()) or (x in us_states.values()))]
+    data = data[data['state'].map(lambda x: (x in us_states.keys()) or (x in us_states.values()))]   
+#    print(len(invalid_data), len(data))
     
-    print(len(invalid_data), len(data))
     return data
      
 
-def preprocess_yelp_data(path):
+def groupby_region(data):
+    group_counts = data['state'].value_counts()
+    
+    return group_counts
+    
+    
+def preprocess_yelp_data(path, save_path):
     
     file_path = path + "yelp_academic_dataset_business.json"   
     yelp_data = load_yelp_data_json(file_path)
-    lasVegasData = load_lasVegas_data(yelp_data)
-    print(len(lasVegasData)) 
+#     lasVegasData = load_lasVegas_data(yelp_data)
 #     csvWriter(path + "lasVegas.csv", lasVegasData)
     
     yelp_data = clean_yelp_data(yelp_data)
+    group_count = groupby_region(yelp_data)
+    csvWriter(save_path+"region_wise_counts.csv", group_count)
+    
+    return
     
 if __name__=='__main__':   
     
     start=time.time()
     path = "../../../data/yelp_dataset/"
-    preprocess_yelp_data(path) 
+    save_path = "../../resources/dataset/"
+    
+    preprocess_yelp_data(path,save_path) 
     print ("\nRun time: "+ str(time.time()-start)+" seconds" )  
     
     
