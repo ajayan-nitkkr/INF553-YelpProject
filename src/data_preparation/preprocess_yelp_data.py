@@ -18,6 +18,7 @@ def clean_yelp_data(data):
                  "TN" : "47", "TX" : "48", "UT" : "49", "VT" : "50", "VA" : "51", "WA" : "53", "WV" : "54",
                  "WI" : "55", "WY" : "56"}
     
+    print(len(data))
     invalid_data = data[data['state'].map(lambda x: x not in us_states)]
     data = data[data['state'].map(lambda x: (x in us_states.keys()) or (x in us_states.values()))]
     
@@ -29,7 +30,8 @@ def preprocess_yelp_data(path):
     
     file_path = path + "yelp_academic_dataset_business.json"   
     yelp_data = load_yelp_data_json(file_path)
-#     lasVegasData = load_lasVegas_data(yelp_data)
+    lasVegasData = load_lasVegas_data(yelp_data)
+    print(len(lasVegasData)) 
 #     csvWriter(path + "lasVegas.csv", lasVegasData)
     
     yelp_data = clean_yelp_data(yelp_data)
