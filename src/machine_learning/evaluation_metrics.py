@@ -5,22 +5,16 @@ API to get True Positive, True Negative,
 False Positive, False Negative data
 """
 def get_confusion_matrix_result(test_actual, test_pred):
-    TP = 0
-    FP = 0
-    TN = 0
-    FN = 0
+    TP, FP, TN, FN = 0, 0, 0, 0
 
     for i in range(len(test_pred)):
         if test_pred[i]==1 and test_actual[i]==1 :
            TP += 1
-    for i in range(len(test_pred)):
-        if test_pred[i]==1 and test_actual[i]==0 :
+        elif test_pred[i]==1 and test_actual[i]==0 :
            FP += 1
-    for i in range(len(test_pred)):
-        if test_pred[i]==0 and test_actual[i]==0 :
+        elif test_pred[i]==0 and test_actual[i]==0 :
            TN += 1
-    for i in range(len(test_pred)):
-        if test_pred[i]==0 and test_actual[i]==1:
+        elif test_pred[i]==0 and test_actual[i]==1:
            FN += 1
 
     return TP, TN, FP, FN
