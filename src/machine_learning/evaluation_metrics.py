@@ -5,6 +5,15 @@ Author: Ajay Anand
 """
 class EvaluationMetric:
     DEFAULT_VALUE = -1
+    LABEL_TP = "TP"
+    LABEL_FP = "FP"
+    LABEL_TN = "TN"
+    LABEL_FN = "FN"
+    LABEL_SENSITIVITY = "sensitivity"
+    LABEL_SPECIFICITY = "specificity"
+    LABEL_PRECISION = "precision"
+    LABEL_F1SCORE = "f1score"
+    LABEL_ACCURACY = "accuracy"
 
     def __init__(self):
         self.TP = self.DEFAULT_VALUE
@@ -134,5 +143,14 @@ class EvaluationMetric:
         self.f1_score = self.get_F1score(test_actual, test_pred)
         self.accuracy = self.get_accuracy(test_actual, test_pred)
 
-        return self.TP, self.TN, self.FP, self.FN, self.sensitivity, self.specificity, \
-               self.precision, self.accuracy, self.f1_score
+        eval_dict = {}
+        eval_dict[self.LABEL_TP] = self.TP
+        eval_dict[self.LABEL_TN] = self.TN
+        eval_dict[self.LABEL_FP] = self.FP
+        eval_dict[self.LABEL_FN] = self.FN
+        eval_dict[self.LABEL_SENSITIVITY] = self.sensitivity
+        eval_dict[self.LABEL_SPECIFICITY] = self.specificity
+        eval_dict[self.LABEL_PRECISION] = self.precision
+        eval_dict[self.LABEL_F1SCORE] = self.f1_score
+        eval_dict[self.LABEL_ACCURACY] = self.accuracy
+        return eval_dict
