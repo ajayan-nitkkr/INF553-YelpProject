@@ -1,5 +1,10 @@
+"""
+Author: Ajay Anand
+"""
+
 import pandas as pd
 import json
+
 
 la_govt_data_path = '../../../../data/LA_govt_2016-18_dataset.csv'
 yelp_challenge_data_path = '../../../../data/yelp_dataset/yelp_dataset~/yelp_academic_dataset_business.json'

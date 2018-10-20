@@ -1,3 +1,7 @@
+"""
+Author: Ajay Anand
+"""
+
 COL_BUSINESS_ID = 'business_id'
 COL_NAME = 'name'
 COL_ADDRESS = 'address'

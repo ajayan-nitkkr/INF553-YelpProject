@@ -1,6 +1,8 @@
 from sklearn.metrics import accuracy_score
 
-
+"""
+Author: Ajay Anand
+"""
 class EvaluationMetric:
     DEFAULT_VALUE = -1
 
@@ -14,7 +16,6 @@ class EvaluationMetric:
         self.precision = self.DEFAULT_VALUE
         self.f1_score = self.DEFAULT_VALUE
         self.accuracy = self.DEFAULT_VALUE
-
 
     """
     API to get True Positive, True Negative,
@@ -38,7 +39,6 @@ class EvaluationMetric:
 
         return self.TP, self.TN, self.FP, self.FN
 
-
     """
     API to get sensitivity
     Called by various names such as sensitivity, recall,
@@ -56,7 +56,6 @@ class EvaluationMetric:
         else:
             self.sensitivity = 0
         return self.sensitivity
-
 
     """
     API to get specificity
@@ -76,7 +75,6 @@ class EvaluationMetric:
             self.specificity = 0
         return self.specificity
 
-
     """
     API to get precision
     Called by various names such as precision, positive predictive value (PPV)
@@ -93,7 +91,6 @@ class EvaluationMetric:
         else:
             self.precision = 0
         return self.precision
-
 
     """
     API to get F1 score
@@ -115,7 +112,6 @@ class EvaluationMetric:
 
         return self.f1_score
 
-
     """
     API to get accuracy (ACC)
     """
@@ -126,7 +122,6 @@ class EvaluationMetric:
 
         self.accuracy = accuracy_score(test_actual, test_pred)
         return self.accuracy
-
 
     """
     API to get all the evaluation metrics

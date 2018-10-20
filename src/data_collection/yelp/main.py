@@ -1,3 +1,7 @@
+"""
+Author: Ajay Anand
+"""
+
 from src.data_collection.yelp.yelp_api_adapter import search_yelp_restaurant
 
 from src.data_collection.yelp.yelp_scraper import scrap_yelp_restaurant_data

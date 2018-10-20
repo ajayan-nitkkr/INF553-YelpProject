@@ -1,4 +1,8 @@
 """
+Author: Ajay Anand
+"""
+
+"""
 Basic features
 """
 YELP_COl_PRICE = 'priceRange'
