@@ -59,6 +59,27 @@ def get_precision(test_actual, test_pred):
 
 
 """
+API to get F1 score
+"""
+def get_F1score(test_actual, test_pred):
+    TP, TN, FP, FN = get_confusion_matrix_result(test_actual, test_pred)
+
+    precision = 0
+    if TP + FP != 0:
+        precision = (float)(TP) / (TP + FP)
+
+    sensitivity = 0
+    if TP + FN != 0:
+        sensitivity = (float)(TP) / (TP + FN)
+
+    f1_score = 0
+    if sensitivity + precision != 0:
+        f1_score = (float)(2*precision*sensitivity)/(precision+sensitivity)
+
+    return f1_score
+
+
+"""
 API to get accuracy (ACC)
 """
 def get_accuracy(test_actual, test_pred):
@@ -84,6 +105,10 @@ def get_evaluation_metrics(test_actual, test_pred):
     if TP + FP != 0:
         precision = (float)(TP) / (TP + FP)
 
+    f1_score = 0
+    if sensitivity + precision != 0:
+        f1_score = (float)(2*precision*sensitivity)/(precision+sensitivity)
+
     accuracy = accuracy_score(test_actual, test_pred)
 
-    return TP, TN, FP, FN, sensitivity, specificity, precision, accuracy
+    return TP, TN, FP, FN, sensitivity, specificity, precision, accuracy, f1_score
