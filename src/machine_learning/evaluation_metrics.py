@@ -1,114 +1,143 @@
 from sklearn.metrics import accuracy_score
 
-"""
-API to get True Positive, True Negative,
-False Positive, False Negative data
-"""
-def get_confusion_matrix_result(test_actual, test_pred):
-    TP, FP, TN, FN = 0, 0, 0, 0
 
-    for i in range(len(test_pred)):
-        if test_pred[i]==1 and test_actual[i]==1 :
-           TP += 1
-        elif test_pred[i]==1 and test_actual[i]==0 :
-           FP += 1
-        elif test_pred[i]==0 and test_actual[i]==0 :
-           TN += 1
-        elif test_pred[i]==0 and test_actual[i]==1:
-           FN += 1
+class EvaluationMetric:
+    DEFAULT_VALUE = -1
 
-    return TP, TN, FP, FN
+    def __init__(self):
+        self.TP = self.DEFAULT_VALUE
+        self.FP = self.DEFAULT_VALUE
+        self.TN = self.DEFAULT_VALUE
+        self.FN = self.DEFAULT_VALUE
+        self.sensitivity = self.DEFAULT_VALUE
+        self.specificity = self.DEFAULT_VALUE
+        self.precision = self.DEFAULT_VALUE
+        self.f1_score = self.DEFAULT_VALUE
+        self.accuracy = self.DEFAULT_VALUE
 
 
-"""
-API to get sensitivity
-Called by various names such as sensitivity, recall,
-hit rate, true positive rate (TPR)
-"""
-def get_sensitivity(test_actual, test_pred):
-    TP, TN, FP, FN = get_confusion_matrix_result(test_actual, test_pred)
-    sensitivity = 0
-    if TP + FN != 0:
-        sensitivity = (float)(TP) / (TP + FN)
-    return sensitivity
+    """
+    API to get True Positive, True Negative,
+    False Positive, False Negative data
+    """
+    def get_confusion_matrix_result(self, test_actual, test_pred):
+        if self.TP != self.DEFAULT_VALUE and self.TN != self.DEFAULT_VALUE and \
+                        self.FP != self.DEFAULT_VALUE and self.FN != self.DEFAULT_VALUE:
+            # value already exist
+            return self.TP, self.TN, self.FP, self.FN
+
+        for i in range(len(test_pred)):
+            if test_pred[i]==1 and test_actual[i]==1 :
+                self.TP += 1
+            elif test_pred[i]==1 and test_actual[i]==0 :
+                self.FP += 1
+            elif test_pred[i]==0 and test_actual[i]==0 :
+                self.TN += 1
+            elif test_pred[i]==0 and test_actual[i]==1:
+                self.FN += 1
+
+        return self.TP, self.TN, self.FP, self.FN
 
 
-"""
-API to get specificity
-Called by various names such as specificity, selectivity,
-true negative rate (TNR)
-"""
-def get_specificity(test_actual, test_pred):
-    TP, TN, FP, FN = get_confusion_matrix_result(test_actual, test_pred)
-    specificity = 0
-    if TN + FP != 0:
-        specificity = (float)(TN) / (TN + FP)
-    return specificity
+    """
+    API to get sensitivity
+    Called by various names such as sensitivity, recall,
+    hit rate, true positive rate (TPR)
+    """
+    def get_sensitivity(self, test_actual, test_pred):
+        if self.sensitivity != self.DEFAULT_VALUE:
+            # value already exist
+            return self.sensitivity
+
+        self.TP, self.TN, self.FP, self.FN = self.get_confusion_matrix_result(test_actual, test_pred)
+
+        if self.TP + self.FN != 0:
+            self.sensitivity = (float)(self.TP) / (self.TP + self.FN)
+        else:
+            self.sensitivity = 0
+        return self.sensitivity
 
 
-"""
-API to get precision
-Called by various names such as precision, positive predictive value (PPV)
-"""
-def get_precision(test_actual, test_pred):
-    TP, TN, FP, FN = get_confusion_matrix_result(test_actual, test_pred)
-    precision = 0
-    if TP + FP != 0:
-        precision = (float)(TP) / (TP + FP)
-    return precision
+    """
+    API to get specificity
+    Called by various names such as specificity, selectivity,
+    true negative rate (TNR)
+    """
+    def get_specificity(self, test_actual, test_pred):
+        if self.specificity != self.DEFAULT_VALUE:
+            # value already exist
+            return self.specificity
+
+        self.TP, self.TN, self.FP, self.FN = self.get_confusion_matrix_result(test_actual, test_pred)
+
+        if self.TN + self.FP != 0:
+            self.specificity = (float)(self.TN) / (self.TN + self.FP)
+        else:
+            self.specificity = 0
+        return self.specificity
 
 
-"""
-API to get F1 score
-"""
-def get_F1score(test_actual, test_pred):
-    TP, TN, FP, FN = get_confusion_matrix_result(test_actual, test_pred)
+    """
+    API to get precision
+    Called by various names such as precision, positive predictive value (PPV)
+    """
+    def get_precision(self, test_actual, test_pred):
+        if self.precision != self.DEFAULT_VALUE:
+            # value already exist
+            return self.precision
 
-    precision = 0
-    if TP + FP != 0:
-        precision = (float)(TP) / (TP + FP)
+        self.TP, self.TN, self.FP, self.FN = self.get_confusion_matrix_result(test_actual, test_pred)
 
-    sensitivity = 0
-    if TP + FN != 0:
-        sensitivity = (float)(TP) / (TP + FN)
-
-    f1_score = 0
-    if sensitivity + precision != 0:
-        f1_score = (float)(2*precision*sensitivity)/(precision+sensitivity)
-
-    return f1_score
+        if self.TP + self.FP != 0:
+            self.precision = (float)(self.TP) / (self.TP + self.FP)
+        else:
+            self.precision = 0
+        return self.precision
 
 
-"""
-API to get accuracy (ACC)
-"""
-def get_accuracy(test_actual, test_pred):
-    accuracy = accuracy_score(test_actual, test_pred)
-    return accuracy
+    """
+    API to get F1 score
+    """
+    def get_F1score(self, test_actual, test_pred):
+        if self.f1_score != self.DEFAULT_VALUE:
+            # value already exist
+            return self.f1_score
+
+        self.TP, self.TN, self.FP, self.FN = self.get_confusion_matrix_result(test_actual, test_pred)
+
+        self.precision = self.get_precision(test_actual, test_pred)
+        self.sensitivity = self.get_sensitivity(test_actual, test_pred)
+
+        if self.sensitivity + self.precision != 0:
+            self.f1_score = (float)(2*self.precision*self.sensitivity)/(self.precision+self.sensitivity)
+        else:
+            self.f1_score = 0
+
+        return self.f1_score
 
 
-"""
-API to get all the evaluation metrics
-"""
-def get_evaluation_metrics(test_actual, test_pred):
-    TP, TN, FP, FN = get_confusion_matrix_result(test_actual, test_pred)
+    """
+    API to get accuracy (ACC)
+    """
+    def get_accuracy(self, test_actual, test_pred):
+        if self.accuracy != self.DEFAULT_VALUE:
+            # value already exist
+            return self.accuracy
 
-    sensitivity = 0
-    if TP + FN != 0:
-        sensitivity = (float)(TP) / (TP + FN)
+        self.accuracy = accuracy_score(test_actual, test_pred)
+        return self.accuracy
 
-    specificity = 0
-    if TN + FP != 0:
-        specificity = (float)(TN) / (TN + FP)
 
-    precision = 0
-    if TP + FP != 0:
-        precision = (float)(TP) / (TP + FP)
+    """
+    API to get all the evaluation metrics
+    """
+    def get_evaluation_metrics(self, test_actual, test_pred):
+        self.TP, self.TN, self.FP, self.FN = self.get_confusion_matrix_result(test_actual, test_pred)
+        self.sensitivity = self.get_sensitivity(test_actual, test_pred)
+        self.specificity = self.get_specificity(test_actual, test_pred)
+        self.precision = self.get_precision(test_actual, test_pred)
+        self.f1_score = self.get_F1score(test_actual, test_pred)
+        self.accuracy = self.get_accuracy(test_actual, test_pred)
 
-    f1_score = 0
-    if sensitivity + precision != 0:
-        f1_score = (float)(2*precision*sensitivity)/(precision+sensitivity)
-
-    accuracy = accuracy_score(test_actual, test_pred)
-
-    return TP, TN, FP, FN, sensitivity, specificity, precision, accuracy, f1_score
+        return self.TP, self.TN, self.FP, self.FN, self.sensitivity, self.specificity, \
+               self.precision, self.accuracy, self.f1_score
