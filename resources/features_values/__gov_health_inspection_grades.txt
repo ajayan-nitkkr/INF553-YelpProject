@@ -1,0 +1,9 @@
+A : A grade
+B : B DownGrade
+C : C DownGrade
+N : Not Approved
+O : Approved
+X : Closed with Fees
+P : Compliant
+S : Suspended
+Blank : Unspecified
