@@ -1,0 +1,15 @@
+Data Source : http://us-city.census.okfn.org/dataset/food-safety
+    FileName   : Restaurant_Inspections.csv (165477 entries with multiple rows due to Current/InspectionDate)
+    FileName : Restaurant_Inspections_Violations_Codes.csv
+
+FileName: Restaurant_Inspections_CurrentGrade.csv
+RestaurantName, LocationName, CategoryName, Address, City, State, Zip, CurrentGrade
+
+FileName: Restaurant_Inspections_InspectionGrade.csv
+RestaurantName, LocationName, CategoryName, Address, City, State, Zip, InspectionGrade
+
+FileName: Restaurant_Inspections_Violation_Demerits.csv
+RestaurantName,	LocationName, CategoryName, Address, City, State, Zip, Violations, CurrentDemerits, InspectionDemerits
+
+
+
