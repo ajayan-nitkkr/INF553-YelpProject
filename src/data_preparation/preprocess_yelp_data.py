@@ -32,10 +32,6 @@ def groupby_region(data):
     
     return group_counts
  
-def find_missing_data_count(data):
-    pass    
-
-
 def valid_business(categories_str):
     if categories_str is None:
         return False
@@ -73,7 +69,6 @@ def preprocess_yelp_data(path, save_path):
 #     group_count = groupby_region(yelp_data)
 #     print(group_count)
     csvWriter(save_path+"valid_business_yelp_data.csv", yelp_data)
-#     missing_data_count = find_missing_data_count(yelp_data)
         
     return
     

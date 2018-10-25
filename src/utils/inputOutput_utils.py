@@ -10,4 +10,8 @@ def load_yelp_data_json(file):
 
 def csvWriter(path, data):
     data.to_csv(path, encoding = "utf-8", index=False)
+    
+def csvReader(path):
+    data = pd.read_csv(path, encoding = "utf-8")
+    return data
 
