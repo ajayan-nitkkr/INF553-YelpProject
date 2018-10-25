@@ -42,6 +42,7 @@ def valid_business(categories_str):
     categories = categories_str.split(',')
     fin  = open("../../resources/dataset/business_categories.txt")
     valid_business_list = dict()
+    
     for line in fin:
         line = line.strip()
         valid_business_list[line]=1
@@ -67,6 +68,8 @@ def preprocess_yelp_data(path, save_path):
 #     csvWriter(save_path + "preprocessed_lasVegas.csv", lasVegasData)
 
     yelp_data = clean_yelp_data(yelp_data)
+    
+    
 #     group_count = groupby_region(yelp_data)
 #     print(group_count)
     csvWriter(save_path+"valid_business_yelp_data.csv", yelp_data)
