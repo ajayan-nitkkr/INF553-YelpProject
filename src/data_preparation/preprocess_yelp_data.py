@@ -23,7 +23,7 @@ def clean_yelp_data(data):
     invalid_data = data[data['state'].map(lambda x: x not in us_states)]
     data = data[data['state'].map(lambda x: (x in us_states.keys()) or (x in us_states.values()))]   
 #    print(len(invalid_data), len(data))
-    
+    data = clean_business(data)
     return data
      
 
@@ -61,14 +61,15 @@ def preprocess_yelp_data(path, save_path):
     file_path = path + "yelp_academic_dataset_business.json"   
     yelp_data = load_yelp_data_json(file_path)
     
-    lasVegasData = load_lasVegas_data(yelp_data)    
-    lasVegasData = clean_business(lasVegasData)
+#     lasVegasData = load_lasVegas_data(yelp_data)    
+#     lasVegasData = clean_business(lasVegasData)
     
 #     csvWriter(save_path + "preprocessed_lasVegas.csv", lasVegasData)
 
-#     yelp_data = clean_yelp_data(yelp_data)
+    yelp_data = clean_yelp_data(yelp_data)
 #     group_count = groupby_region(yelp_data)
-#     csvWriter(save_path+"region_wise_counts.csv", group_count)
+#     print(group_count)
+    csvWriter(save_path+"valid_business_yelp_data.csv", yelp_data)
 #     missing_data_count = find_missing_data_count(yelp_data)
         
     return
