@@ -68,14 +68,14 @@ def find_missing_data(path):
 #     yelp_data = csvReader(path+"preprocessed_lasVegas.csv")
     yelp_data = csvReader(path+"valid_business_yelp_data.csv")    
     business_with_missing_data = find_business_with_missing_data(yelp_data)
-    csvWriter(path+"missing_data_yelp_business_All_Yelp_Data.csv", business_with_missing_data)
+#     csvWriter(path+"missing_data_yelp_business_All_Yelp_Data.csv", business_with_missing_data)
     
     full_data_bIds, partial_data_bIds = missing_data_details(business_with_missing_data)
     
     print(len(full_data_bIds), len(partial_data_bIds))
 
-    print_full_data_details(full_data_bIds, path)
-    print_partial_data_details(partial_data_bIds, path)
+#     print_full_data_details(full_data_bIds, path)
+#     print_partial_data_details(partial_data_bIds, path)
     
     return 
 
