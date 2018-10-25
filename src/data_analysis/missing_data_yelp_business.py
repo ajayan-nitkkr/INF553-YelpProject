@@ -1,4 +1,7 @@
 import time
+from collections import defaultdict
+import pandas as pd
+import numpy as np
 from INF553_YelpProject.src.utils.inputOutput_utils import csvReader, csvWriter
 
 def find_business_with_missing_data(data):
@@ -13,15 +16,10 @@ def find_business_with_missing_data(data):
     business_parking_schema = ['garage', "street", "validated", "lot", "valet"]
     
     missing_data = data
-    for _, row in missing_data.iterrows():
-        for col in data_schema:
-            if len(str(row[col]))==0:
-                row[col] = 0
-            else:
-                row[col] = 1
-      
+    for col in data_schema:
+        missing_data[col]=data[col].isnull()
+       
     return missing_data
-
 
 def find_missing_data(path):
     yelp_data = csvReader(path+"preprocessed_lasVegas.csv")
