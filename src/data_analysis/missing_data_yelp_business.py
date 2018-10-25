@@ -1,7 +1,5 @@
 import time
 from collections import defaultdict
-import pandas as pd
-import numpy as np
 from INF553_YelpProject.src.utils.inputOutput_utils import csvReader, csvWriter
 
 def find_business_with_missing_data(data):
