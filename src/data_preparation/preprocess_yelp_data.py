@@ -5,8 +5,7 @@ def load_lasVegas_data(data):
     
     data = data[data['city'].map(lambda x: x=="Las Vegas")]
     data = data[data['state'].map(lambda x: x=="NV")]
-    uniqueCounts = data['categories'].value_counts()
-    print(len(uniqueCounts))
+    
     return data 
 
 
@@ -36,18 +35,44 @@ def groupby_region(data):
  
 def find_missing_data_count(data):
     pass    
+
+
+def valid_business(categories_str):
+    if categories_str is None:
+        return False
+    categories = categories_str.split(',')
+    fin  = open("../../resources/dataset/business_categories.txt")
+    valid_business_list = dict()
+    for line in fin:
+        line = line.strip()
+        valid_business_list[line]=1
+    
+    for category in categories:
+        curr_category = category.strip()
+        if curr_category in valid_business_list.keys():
+            return True
+    return False
+
+def clean_business(data):
+    data = data[data['categories'].map(lambda x: valid_business(x)==True)]
+    return data
     
 def preprocess_yelp_data(path, save_path):
     
     file_path = path + "yelp_academic_dataset_business.json"   
     yelp_data = load_yelp_data_json(file_path)
-    lasVegasData = load_lasVegas_data(yelp_data)
-#     csvWriter(path + "lasVegas.csv", lasVegasData)
+    lasVegasData = load_lasVegas_data(yelp_data)    
+    print(len(lasVegasData))
+
+    lasVegasData = clean_business(lasVegasData)
+    print(len(lasVegasData))
     
-    yelp_data = clean_yelp_data(yelp_data)
-    group_count = groupby_region(yelp_data)
+    csvWriter(save_path + "preprocessed_lasVegas.csv", lasVegasData)
+
+#     yelp_data = clean_yelp_data(yelp_data)
+#     group_count = groupby_region(yelp_data)
 #     csvWriter(save_path+"region_wise_counts.csv", group_count)
-    missing_data_count = find_missing_data_count(yelp_data)
+#     missing_data_count = find_missing_data_count(yelp_data)
         
     return
     
