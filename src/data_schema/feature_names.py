@@ -2,6 +2,7 @@
 Author: Ajay Anand
 """
 
+
 class FeatureNames:
     COL_BUSINESS_ID = 'business_id'
     COL_NAME = 'name'

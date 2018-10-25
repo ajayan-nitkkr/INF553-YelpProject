@@ -9,5 +9,5 @@ def load_yelp_data_json(file):
     return data 
 
 def csvWriter(path, data):
-    data.to_csv(path, encoding = "utf-8")
+    data.to_csv(path, encoding = "utf-8", index=False)
 

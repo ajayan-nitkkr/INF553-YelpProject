@@ -1,6 +1,8 @@
 """
 Author: Ajay Anand
 """
+
+
 class YelpBusinessDataSchema:
     COL_BUSINESS_ID = "BusinessId"
     COL_RESTAURANT_NAME = "RestaurantName"
@@ -53,13 +55,13 @@ class YelpBusinessDataSchema:
 
 
 class LasVegasGovtDataSchema:
-    COL_RESTAURANT_NAME = "RestaurantName"
+    COL_RESTAURANT_NAME = 'RestaurantName'
     COL_LOCATION_NAME = "LocationName"
     COL_CATEGORY_NAME = "CategoryName"
     COL_ADDRESS = "Address"
     COL_CITY = "City"
     COL_STATE = "State"
-    COL_ZIP = "Zip"
+    COL_ZIP = 'Zip'
     COL_CURRENT_GRADE = "CurrentGrade"
     COL_INSPECTION_GRADE = "InspectionGrade"
     COL_VIOLATIONS = "Violations"
