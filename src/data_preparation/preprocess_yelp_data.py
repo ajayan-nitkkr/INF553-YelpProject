@@ -4,8 +4,7 @@ from INF553_YelpProject.src.utils.inputOutput_utils import load_yelp_data_json, 
 def load_lasVegas_data(data):
     
     data = data[data['city'].map(lambda x: x=="Las Vegas")]
-    data = data[data['state'].map(lambda x: x=="NV")]
-    
+    data = data[data['state'].map(lambda x: x=="NV")]  
     return data 
 
 
@@ -61,13 +60,11 @@ def preprocess_yelp_data(path, save_path):
     
     file_path = path + "yelp_academic_dataset_business.json"   
     yelp_data = load_yelp_data_json(file_path)
-    lasVegasData = load_lasVegas_data(yelp_data)    
-    print(len(lasVegasData))
-
-    lasVegasData = clean_business(lasVegasData)
-    print(len(lasVegasData))
     
-    csvWriter(save_path + "preprocessed_lasVegas.csv", lasVegasData)
+    lasVegasData = load_lasVegas_data(yelp_data)    
+    lasVegasData = clean_business(lasVegasData)
+    
+#     csvWriter(save_path + "preprocessed_lasVegas.csv", lasVegasData)
 
 #     yelp_data = clean_yelp_data(yelp_data)
 #     group_count = groupby_region(yelp_data)
