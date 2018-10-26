@@ -20,6 +20,9 @@ def find_business_with_missing_data(data):
     return missing_data
 
 
+#Rimsha's LasVegas Dataset -> Use common business schema
+	
+	
 def missing_data_details(data):
     
     data_schema = ['name', "neighborhood", 'address', 'city', 'state', 'postal_code', 'review_count',
