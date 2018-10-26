@@ -56,18 +56,27 @@ if __name__ == '__main__':
     # merge multiple files of government data into single dataframe
     lv_object = LasVegasGovtDataSchema()
     lv_current_grade_df = load_lv_govt_data(lv_current_grade_file)
-    print("lv_govt_df1:",len(lv_current_grade_df), len(lv_current_grade_df[lv_object.COL_RESTAURANT_NAME].unique()))
-    lv_inspection_grade_df = load_lv_govt_data(lv_inspection_grade_file)
-    print("lv_govt_df2:", len(lv_inspection_grade_df), len(lv_inspection_grade_df[lv_object.COL_RESTAURANT_NAME].unique()))
-    overlap_conditions = lv_object.COL_RESTAURANT_NAME
-    df = find_overlap(lv_current_grade_df, lv_inspection_grade_df, overlap_conditions)
-    print("df:",len(df))
-    print (len(df[lv_object.COL_RESTAURANT_NAME].unique()))
-    lv_violation_df = load_lv_govt_data(lv_violation_file)
-    print("lv_govt_df2:", len(lv_violation_df), len(lv_violation_df[lv_object.COL_RESTAURANT_NAME].unique()))
-    overlap_conditions = lv_object.COL_RESTAURANT_NAME
-    df = find_overlap(df, lv_violation_df, overlap_conditions)
-    print("df:", len(df))
+    print(len(lv_current_grade_df))
+    df = lv_current_grade_df.drop_duplicates(subset=[lv_object.COL_RESTAURANT_NAME,
+                                                     lv_object.COL_LOCATION_NAME,
+                                                     lv_object.COL_CATEGORY_NAME,
+                                                     lv_object.COL_ADDRESS,
+                                                     lv_object.COL_CITY,
+                                                     lv_object.COL_STATE,
+                                                     lv_object.COL_ZIP])
+    print(len(df))
+    # print("lv_govt_df1:",len(lv_current_grade_df), len(lv_current_grade_df[lv_object.COL_RESTAURANT_NAME].unique()))
+    # lv_inspection_grade_df = load_lv_govt_data(lv_inspection_grade_file)
+    # print("lv_govt_df2:", len(lv_inspection_grade_df), len(lv_inspection_grade_df[lv_object.COL_RESTAURANT_NAME].unique()))
+    # overlap_conditions = lv_object.COL_RESTAURANT_NAME
+    # df = find_overlap(lv_current_grade_df, lv_inspection_grade_df, overlap_conditions)
+    # print("df:",len(df))
+    # print (len(df[lv_object.COL_RESTAURANT_NAME].unique()))
+    # lv_violation_df = load_lv_govt_data(lv_violation_file)
+    # print("lv_govt_df2:", len(lv_violation_df), len(lv_violation_df[lv_object.COL_RESTAURANT_NAME].unique()))
+    # overlap_conditions = lv_object.COL_RESTAURANT_NAME
+    # df = find_overlap(df, lv_violation_df, overlap_conditions)
+    # print("df:", len(df))
 
 
     # yelp_df = load_yelp_challenge_data(yelp_challenge_data_path)

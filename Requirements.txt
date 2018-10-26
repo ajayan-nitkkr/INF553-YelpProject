@@ -4,3 +4,5 @@ requests
 urllib
 BeautifulSoup
 scikit-learn
+matplotlib
+numpy
