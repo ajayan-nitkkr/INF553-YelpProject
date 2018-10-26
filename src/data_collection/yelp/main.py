@@ -15,7 +15,7 @@ def traverse_business_data(yelp_df):
     restaurant_list = []
     for index, row in yelp_df.iterrows():
         print("index:",index)
-        if index >= 2:
+        if index >= 50:
             break
         business_id = row[yelp_obj.COL_BUSINESS_ID]
         if business_id:
