@@ -9,12 +9,13 @@ import requests
 from bs4 import BeautifulSoup
 
 from src.data_collection.yelp.yelp_feature_names import *
-from src.data_schema.feature_names import *
+from src.data_schema.feature_names import FeatureNames
 
 """
 Scrap restaurant data from yelp website based on restaurant url
 """
 def scrap_yelp_restaurant_data(restaurant_url):
+    requests.packages.urllib3.disable_warnings()
     yelp_path = requests.get(restaurant_url, verify=False)
     soup = BeautifulSoup(yelp_path.text, "html.parser")
 
@@ -41,8 +42,9 @@ def scrap_yelp_restaurant_data(restaurant_url):
 add any basic information present for restaurant
 """
 def scrap_basic_info(info, result_data):
+    schema_obj = FeatureNames()
     basic_data_json = json.loads(info)
-    result_data[COl_PRICE] = basic_data_json.get(YELP_COl_PRICE)
+    result_data['Price'] = basic_data_json.get(YELP_COl_PRICE)
 
 
 """
