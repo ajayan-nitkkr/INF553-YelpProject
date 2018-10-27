@@ -163,7 +163,7 @@ def find_missing_data(path):
         
     print("Mean B_ids Missing Data: "+str(mean_partial_data_row/len(partial_data_bId_percent)))
     print("Most rare feature: " + rareFeature)
-    print("Most common features: " + " ,".join(commonFeatures))
+    print("Most common features: " + ", ".join(commonFeatures))
     
     return 
 
