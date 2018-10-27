@@ -82,6 +82,17 @@ def print_partial_data_percentage(data, path):
     fout.close()
     return
 
+def print_partial_feature_data_percentage(data, path):
+    fout =  open(path+"business_with_percent_partial_feature_data_lasVegas.txt", "w+", encoding = "utf-8")
+    
+    for key in data.keys():
+        fout.write(str(key) +" : " + str(data[key]))
+        fout.write("\n")
+        
+    fout.close()
+    return
+
+
 def get_schema(path):
     fin =  open(path,"r", encoding = "utf-8")
     
@@ -95,11 +106,19 @@ def get_schema(path):
 
 def get_partial_data_percentage(data):
     partial_data_analysis_row = {}
+    partial_data_analysis_col = defaultdict(int)
+    total = len(data)
     
     for key in data.keys():
         partial_data_analysis_row[key]=(float(len(data[key]))/47.0)*100  
+        for col in data[key]:
+            partial_data_analysis_col[col]+=1
         
-    return partial_data_analysis_row     
+    for key in partial_data_analysis_col.keys():
+        partial_data_analysis_col[key]/=total
+        partial_data_analysis_col[key]*=100
+    
+    return partial_data_analysis_row, partial_data_analysis_col     
     
 def find_missing_data(path):
     yelp_data = csvReader(path+"LasVegas_Restaurants_Rimsha_Preprocessed.csv")
@@ -114,18 +133,37 @@ def find_missing_data(path):
      
     full_data_bIds, partial_data_bIds = missing_data_details(business_with_missing_data, data_schema)
     
-    partial_data_percent = get_partial_data_percentage(partial_data_bIds) 
+    partial_data_bId_percent, partial_data_features_percent = get_partial_data_percentage(partial_data_bIds) 
     
     mean_partial_data_row = 0  
-    print(len(partial_data_bIds))
-    for key in partial_data_percent.keys():
-        mean_partial_data_row+= partial_data_percent[key]
-        
-    print("Mean B_ids Missing Data: "+str(mean_partial_data_row/len(partial_data_percent)))
     
     print_full_data_details(full_data_bIds, path)
     print_partial_data_details(partial_data_bIds, path)
-    print_partial_data_percentage(partial_data_percent, path)
+    print_partial_data_percentage(partial_data_bId_percent, path)
+    print_partial_feature_data_percentage(partial_data_features_percent, path)
+     
+    print(len(partial_data_bIds))
+    for key in partial_data_bId_percent.keys():
+        mean_partial_data_row+= partial_data_bId_percent[key]  
+     
+    max_val = -float('inf')
+    rareFeature = ""
+    
+    for key in partial_data_features_percent.keys():
+        val = partial_data_features_percent[key]
+        if val > max_val:
+            max_val = val
+            rareFeature = key
+    
+    commonFeatures = []
+    for col in data_schema:
+        if col in partial_data_features_percent.keys():
+            continue
+        commonFeatures.append(col)
+        
+    print("Mean B_ids Missing Data: "+str(mean_partial_data_row/len(partial_data_bId_percent)))
+    print("Most rare feature: " + rareFeature)
+    print("Most common features: " + " ,".join(commonFeatures))
     
     return 
 
