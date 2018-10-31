@@ -2,14 +2,44 @@ Data Source : http://us-city.census.okfn.org/dataset/food-safety
     FileName   : Restaurant_Inspections.csv (165477 entries with multiple rows due to Current/InspectionDate)
     FileName : Restaurant_Inspections_Violations_Codes.csv
 
-FileName: Restaurant_Inspections_CurrentGrade.csv
-RestaurantName, LocationName, CategoryName, Address, City, State, Zip, CurrentGrade
+FileName: Restaurant_Inspections_LV_Final.csv
+A : A grade      95
+B : B DownGrade  85
+C : C DownGrade  75
+N : Not Approved - CLOSED  35
+O : Approved - CLOSED 35
+X : Closed with Fees - NOT CLOSED 65
+P : Compliant - CLOSED 35
+S : Suspended - CLOSED 35
+Blank : Unspecified - 0
 
-FileName: Restaurant_Inspections_InspectionGrade.csv
-RestaurantName, LocationName, CategoryName, Address, City, State, Zip, InspectionGrade
+A 90-100
+B 80-90
+C 70-80
+D 60-70
+E <60
 
-FileName: Restaurant_Inspections_Violation_Demerits.csv
-RestaurantName,	LocationName, CategoryName, Address, City, State, Zip, Violations, CurrentDemerits, InspectionDemerits
+Statistics
++------------+-----+
+|CurrentGrade|count|
++------------+-----+
+|           E|   91|
+|           B|  183|
+|           D|   45|
+|           C|   62|
+|           A|23944|
+|            |   13|
++------------+-----+
 
++---------------+-----+
+|InspectionGrade|count|
++---------------+-----+
+|              E|  102|
+|              B| 2847|
+|              D|   97|
+|              C|  419|
+|              A|20828|
+|               |   45|
++---------------+-----+
 
 
