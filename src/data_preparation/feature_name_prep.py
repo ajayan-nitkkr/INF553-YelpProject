@@ -19,11 +19,13 @@ def rename_govt_data_features(df):
     df.rename(columns={lv_object.COL_CITY: schema_object.COL_CITY}, inplace=True)
     df.rename(columns={lv_object.COL_STATE: schema_object.COL_STATE}, inplace=True)
     df.rename(columns={lv_object.COL_ZIP: schema_object.COL_ZIP}, inplace=True)
+    df.rename(columns={lv_object.COL_VIOLATIONS: schema_object.COL_VIOLATIONS}, inplace=True)
+    df.rename(columns={lv_object.COL_CURRENT_DEMERITS: schema_object.COL_CURRENT_DEMERITS}, inplace=True)
+    df.rename(columns={lv_object.COL_INSPECTION_DEMERITS: schema_object.COL_INSPECTION_DEMERITS}, inplace=True)
+    df.rename(columns={lv_object.COL_CURRENT_SCORE: schema_object.COL_CURRENT_GRADE}, inplace=True)
+    df.rename(columns={lv_object.COL_INSPECTION_SCORE: schema_object.COL_INSPECTION_GRADE}, inplace=True)
     df.rename(columns={lv_object.COL_CURRENT_GRADE: schema_object.COL_CURRENT_GRADE}, inplace=True)
-    # df.rename(columns={lv_object.COL_INSPECTION_GRADE: schema_object.COL_INSPECTION_GRADE}, inplace=True)
-    # df.rename(columns={lv_object.COL_VIOLATIONS: schema_object.COL_VIOLATIONS}, inplace=True)
-    # df.rename(columns={lv_object.COL_CURRENT_DEMERITS: schema_object.COL_CURRENT_DEMERITS}, inplace=True)
-    # df.rename(columns={lv_object.COL_INSPECTION_DEMERITS: schema_object.COL_INSPECTION_DEMERITS}, inplace=True)
+    df.rename(columns={lv_object.COL_INSPECTION_GRADE: schema_object.COL_INSPECTION_GRADE}, inplace=True)
     return df
 
 
@@ -82,16 +84,11 @@ def rename_yelp_challenge_features(df):
 
 
 if __name__ == '__main__':
-    govt_input_file = '../../resources/dataset/Restaurant_Inspections_CurrentGrade.csv'
-    govt_output_file = '../../resources/dataset/Restaurant_Inspections_CurrentGrade_new.csv'
 
-    # govt_df = pd.read_csv(govt_input_file)
-    # govt_df = rename_govt_data_features(govt_df)
-    # csvWriter(govt_output_file, govt_df)
+    input_dataset_file = '../../resources/dataset/Overlapped_Data.csv'
+    output_dataset_file = '../../resources/dataset/final_lasvegas_dataset.csv'
 
-    yelp_challenge_input_file = '../../resources/dataset/Business_Preprocessed.csv'
-    yelp_challenge_output_file = '../../resources/dataset/Business_Preprocessed_new.csv'
-
-    yelp_df = pd.read_csv(yelp_challenge_input_file)
-    yelp_df = rename_yelp_challenge_features(yelp_df)
-    csvWriter(yelp_challenge_output_file, yelp_df)
+    input_df = pd.read_csv(input_dataset_file)
+    input_df = rename_govt_data_features(input_df)
+    input_df = rename_yelp_challenge_features(input_df)
+    csvWriter(output_dataset_file, input_df)

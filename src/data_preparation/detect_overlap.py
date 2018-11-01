@@ -8,10 +8,18 @@ from src.utils.inputOutput_utils import csvWriter
 
 
 """
-find overlap dataset
+renaming features as per final schema
+"""
+
+
+
+"""
+find overlap dataset;
+Manually delete the columns in the created file with 
+column name ending with _y due to repetition
 """
 def find_overlap(df1, df2, overlap_conditions):
-    s1 = pd.merge(df1, df2, how='inner', on=overlap_conditions)
+    s1 = pd.merge(df1, df2, how='inner', on=overlap_conditions, suffixes=('', '_y'))
     return s1
 
 

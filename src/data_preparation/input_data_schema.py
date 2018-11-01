@@ -67,3 +67,5 @@ class LasVegasGovtDataSchema:
     COL_VIOLATIONS = "Violations"
     COL_CURRENT_DEMERITS = "CurrentDemerits"
     COL_INSPECTION_DEMERITS = "InspectionDemerits"
+    COL_CURRENT_SCORE = "CurrentScore"
+    COL_INSPECTION_SCORE = "InspectionScore"
