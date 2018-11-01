@@ -7,8 +7,8 @@ import org.apache.hadoop.fs._
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
 
-/**Ø
-  * Created by lnahoom on 22/08/2016.
+/**
+  * Created by kaurr.
   */
 object Gov_Data_Las_Vegas_Prep {
 
