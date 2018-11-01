@@ -60,5 +60,7 @@ class FeatureNames:
     COL_VIOLATIONS = "violations" # Integer
     COL_CURRENT_DEMERITS = "current_demerits" # Integer
     COL_INSPECTION_DEMERITS = "inspection_demerits" # Integer
+    COL_CURRENT_SCORE = "current_score" # Float
+    COL_INSPECTION_SCORE = "inspection_score" # Float
 
     COL_IS_OPEN = 'is_open' # have to check if needed

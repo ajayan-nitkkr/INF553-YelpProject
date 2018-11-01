@@ -22,8 +22,8 @@ def rename_govt_data_features(df):
     df.rename(columns={lv_object.COL_VIOLATIONS: schema_object.COL_VIOLATIONS}, inplace=True)
     df.rename(columns={lv_object.COL_CURRENT_DEMERITS: schema_object.COL_CURRENT_DEMERITS}, inplace=True)
     df.rename(columns={lv_object.COL_INSPECTION_DEMERITS: schema_object.COL_INSPECTION_DEMERITS}, inplace=True)
-    df.rename(columns={lv_object.COL_CURRENT_SCORE: schema_object.COL_CURRENT_GRADE}, inplace=True)
-    df.rename(columns={lv_object.COL_INSPECTION_SCORE: schema_object.COL_INSPECTION_GRADE}, inplace=True)
+    df.rename(columns={lv_object.COL_CURRENT_SCORE: schema_object.COL_CURRENT_SCORE}, inplace=True)
+    df.rename(columns={lv_object.COL_INSPECTION_SCORE: schema_object.COL_INSPECTION_SCORE}, inplace=True)
     df.rename(columns={lv_object.COL_CURRENT_GRADE: schema_object.COL_CURRENT_GRADE}, inplace=True)
     df.rename(columns={lv_object.COL_INSPECTION_GRADE: schema_object.COL_INSPECTION_GRADE}, inplace=True)
     return df
