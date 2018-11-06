@@ -1,9 +1,61 @@
-A : A grade
-B : B DownGrade
-C : C DownGrade
-N : Not Approved
-O : Approved
-X : Closed with Fees
-P : Compliant
-S : Suspended
+A : A grade      95
+B : B DownGrade  85
+C : C DownGrade  75
+N : Not Approved - CLOSED  35
+O : Approved - CLOSED 35
+X : Closed with Fees - NOT CLOSED 65
+P : Compliant - CLOSED 35
+S : Suspended - CLOSED 35
 Blank : Unspecified
+
+A 90-100
+B 80-90
+C 70-80
+D 60-70
+E <60
+
++------------+-----+
+|CurrentGrade|count|
++------------+-----+
+|           B |  159|
+|           O |   81|
+|           C |   75|
+|           A |23926|
+|           N |   16|
+|           X |   43|
+|              |   13|
++------------+-----+
++---------------+-----+
+|InspectionGrade|count|
++---------------+-----+
+|              B |  454|
+|              O|    8|
+|              C|  115|
+|              A|24102|
+|              X|   66|
+|              P|   62|
+|              a|    3|
+|                |  106|
++---------------+-----+
+
++------------+-----+
+|CurrentGrade|count|
++------------+-----+
+|           E|   91|
+|           B|  183|
+|           D|   45|
+|           C|   62|
+|           A|23944|
+|            |   13|
++------------+-----+
+
++---------------+-----+
+|InspectionGrade|count|
++---------------+-----+
+|              E|  102|
+|              B| 2847|
+|              D|   97|
+|              C|  419|
+|              A|20828|
+|               |   45|
++---------------+-----+
