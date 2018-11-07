@@ -40,7 +40,7 @@ def missing_data_details(data, data_schema):
     
     for _,row in data.iterrows():
         full = True
-        b_id = row['BusinessId']
+        b_id = row['business_id']
         for col in data_schema:
             if row[col]=="Null":
                 partial_data_bIds[b_id].append(col)
@@ -98,8 +98,9 @@ def get_schema(path):
     
     data_schema = [] 
     for line in fin:
-        line = line.split()
-        col = line[0].strip('"')
+        #line = line.split()
+        #col = line[0].strip('"')
+        col = line.strip()
         data_schema.append(col)
         
     return data_schema    
@@ -121,46 +122,46 @@ def get_partial_data_percentage(data):
     return partial_data_analysis_row, partial_data_analysis_col     
     
 def find_missing_data(path):
-    yelp_data = csvReader(path+"LasVegas_Restaurants_Rimsha_Preprocessed.csv")
+    yelp_data = csvReader(path+"final_lasvegas_dataset.csv")
 #     yelp_data = csvReader(path+"valid_business_yelp_data.csv")    
       
-    data_schema = get_schema("../../resources/schema/Schema_Business_Preprocessed.txt")
-    data_schema.remove("BusinessId")
+    data_schema = get_schema("../../resources/schema/Final_Schema.txt")
+    data_schema.remove("business_id")
     
     business_with_missing_data = find_business_with_missing_data(yelp_data, data_schema)
     csvWriter(path+"missing_data_yelp_business.csv", business_with_missing_data)
-     
-     
+       
+       
     full_data_bIds, partial_data_bIds = missing_data_details(business_with_missing_data, data_schema)
-    
+     
     partial_data_bId_percent, partial_data_features_percent = get_partial_data_percentage(partial_data_bIds) 
-    
+     
     mean_partial_data_row = 0  
-    
+     
     print_full_data_details(full_data_bIds, path)
     print_partial_data_details(partial_data_bIds, path)
     print_partial_data_percentage(partial_data_bId_percent, path)
     print_partial_feature_data_percentage(partial_data_features_percent, path)
-     
+      
     print(len(partial_data_bIds))
     for key in partial_data_bId_percent.keys():
         mean_partial_data_row+= partial_data_bId_percent[key]  
-     
+      
     max_val = -float('inf')
     rareFeature = ""
-    
+     
     for key in partial_data_features_percent.keys():
         val = partial_data_features_percent[key]
         if val > max_val:
             max_val = val
             rareFeature = key
-    
+     
     commonFeatures = []
     for col in data_schema:
         if col in partial_data_features_percent.keys():
             continue
         commonFeatures.append(col)
-        
+         
     print("Mean B_ids Missing Data: "+str(mean_partial_data_row/len(partial_data_bId_percent)))
     print("Most rare feature: " + rareFeature)
     print("Most common features: " + ", ".join(commonFeatures))
