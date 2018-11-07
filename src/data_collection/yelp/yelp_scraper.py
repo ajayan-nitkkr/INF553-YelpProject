@@ -11,6 +11,30 @@ from bs4 import BeautifulSoup
 from src.data_collection.yelp.yelp_feature_names import *
 from src.data_schema.feature_names import FeatureNames
 
+
+"""
+add any basic information present for restaurant
+"""
+def scrap_basic_info(info, result_data):
+    schema_obj = FeatureNames()
+    basic_data_json = json.loads(info)
+    result_data['Price'] = basic_data_json.get(YELP_COl_PRICE)
+
+
+""" 
+add any business information present for restaurant
+"""
+def scrap_business_info(info, result_data):
+    key_list = info.find_all("dt")
+    value_list = info.find_all("dd")
+    if key_list and value_list:
+        for i in range(len(key_list)):
+            if key_list[i] and value_list[i]:
+                key = key_list[i].text.strip()
+                value = value_list[i].text.strip()
+                result_data[key] = value
+
+
 """
 Scrap restaurant data from yelp website based on restaurant url
 """
@@ -33,29 +57,8 @@ def scrap_yelp_restaurant_data(restaurant_url):
     else:
         print("Business info not available for restaurant:", restaurant_url)
 
+    # fill_missing_values_As_None()
+
     json_data = json.dumps(result_data)
     # print(json_data)
     return json_data
-
-
-"""
-add any basic information present for restaurant
-"""
-def scrap_basic_info(info, result_data):
-    schema_obj = FeatureNames()
-    basic_data_json = json.loads(info)
-    result_data['Price'] = basic_data_json.get(YELP_COl_PRICE)
-
-
-"""
-add any business information present for restaurant
-"""
-def scrap_business_info(info, result_data):
-    key_list = info.find_all("dt")
-    value_list = info.find_all("dd")
-    if key_list and value_list:
-        for i in range(len(key_list)):
-            if key_list[i] and value_list[i]:
-                key = key_list[i].text.strip()
-                value = value_list[i].text.strip()
-                result_data[key] = value
