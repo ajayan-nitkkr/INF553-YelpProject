@@ -30,7 +30,7 @@ class ModelUtils:
 
 	def save_model(self,model,filename):
 		# save the model to disk
-		filename = 'finalized_model.sav'
+		#filename = 'finalized_model.sav'
 		pickle.dump(model, open(filename, 'wb'))
 		return filename
 
