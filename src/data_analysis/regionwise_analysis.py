@@ -36,8 +36,8 @@ def region_wise_mean_score(path):
         under_performing_business_counts[key]=[zip_code_mean[key], len(under_performing_business[key])]
     
     csvWriter(path + "postal_code_wise_analysis.csv", postal_code_avg)
-    print_data(path + "under_perfermoing_business_lasVegas.csv", under_performing_business)
-    print_data(path + "under_perfermoing_business_counts_lasVegas.csv", under_performing_business_counts)    
+    print_data(path + "under_performing_business_lasVegas.csv", under_performing_business)
+    print_data(path + "under_performing_business_counts_lasVegas.csv", under_performing_business_counts)    
     return
 
 
