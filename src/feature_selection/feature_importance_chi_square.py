@@ -37,7 +37,7 @@ class ChiSquare:
 
         self._print_chisquare_result(colX,alpha)
 if __name__ == "__main__":
-    df = pd.read_csv('/Users/apple/Desktop/final_lasvegas_dataset.csv')
+    df = pd.read_csv('../../dataset/final_lasvegas_dataset.csv')
     # df['dummyCat'] = np.random.choice([0, 1], size=(len(df),), p=[0.5, 0.5])
     df.head()
     cT = ChiSquare(df)
