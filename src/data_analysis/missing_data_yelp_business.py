@@ -4,47 +4,30 @@ from INF553_YelpProject.src.utils.inputOutput_utils import csvReader, csvWriter
 
 def find_business_with_missing_data(data, data_schema):
     
-#     data_schema = ['name', "neighborhood", 'address', 'city', 'state', 'postal_code', 'review_count',
-#                    'latitude', "longitude", "stars", "is_open", "attributes", "categories", "hours" ]
-#     
-#     attribute_schema = ["BikeParking", "BusinessAcceptsCreditCards", "BusinessParking", "GoodForKids",
-#                         "HasTV", "NoiseLevel", "OutdoorSeating", "RestaurantsAttire", "RestaurantsDelivery",
-#                         "RestaurantsGoodForGroups", "RestaurantsPriceRange2", "RestaurantsReservations", "RestaurantsTakeOut"]
-#     
-#     business_parking_schema = ['garage', "street", "validated", "lot", "valet"]
-    
     data.fillna(value = "Null", inplace = True)
 
     missing_data = data
-#     for col in data_schema:
-#         missing_data[col]=data[col].isnull()
-    
-#     for _,row in missing_data.iterrows():
-#         for col in data_schema:
-#             if row[col] == "Null":
-#                 row[col]=True
-#             else:
-#                 row[col]=False
-    
          
     return missing_data
 
 
 def missing_data_details(data, data_schema):
-    
-#     data_schema = ['name', "neighborhood", 'address', 'city', 'state', 'postal_code', 'review_count',
-#                    'latitude', "longitude", "stars", "is_open", "attributes", "categories", "hours" ]
-    
+        
     full_data_bIds = []
     partial_data_bIds = defaultdict(list)
-    
+
     for _,row in data.iterrows():
         full = True
         b_id = row['business_id']
+        if b_id in partial_data_bIds.keys():
+            continue
         for col in data_schema:
             if row[col]=="Null":
                 partial_data_bIds[b_id].append(col)
                 full = False
+        if b_id in full_data_bIds:
+            continue
+        
         if  full:
             full_data_bIds.append(b_id)
 
@@ -105,17 +88,18 @@ def get_schema(path):
         
     return data_schema    
 
-def get_partial_data_percentage(data):
+def get_partial_data_percentage(data, total_cols, total_data):
     partial_data_analysis_row = {}
     partial_data_analysis_col = defaultdict(int)
     total = len(data)
     
     for key in data.keys():
-        partial_data_analysis_row[key]=(float(len(data[key]))/47.0)*100  
+        partial_data_analysis_row[key]=(float(len(data[key]))/total_cols)*100  
         for col in data[key]:
             partial_data_analysis_col[col]+=1
         
     for key in partial_data_analysis_col.keys():
+#         print(key, partial_data_analysis_col[key])
         partial_data_analysis_col[key]/=total
         partial_data_analysis_col[key]*=100
     
@@ -131,11 +115,14 @@ def find_missing_data(path):
     business_with_missing_data = find_business_with_missing_data(yelp_data, data_schema)
     csvWriter(path+"missing_data_yelp_business.csv", business_with_missing_data)
        
-       
+    total_cols = len(business_with_missing_data.columns) 
+    total_data = len(business_with_missing_data)
+    
     full_data_bIds, partial_data_bIds = missing_data_details(business_with_missing_data, data_schema)
      
-    partial_data_bId_percent, partial_data_features_percent = get_partial_data_percentage(partial_data_bIds) 
-     
+    partial_data_bId_percent, partial_data_features_percent = get_partial_data_percentage(partial_data_bIds, total_cols, total_data) 
+    
+      
     mean_partial_data_row = 0  
      
     print_full_data_details(full_data_bIds, path)
@@ -143,7 +130,7 @@ def find_missing_data(path):
     print_partial_data_percentage(partial_data_bId_percent, path)
     print_partial_feature_data_percentage(partial_data_features_percent, path)
       
-    print(len(partial_data_bIds))
+#     print(len(partial_data_bIds))
     for key in partial_data_bId_percent.keys():
         mean_partial_data_row+= partial_data_bId_percent[key]  
       
