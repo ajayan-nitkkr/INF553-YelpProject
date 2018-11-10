@@ -36,6 +36,7 @@ class EvaluationMetric:
             # value already exist
             return self.TP, self.TN, self.FP, self.FN
 
+        self.TP, self.FP, self.TN, self.FN = 0, 0, 0, 0
         for i in range(len(test_pred)):
             if test_pred[i]==1 and test_actual[i]==1 :
                 self.TP += 1
