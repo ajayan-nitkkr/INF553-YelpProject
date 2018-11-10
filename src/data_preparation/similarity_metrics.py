@@ -2,6 +2,15 @@ import time
 from collections import defaultdict
 from INF553_YelpProject.src.utils.inputOutput_utils import csvReader, csvWriter_from_text
 
+def print_analysis(p_data, c_data, path):    
+    fout =  open(path, "w+", encoding = "utf-8")
+    
+    if len(p_data)!=len(c_data):
+        return
+    for key in p_data.keys():
+        fout.write(str(key)+" - Peasrson Coeff Len : " + str(len(p_data[key])) + ",  Cosine Sim Len : " + str(len(c_data[key])) + "\n")
+
+    fout.close()
 
 def get_pearson_similarity(b1, b2, data):
     
@@ -82,7 +91,6 @@ def find_best_similarity_metrics(path):
     similar_business_pearson = defaultdict(list)
     similar_business_cosine = defaultdict(list)
     
-    count  = 0
     for curr_bid in business_data.keys():
         for new_bid in business_data.keys():
              
@@ -99,9 +107,10 @@ def find_best_similarity_metrics(path):
             if sim_score_c>=0.962 :   ##For Cosine Sim
                 similar_business_cosine[curr_bid].append(new_bid)
 
-
     csvWriter_from_text(similar_business_pearson, path+"similar_users_pearson.csv")
     csvWriter_from_text(similar_business_cosine, path+"similar_users_cosine.csv")
+
+    print_analysis(similar_business_pearson, similar_business_cosine, path+"similar_user_analysis.txt")
     
     
 if __name__=='__main__':   
