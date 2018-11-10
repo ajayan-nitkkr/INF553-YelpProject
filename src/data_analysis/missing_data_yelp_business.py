@@ -85,7 +85,7 @@ def get_schema(path):
         #col = line[0].strip('"')
         col = line.strip()
         data_schema.append(col)
-        
+       
     return data_schema    
 
 def get_partial_data_percentage(data, total_cols, total_data):
