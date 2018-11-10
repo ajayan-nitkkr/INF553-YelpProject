@@ -1,5 +1,4 @@
 import time
-
 from collections import defaultdict
 from INF553_YelpProject.src.utils.inputOutput_utils import csvReader, csvWriter_from_text
 
@@ -33,7 +32,19 @@ def get_cosine_similarity(b1, b2, data):
     b1_data = data[b1]
     b2_data = data[b2]
 
-
+    if len(b1_data)!=len(b2_data):
+        return 0
+    sum_x = 0
+    sum_y = 0
+    sum_xy = 0     
+    for i in range(len(b1_data)):
+        x = b1_data[i] 
+        y = b2_data[i]
+        sum_x += x*x
+        sum_y += y*y
+        sum_xy += x*y
+    
+    return sum_xy/((sum_x*sum_y)**0.5)
 
 
 
@@ -68,20 +79,29 @@ def find_best_similarity_metrics(path):
             business_data_details.append(row[col])
         business_data[bid] = business_data_details    
     
-    similar_business = defaultdict(list)
+    similar_business_pearson = defaultdict(list)
+    similar_business_cosine = defaultdict(list)
     
+    count  = 0
     for curr_bid in business_data.keys():
         for new_bid in business_data.keys():
              
             if new_bid == curr_bid:
                 continue
-            sim_score = get_pearson_similarity(curr_bid, new_bid, business_data)              
+            sim_score_p = get_pearson_similarity(curr_bid, new_bid, business_data)              
+            sim_score_c = get_cosine_similarity(curr_bid, new_bid, business_data)
             
-            if sim_score>=0.917 :   ##For Pearson Corr
-                similar_business[curr_bid].append(new_bid)
+#             print(sim_score_p, sim_score_c)
             
-               
-    csvWriter_from_text(similar_business, path+"similar_users_pearson.csv")
+            if sim_score_p>=0.917 :   ##For Pearson Corr
+                similar_business_pearson[curr_bid].append(new_bid)
+                
+            if sim_score_c>=0.962 :   ##For Cosine Sim
+                similar_business_cosine[curr_bid].append(new_bid)
+
+
+    csvWriter_from_text(similar_business_pearson, path+"similar_users_pearson.csv")
+    csvWriter_from_text(similar_business_cosine, path+"similar_users_cosine.csv")
     
     
 if __name__=='__main__':   
