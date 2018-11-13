@@ -1,25 +1,23 @@
 import time
-from collections import defaultdict
-from INF553_YelpProject.src.utils.inputOutput_utils import csvReader
 import matplotlib.pyplot as plt
+from sklearn.metrics import roc_curve, auc
 
-def plot_roc(data):
-    pass
 
-def plot_auc(data):
-    pass
+def plot_roc(y_test, y_pred):
+    
+    fpr, tpr, _ = roc_curve(y_test, y_pred)
+    roc_auc = auc(fpr, tpr)        
+      
+    plt.figure()
+    plt.plot(fpr, tpr, color='blue', lw=1, label='ROC curve (area = %0.2f)' % roc_auc)
+    plt.plot([0, 1], [0, 1], color='navy', lw = 1, linestyle='--')
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver operating characteristic')
+    plt.legend(loc="lower right")
+    plt.show()
 
-def plot_graphs(path):
-    
-    las_vegas_data = csvReader(path + "final_lasvegas_dataset.csv")
-    
-    plot_roc(las_vegas_data)
-    plot_auc(las_vegas_data)
 
-if __name__=='__main__':   
-    
-    start=time.time()
-    path = "../../resources/dataset/"
-    
-    plot_graphs(path) 
-    print ("\nRun time: "+ str(time.time()-start)+" seconds" ) 
+

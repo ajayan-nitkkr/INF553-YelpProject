@@ -1,15 +1,12 @@
 import time
 import pandas as pd
 import numpy as np
-from collections import defaultdict
-from INF553_YelpProject.src.utils.inputOutput_utils import csvReader, csvWriter_from_text
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
 from INF553_YelpProject.src.data_schema.feature_names import FeatureNames
 from INF553_YelpProject.src.machine_learning.evaluation_metrics import EvaluationMetric
-
+from INF553_YelpProject.src.data_analysis.plot_roc_auc import plot_roc
 
 #############################
 ########## Ajay's code for getting train and test dataset
@@ -72,11 +69,9 @@ def divide_dataset(df):
 
     return X_train, X_test, y_train, y_test
 
-def predict_testdata(svm_clf, X_test):
-    y_pred = svm_clf.predict(X_test)
+def predict_testdata(model, X_test):
+    y_pred = model.predict(X_test)
     return y_pred
-
-
 
 def run_adaBoost_model():
     
@@ -84,15 +79,17 @@ def run_adaBoost_model():
     X_train, X_test, y_train, y_test = divide_dataset(df)
     
     adaboost_model = AdaBoostClassifier( DecisionTreeClassifier(max_depth=2), n_estimators = 30, learning_rate=1)
-    
     adaboost_model.fit(X_train, np.ravel(y_train))
-    
+      
     y_pred = predict_testdata(adaboost_model, X_test)
     evaluation_metric = EvaluationMetric()
-
+  
     result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
-    
+  
     print(result)
+    plot_roc(y_test, y_pred)
+    
+    return
 
 if __name__=='__main__':   
     
