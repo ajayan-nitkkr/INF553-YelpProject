@@ -7,6 +7,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn import svm
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import confusion_matrix
 from src.data_schema.feature_names import FeatureNames
 from src.machine_learning.evaluation_metrics import EvaluationMetric
 
@@ -33,7 +34,7 @@ def divide_dataset(df):
     Y = df[[schema_obj.COL_INSPECTION_GRADE]]
 
     # print "Dividing data set into training and test set..."
-    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=62)
+    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3)
 
     positive_count = 0
     negative_count = 0
@@ -120,6 +121,7 @@ if __name__ == '__main__':
 
     ################ ACCURACY #################
     evaluation_metric = EvaluationMetric()
+    # confusion_matrix = confusion_matrix(y_test.values, y_pred)
     result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
     print(result)
     ###########################################

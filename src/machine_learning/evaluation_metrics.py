@@ -1,4 +1,5 @@
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix
 
 """
 Author: Ajay Anand
@@ -36,17 +37,18 @@ class EvaluationMetric:
             # value already exist
             return self.TP, self.TN, self.FP, self.FN
 
-        self.TP, self.FP, self.TN, self.FN = 0, 0, 0, 0
-        for i in range(len(test_pred)):
-            if test_pred[i]==1 and test_actual[i]==1 :
-                self.TP += 1
-            elif test_pred[i]==1 and test_actual[i]==0 :
-                self.FP += 1
-            elif test_pred[i]==0 and test_actual[i]==0 :
-                self.TN += 1
-            elif test_pred[i]==0 and test_actual[i]==1:
-                self.FN += 1
+        # self.TP, self.FP, self.TN, self.FN = 0, 0, 0, 0
+        # for i in range(len(test_pred)):
+        #     if test_pred[i]==1 and test_actual[i]==1 :
+        #         self.TP += 1
+        #     elif test_pred[i]==1 and test_actual[i]==0 :
+        #         self.FP += 1
+        #     elif test_pred[i]==0 and test_actual[i]==0 :
+        #         self.TN += 1
+        #     elif test_pred[i]==0 and test_actual[i]==1:
+        #         self.FN += 1
 
+        self.TN, self.FP, self.FN, self.TP = confusion_matrix(test_actual, test_pred).ravel()
         return self.TP, self.TN, self.FP, self.FN
 
     """
