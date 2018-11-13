@@ -14,7 +14,7 @@ def splitData(filename):
     #y_test.to_csv("/Users/apple/Desktop/y_test.csv", encoding='utf-8', index=False)
     #X_validate.to_csv("/Users/apple/Desktop/X_validate.csv", encoding='utf-8', index=False)
     #y_validate.to_csv("/Users/apple/Desktop/y_validate.csv", encoding='utf-8', index=False)
-    return X_train,X_val,X_test,Y_train,Y_val,Y_test
+    return X_train,X_val,X_test,y_train,y_val,y_test
 
 
 if __name__ == "__main__":

@@ -31,6 +31,24 @@ def fill_missing_data(path):
     
     schema = ['violations', 'current_demerits', 'inspection_demerits', 
               'current_score', 'inspection_score', 'rating', 'review_count']
+    
+    
+    for bid in business_with_missing_data.keys():
+        pass
+    
+    for i, row in las_vegas_data.iterrows():
+        bid = row['business_id']
+        
+        if bid in business_with_missing_data.keys():
+            
+            similar_users = business_with_missing_data[bid]
+            for col in schema:
+                if row[col]!="Null":
+                    continue
+                
+                
+            
+            
 
     
     
