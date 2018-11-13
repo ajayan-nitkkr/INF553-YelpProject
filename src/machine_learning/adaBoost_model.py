@@ -6,6 +6,7 @@ from INF553_YelpProject.src.utils.inputOutput_utils import csvReader, csvWriter_
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
 from INF553_YelpProject.src.data_schema.feature_names import FeatureNames
 from INF553_YelpProject.src.machine_learning.evaluation_metrics import EvaluationMetric
 
@@ -66,29 +67,36 @@ def divide_dataset(df):
         else:
             negative_count+=1
 
-    print("Test data Shape:: ", X_test.shape, 'with ', \
-        'Positives =', positive_count, ', Negatives =', negative_count)
+#     print("Test data Shape:: ", X_test.shape, 'with ', \
+#         'Positives =', positive_count, ', Negatives =', negative_count)
 
     return X_train, X_test, y_train, y_test
 
+def predict_testdata(svm_clf, X_test):
+    y_pred = svm_clf.predict(X_test)
+    return y_pred
 
-def run_adaBoost_model(path):
+
+
+def run_adaBoost_model():
     
     df = construct_dataset()
     X_train, X_test, y_train, y_test = divide_dataset(df)
     
-    model_real = AdaBoostClassifier( DecisionTreeClassifier(max_depth=2),n_estimators=600,learning_rate=1)
-
-    model_discrete = AdaBoostClassifier( DecisionTreeClassifier(max_depth=2), n_estimators=600, learning_rate=1.5, algorithm="SAMME")
+    adaboost_model = AdaBoostClassifier( DecisionTreeClassifier(max_depth=2), n_estimators = 30, learning_rate=1)
     
-    model_real.fit(X_train, np.ravel(y_train))
-    model_discrete.fit(X_train, np.ravel(y_train))
+    adaboost_model.fit(X_train, np.ravel(y_train))
+    
+    y_pred = predict_testdata(adaboost_model, X_test)
+    evaluation_metric = EvaluationMetric()
 
+    result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
+    
+    print(result)
 
 if __name__=='__main__':   
     
     start=time.time()
-    path = "../../resources/split_data/"
     
-    run_adaBoost_model(path) 
+    run_adaBoost_model() 
     print ("\nRun time: "+ str(time.time()-start)+" seconds" )  
