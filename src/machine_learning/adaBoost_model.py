@@ -6,7 +6,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from INF553_YelpProject.src.data_schema.feature_names import FeatureNames
 from INF553_YelpProject.src.machine_learning.evaluation_metrics import EvaluationMetric
-from INF553_YelpProject.src.data_analysis.plot_roc_auc import plot_roc
+from INF553_YelpProject.src.data_analysis.plot_roc_auc import plot_roc,\
+    plot_precision_recall
 
 #############################
 ########## Ajay's code for getting train and test dataset
@@ -80,14 +81,20 @@ def run_adaBoost_model():
     
     adaboost_model = AdaBoostClassifier( DecisionTreeClassifier(max_depth=2), n_estimators = 30, learning_rate=1)
     adaboost_model.fit(X_train, np.ravel(y_train))
-      
+    
     y_pred = predict_testdata(adaboost_model, X_test)
+    
     evaluation_metric = EvaluationMetric()
   
     result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
   
     print(result)
-    plot_roc(y_test, y_pred)
+    probs = adaboost_model.predict_proba(X_test)
+    probs = probs[:, 1]
+    plot_roc(y_test, probs)
+    plot_precision_recall(y_test, y_pred, probs)
+    
+#     plot_roc(y_test, y_pred)
     
     return
 
