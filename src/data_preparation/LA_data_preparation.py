@@ -3,12 +3,18 @@ Author: Ajay Anand
 """
 
 import pandas as pd
+import numpy as np
 from src.data_preparation.input_data_schema import LosAngelesGovtDataSchema
 from src.data_schema.feature_names import FeatureNames
 from src.utils.inputOutput_utils import csvWriter
 
 
-def rename_la_govt_data_features(df):
+"""
+rename the column feature names as per schema,
+drop the columns not in schema,
+create new columns in schema with Null values
+"""
+def prepare_la_data_features(df):
     la_object = LosAngelesGovtDataSchema()
     schema_object = FeatureNames()
     df.rename(columns={la_object.COL_NAME: schema_object.COL_NAME}, inplace=True)
@@ -98,10 +104,15 @@ def rename_la_govt_data_features(df):
 
 
 if __name__ == '__main__':
-    # rename columns, get only required columns
+
     input_la_dataset_file = '../../resources/dataset/LA_dataset_v1.csv'
     output_dataset_file = '../../resources/dataset/LA_dataset_v2.csv'
     input_df = pd.read_csv(input_la_dataset_file)
-    input_df = rename_la_govt_data_features(input_df)
+
+    # prepare features
+    input_df = prepare_la_data_features(input_df)
+
+    # fill empty values as Null
+    input_df = input_df.replace(np.nan, 'Null')
+
     csvWriter(output_dataset_file, input_df)
-    # input_df.to_csv(output_dataset_file, index=False)
