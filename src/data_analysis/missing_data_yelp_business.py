@@ -112,6 +112,8 @@ def find_missing_data(path):
     data_schema = get_schema("../../resources/schema/Final_Schema.txt")
     data_schema.remove("business_id")
     
+    print(data_schema)
+    
     business_with_missing_data = find_business_with_missing_data(yelp_data, data_schema)
     csvWriter(path+"missing_data_yelp_business.csv", business_with_missing_data)
        
