@@ -78,7 +78,7 @@ def rename_yelp_challenge_features(df):
     df.rename(columns={yelp_obj.COL_RESTAURANTS_TABLE_SERVICE: schema_obj.COL_RESTAURANTS_TABLE_SERVICE}, inplace=True)
     df.rename(columns={yelp_obj.COL_RESTAURANTS_TAKEOUT: schema_obj.COL_RESTAURANTS_TAKEOUT}, inplace=True)
     df.rename(columns={yelp_obj.COL_SMOKING: schema_obj.COL_SMOKING}, inplace=True)
-    df.rename(columns={yelp_obj.CoL_WHEELCHAIR_ACCESSIBLE: schema_obj.CoL_WHEELCHAIR_ACCESSIBLE}, inplace=True)
+    df.rename(columns={yelp_obj.CoL_WHEELCHAIR_ACCESSIBLE: schema_obj.COL_WHEELCHAIR_ACCESSIBLE}, inplace=True)
     df.rename(columns={yelp_obj.COL_WIFI: schema_obj.COL_WIFI}, inplace=True)
     return df
 
