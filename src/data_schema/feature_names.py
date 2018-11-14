@@ -50,7 +50,7 @@ class FeatureNames:
     COL_RESTAURANTS_TABLE_SERVICE = "restaurants_table_service" # Boolean
     COL_RESTAURANTS_TAKEOUT = "restaurants_takeout" # Boolean
     COL_SMOKING = "smoking" # Integer
-    CoL_WHEELCHAIR_ACCESSIBLE = "wheelchair_accessible" # Boolean
+    COL_WHEELCHAIR_ACCESSIBLE = "wheelchair_accessible" # Boolean
     COL_WIFI = "wifi" # Integer
 
     COL_LOCATION_NAME = "location_name" # String
@@ -62,5 +62,17 @@ class FeatureNames:
     COL_INSPECTION_DEMERITS = "inspection_demerits" # Integer
     COL_CURRENT_SCORE = "current_score" # Float
     COL_INSPECTION_SCORE = "inspection_score" # Float
+
+    COL_ACCEPTS_APPLE_PAY = "accepts_apple_pay"
+    COL_ACCEPTS_GOOGLE_PAY = "accepts_google_pay"
+    COL_GENDER_NEUTRAL_RESTROOMS = "gender_neutral_restrooms"
+    COL_GOOD_FOR = "good_for"
+    COL_GOOD_FOR_WORKING = "good_for_working"
+    COL_HAS_GLUTEN_FREE_OPTIONS = "has_gluten_free_options"
+    COL_HAS_POOL_TABLE = "has_pool_table"
+    COL_LIKED_BY_VEGANS = "liked_by_vegans"
+    COL_LIKED_BY_VEGETARIANS = "liked_by_vegetarians"
+    COL_OFFERS_MILITARY_DISCOUNT = "offers_military_discount"
+    COL_WAITER_SERVICE = "waiter_service"
 
     COL_IS_OPEN = 'is_open' # have to check if needed
