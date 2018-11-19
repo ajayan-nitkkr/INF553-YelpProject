@@ -62,9 +62,11 @@ def fill_missing_data(path):
                 empty = 0
                 for user in similar_users:
                     sim_data = las_vegas_data.loc[las_vegas_data['business_id'] == user]
-                    
-                        
-                    if ((sim_data[col]!="Null")):
+                    print(sim_data.values)
+                    print(sim_data.columns)
+                    print("hh",sim_data[col],"yyy")
+                    print("dd",sim_data.values,"rr")
+                    if (sim_data[col]!="Null"):
                         pass
                     else:
                         empty+=1
