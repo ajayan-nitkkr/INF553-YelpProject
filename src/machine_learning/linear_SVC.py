@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[18]:
+# In[1]:
 
 
 import numpy as np
@@ -13,7 +13,7 @@ from src.machine_learning.split_data_train_test_validation import *
 from src.machine_learning.evaluation_metrics import *
 
 
-# In[5]:
+# In[ ]:
 
 
 def read_dataset(filename):
@@ -21,7 +21,7 @@ def read_dataset(filename):
     return df
 
 
-# In[12]:
+# In[28]:
 
 
 def get_training_val_test_set(filename):
@@ -30,7 +30,7 @@ def get_training_val_test_set(filename):
     return X_train,X_val,X_test,y_train,y_val,y_test
 
 
-# In[13]:
+# In[29]:
 
 
 def train_LinearSVC(X_train,Y_train):
@@ -44,7 +44,7 @@ def train_LinearSVC(X_train,Y_train):
     save_model(model,'svc_model.sav')
 
 
-# In[14]:
+# In[30]:
 
 
 def predict_health_score(X_test):
@@ -52,7 +52,7 @@ def predict_health_score(X_test):
     return Y_pred
 
 
-# In[15]:
+# In[31]:
 
 
 def get_eval_metrics(Y_test,Y_pred):
@@ -62,11 +62,11 @@ def get_eval_metrics(Y_test,Y_pred):
     return eval_dict
 
 
-# In[16]:
+# In[32]:
 
 
-df=read_dataset('../../resources/dataset/final_lasvegas_dataset.csv')
-X_train,X_val,X_test,y_train,y_val,y_test=get_training_val_test_set(df)
+df=read_dataset('final_lasvegas_dataset_filled_data.csv')
+X_train,X_val,X_test,y_train,y_val,y_test=get_training_test_set(df)
 train_SVC(X_train,Y_train)
 Y_pred=predict_health_score(X_test)
 eval_dict=get_eval_metrics(Y_test,Y_pred)
