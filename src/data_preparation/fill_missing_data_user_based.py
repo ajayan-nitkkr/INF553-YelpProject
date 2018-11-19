@@ -44,6 +44,7 @@ def fill_missing_data(path):
     
 #     total_data_len = len(business_with_missing_data)
     count = 0
+    empty_cols = []
     for _, row in las_vegas_data.iterrows():
         bid = row['business_id']   
         
@@ -53,27 +54,25 @@ def fill_missing_data(path):
             sim_user_count = len(similar_users)
             
             schema = [x.strip() for x in business_missing_cols[bid]]
-            schema = ['accepts_insurance']
-            
+#             schema = ['accepts_insurance', 'alcohol']
+  
             for col in schema:
-                
+        
                 if row[col]!="Null":
                     continue
+                
                 empty = 0
                 for user in similar_users:
+                    user = user.strip()
                     sim_data = las_vegas_data.loc[las_vegas_data['business_id'] == user]
-                    print(sim_data.values)
-                    print(sim_data.columns)
-                    print("hh",sim_data[col],"yyy")
-                    print("dd",sim_data.values,"rr")
-                    if (sim_data[col]!="Null"):
+                    
+                    if (sim_data[col].values[0] !="Null"):
                         pass
                     else:
                         empty+=1
                         
                 if empty ==  sim_user_count:
-                    print("---------------------------------here")
-                    print(col)
+                    empty_cols.append((user, col))
                     continue
         
         

@@ -18,7 +18,11 @@ def construct_dataset():
     # df = df[:100]
     df = df[[schema_obj.COL_RATING,
              schema_obj.COL_RESTAURANTS_PRICE_RANGE2,
-             schema_obj.COL_INSPECTION_GRADE]]
+             schema_obj.COL_INSPECTION_GRADE,
+             schema_obj.COL_REVIEW_COUNT,
+             schema_obj.COL_VIOLATIONS,
+             schema_obj.COL_CURRENT_DEMERITS,
+        schema_obj.COL_INSPECTION_DEMERITS]]
     df[schema_obj.COL_RESTAURANTS_PRICE_RANGE2] = df.apply(categorize_price_as_integer, axis=1)
     df[schema_obj.COL_INSPECTION_GRADE] = df.apply(categorize_grade_with_integer, axis=1)
 
@@ -50,7 +54,11 @@ def categorize_price_as_integer(row):
 def divide_dataset(df):
     schema_obj = FeatureNames()
     X = df[[schema_obj.COL_RATING,
-             schema_obj.COL_RESTAURANTS_PRICE_RANGE2]]
+             schema_obj.COL_RESTAURANTS_PRICE_RANGE2,
+             schema_obj.COL_REVIEW_COUNT,
+             schema_obj.COL_VIOLATIONS,
+             schema_obj.COL_CURRENT_DEMERITS,
+             schema_obj.COL_INSPECTION_DEMERITS]]
     Y = df[[schema_obj.COL_INSPECTION_GRADE]]
 
     # print "Dividing data set into training and test set..."
