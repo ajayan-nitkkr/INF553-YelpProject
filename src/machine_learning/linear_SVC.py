@@ -5,33 +5,95 @@
 
 
 import numpy as np
-from sklearn.svm import SVC
-import pandas as pd
+from sklearn.svm import LinearSVC
+
 import math
 from src.machine_learning.model_save_and_load import *
 from src.machine_learning.split_data_train_test_validation import *
 from src.machine_learning.evaluation_metrics import *
 
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from src.data_schema.feature_names import FeatureNames
+from src.machine_learning.evaluation_metrics import EvaluationMetric
 
-# In[ ]:
 
 
-def read_dataset(filename):
-    df=pd.DataFrame.from_csv(filename)
+def construct_dataset():
+    file = '../../resources/dataset/final_lasvegas_dataset.csv'
+    df = pd.read_csv(file)
+    schema_obj = FeatureNames()
+    # df = df[:100]
+    df = df[[schema_obj.COL_RATING,
+             schema_obj.COL_RESTAURANTS_PRICE_RANGE2,
+             schema_obj.COL_INSPECTION_GRADE]]
+    df[schema_obj.COL_RESTAURANTS_PRICE_RANGE2] = df.apply(categorize_price_as_integer, axis=1)
+    df[schema_obj.COL_INSPECTION_GRADE] = df.apply(categorize_grade_with_integer, axis=1)
+
+    print("Dataset Shape:: ", df.shape)
     return df
 
 
-# In[28]:
+def divide_dataset(df):
+    schema_obj = FeatureNames()
+    X = df[[schema_obj.COL_RATING,
+             schema_obj.COL_RESTAURANTS_PRICE_RANGE2]]
+    Y = df[[schema_obj.COL_INSPECTION_GRADE]]
+
+    # print "Dividing data set into training and test set..."
+    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3)
+
+    positive_count = 0
+    negative_count = 0
+    for i in range(len(y_test.values)):
+        if y_test.values[i][0] == 1:
+            positive_count+=1
+        else:
+            negative_count+=1
+
+    print("Test data Shape:: ", X_test.shape, 'with ', \
+        'Positives =', positive_count, ', Negatives =', negative_count)
+
+    return X_train, X_test, y_train, y_test
+
+
+# def categorize_score_attribute_with_boolean(row):
+#     # attribute_name = 'SCORE'
+#     schema_obj = FeatureNames()
+#     attribute_name = schema_obj.COL_INSPECTION_SCORE
+#
+#     modified_score = None
+#     if row[attribute_name] > 90 and row[attribute_name] <= 100: modified_score = 0
+#     elif row[attribute_name] > 0 and row[attribute_name] <= 90: modified_score = 1
+#     return modified_score
+
+
+def categorize_grade_with_integer(row):
+    schema_obj = FeatureNames()
+    attribute_name = schema_obj.COL_INSPECTION_GRADE
+
+    modified_score = None
+    if row[attribute_name] == 'A' :
+        modified_score = 0
+    else:
+        modified_score = 1
+    return modified_score
+
+
+def categorize_price_as_integer(row):
+    schema_obj = FeatureNames()
+    attribute_name = schema_obj.COL_RESTAURANTS_PRICE_RANGE2
+    modified_price = None
+
+    if row[attribute_name] == "Null": modified_price = -1
+    else: modified_price = int(row[attribute_name])
+    return modified_price
+
 
 
 def get_training_val_test_set(filename):
-    #print(df.columns.values)
     X_train,X_val,X_test,y_train,y_val,y_test=splitData(filename)
     return X_train,X_val,X_test,y_train,y_val,y_test
-
-
-# In[29]:
-
 
 def train_LinearSVC(X_train,Y_train):
     '''
@@ -41,33 +103,38 @@ def train_LinearSVC(X_train,Y_train):
     clf = LinearSVC(random_state=0, tol=1e-5)
     #hinge loss, L2 penalty, do dual=False when n_samples>n_features
     model = clf.fit(X_train, Y_train) 
-    save_model(model,'svc_model.sav')
+    print('Model:', clf)
+    print("Training completed...")
+    return clf
 
 
-# In[30]:
+def predict_testdata(clf, X_test):
+    y_pred = clf.predict(X_test)
+    return y_pred
 
 
-def predict_health_score(X_test):
-    Y_pred=clf.predict([X_test])
-    return Y_pred
+if __name__ == '__main__':
 
+    ########### CONSTRUCT DATA SET ############
+    df = construct_dataset()
+    ###########################################
 
-# In[31]:
+    ############# DATA SLICING ################
+    X_train, X_test, y_train, y_test = divide_dataset(df)
+    # print(X_train,X_test,y_train,y_test)
+    ###########################################
 
+    ################ TRAINING #################
+    clf = train_LinearSVC(X_train, y_train)
+    ###########################################
 
-def get_eval_metrics(Y_test,Y_pred):
-    #Use Ajay's API
-    eval_obj=EvaluationMetric()
-    eval_dict=eval_obj.get_evaluation_metrics(Y_test, Y_pred)
-    return eval_dict
+    ################ PREDICTION ###############
+    y_pred = predict_testdata(clf, X_test)
+    ###########################################
 
-
-# In[32]:
-
-
-df=read_dataset('final_lasvegas_dataset_filled_data.csv')
-X_train,X_val,X_test,y_train,y_val,y_test=get_training_test_set(df)
-train_SVC(X_train,Y_train)
-Y_pred=predict_health_score(X_test)
-eval_dict=get_eval_metrics(Y_test,Y_pred)
-
+    ################ ACCURACY #################
+    evaluation_metric = EvaluationMetric()
+    # confusion_matrix = confusion_matrix(y_test.values, y_pred)
+    result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
+    print(result)
+    ###########################################
