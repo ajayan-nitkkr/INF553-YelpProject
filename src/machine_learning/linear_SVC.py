@@ -8,9 +8,9 @@ import numpy as np
 from sklearn.svm import SVC
 import pandas as pd
 import math
-from INF553_YelpProject.src.machine_learning.model_save_and_load import *
-from INF553_YelpProject.src.machine_learning.split_data_train_test_validation import *
-from INF553_YelpProject.src.machine_learning.evaluation_metrics import *
+from src.machine_learning.model_save_and_load import *
+from src.machine_learning.split_data_train_test_validation import *
+from src.machine_learning.evaluation_metrics import *
 
 
 # In[5]:
