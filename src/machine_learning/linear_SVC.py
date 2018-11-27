@@ -5,13 +5,14 @@
 
 
 import numpy as np
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.svm import LinearSVC
 
 import math
 from src.machine_learning.model_save_and_load import *
 from src.machine_learning.split_data_train_test_validation import *
 from src.machine_learning.evaluation_metrics import *
-
+from src.data_analysis.plot_roc_auc import *
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from src.data_schema.feature_names import FeatureNames
@@ -113,6 +114,10 @@ def predict_testdata(clf, X_test):
     return y_pred
 
 
+def predict_probabilities(svm_clf, X_test):
+    probs = svm_clf.predict_proba(X_test)
+    return probs
+
 if __name__ == '__main__':
 
     ########### CONSTRUCT DATA SET ############
@@ -124,12 +129,27 @@ if __name__ == '__main__':
     # print(X_train,X_test,y_train,y_test)
     ###########################################
 
+
+
     ################ TRAINING #################
-    clf = train_LinearSVC(X_train, y_train)
+    svm = LinearSVC()
+    clf = CalibratedClassifierCV(svm)
+    clf = clf.fit(X_train, y_train)
     ###########################################
 
     ################ PREDICTION ###############
     y_pred = predict_testdata(clf, X_test)
+    ###########################################
+
+    ################ PREDICTION ###############
+    probs = predict_probabilities(clf, X_test)
+    ###########################################
+    new_probs=[]
+    for prob in probs:
+        new_probs.append(max(prob[0],prob[1]))
+    ################ ROC GRAPHS ###############
+    plot_roc(y_test,new_probs)
+    plot_precision_recall(y_test,y_pred,new_probs)
     ###########################################
 
     ################ ACCURACY #################
