@@ -55,7 +55,7 @@ def fill_missing_data(path):
             
             schema = [x.strip() for x in business_missing_cols[bid]]
 #             schema = ['accepts_insurance', 'alcohol']
-  
+            print(schema)
             for col in schema:
         
                 if row[col]!="Null":

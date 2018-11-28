@@ -3,10 +3,12 @@ import pandas as pd
 import numpy as np
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
+from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 from INF553_YelpProject.src.data_schema.feature_names import FeatureNames
 from INF553_YelpProject.src.machine_learning.evaluation_metrics import EvaluationMetric
 from INF553_YelpProject.src.data_analysis.plot_roc_auc import plot_roc, plot_precision_recall
+from INF553_YelpProject.src.machine_learning.split_data_train_test_validation import splitData
 
 #############################
 ########## Ajay's code for getting train and test dataset
@@ -84,8 +86,14 @@ def predict_testdata(model, X_test):
 def run_adaBoost_model():
     
     df = construct_dataset()
-    X_train, X_test, y_train, y_test = divide_dataset(df)
+#     X_train, X_test, y_train, y_test = divide_dataset(df)
     
+    X_train,X_val,X_test,y_train,y_val,y_test = splitData(filename = '../../resources/dataset/final_lasvegas_dataset_v3.csv')
+    
+    min_max_scaler = preprocessing.MinMaxScaler((0,1))
+    X_train = min_max_scaler.fit_transform(X_train)
+    X_test = min_max_scaler.transform(X_test)
+
     adaboost_model = AdaBoostClassifier( DecisionTreeClassifier(max_depth=2), n_estimators = 30, learning_rate=0.1)
     adaboost_model.fit(X_train, np.ravel(y_train))
     
