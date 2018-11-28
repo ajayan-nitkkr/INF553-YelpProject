@@ -113,19 +113,22 @@ def predict_probabilities(svm_clf, X_test):
 if __name__ == '__main__':
 
     ########### CONSTRUCT DATA SET ############
-    df = construct_dataset()
+    #df = construct_dataset()
     ###########################################
 
 
     ############# DATA SLICING ################
-    X_train, X_test, y_train, y_test = divide_dataset(df)
+    #X_train, X_test, y_train, y_test = divide_dataset(df)
     # print(X_train,X_test,y_train,y_test)
     ###########################################
+    X_train,X_val,X_test,y_train,y_val,y_test=splitData(filename='/home/rim/INF553-YelpProject/resources/dataset/final_lasvegas_dataset_v3.csv')
+
 
     min_max_scaler = preprocessing.MinMaxScaler((0,1))
     X_train = min_max_scaler.fit_transform(X_train)
     X_test = min_max_scaler.transform(X_test)
 
+    print(len(X_train),len(X_val),len(X_test))
     ################ TRAINING #################
     svm = LinearSVC()
     clf = CalibratedClassifierCV(svm)
