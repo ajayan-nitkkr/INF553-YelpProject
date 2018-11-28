@@ -4,7 +4,7 @@ import numpy as np
 
 def splitData(filename):
     dataframe = pd.read_csv(filename)
-    X = dataframe.drop(['current_score','inspection_grade','inspection_score'],axis=1)
+    X = dataframe.drop(['inspection_grade'],axis=1)
     y = dataframe[['inspection_grade']]
     y.replace('A',0,inplace=True)
     y.replace('B',1,inplace=True)
