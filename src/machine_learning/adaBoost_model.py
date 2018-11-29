@@ -94,7 +94,7 @@ def run_adaBoost_model():
     X_train = min_max_scaler.fit_transform(X_train)
     X_test = min_max_scaler.transform(X_test)
 
-    adaboost_model = AdaBoostClassifier( DecisionTreeClassifier(max_depth=2), n_estimators = 30, learning_rate=0.1)
+    adaboost_model = AdaBoostClassifier( DecisionTreeClassifier(max_depth=5), n_estimators = 30, learning_rate=0.1)
     adaboost_model.fit(X_train, np.ravel(y_train))
     
     y_pred = predict_testdata(adaboost_model, X_test)
