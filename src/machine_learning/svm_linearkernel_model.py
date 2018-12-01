@@ -129,22 +129,26 @@ if __name__ == '__main__':
     # print(result)
     # ###########################################
 
-    X_train, X_val, X_test, y_train, y_val, y_test = splitData(
-        filename='../../resources/dataset/dataset_alpha_0.07.csv')
-    min_max_scaler = preprocessing.MinMaxScaler((0,1))
-    X_train = min_max_scaler.fit_transform(X_train)
-    X_test = min_max_scaler.transform(X_test)
-    print(len(X_train),len(X_val),len(X_test))
+    alpha_list = [0.01, 0.03, 0.05, 0.07, 0.1, 0.15]
+    file_path = '../../resources/dataset/dataset_alpha_'
+    for alpha in alpha_list:
+        print("alpha:", alpha)
+        X_train, X_val, X_test, y_train, y_val, y_test = splitData(
+            filename= file_path + str(alpha) + '.csv')
+        min_max_scaler = preprocessing.MinMaxScaler((0,1))
+        X_train = min_max_scaler.fit_transform(X_train)
+        X_test = min_max_scaler.transform(X_test)
+        # print(len(X_train),len(X_val),len(X_test))
 
-    svm_clf=svm.SVC(kernel='linear', probability=True)
-    svm_clf.fit(X_train, y_train)
-    y_pred = svm_clf.predict(X_test)
+        svm_clf=svm.SVC(kernel='linear', probability=True)
+        svm_clf.fit(X_train, y_train)
+        y_pred = svm_clf.predict(X_test)
 
-    evaluation_metric = EvaluationMetric()
-    result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
-    print(result)
+        evaluation_metric = EvaluationMetric()
+        result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
+        print(result)
 
-    probs = svm_clf.predict_proba(X_test)
-    probs = probs[:, 1]
-    plot_roc(y_test, probs)
-    plot_precision_recall(y_test, y_pred, probs)
+        # probs = svm_clf.predict_proba(X_test)
+        # probs = probs[:, 1]
+        # plot_roc(y_test, probs)
+        # plot_precision_recall(y_test, y_pred, probs)
