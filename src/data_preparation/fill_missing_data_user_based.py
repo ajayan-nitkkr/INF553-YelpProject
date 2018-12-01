@@ -52,7 +52,7 @@ def get_user_based_data(data):
 
 def fill_missing_data(path):
     
-    las_vegas_data = csvReader(path + "v4_with_business_id.csv")
+    las_vegas_data = csvReader(path + "v4_with_filled_data.csv")
     business_with_sim_data = readText(path+"similar_users_pearson.csv")
     valid_cols = get_valid_cols("../../resources/schema/Final_schema_v4.txt")
     
