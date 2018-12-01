@@ -121,7 +121,7 @@ if __name__ == '__main__':
     #X_train, X_test, y_train, y_test = divide_dataset(df)
     # print(X_train,X_test,y_train,y_test)
     ###########################################
-    X_train,X_val,X_test,y_train,y_val,y_test=splitData(filename='/home/rim/INF553-YelpProject/resources/dataset/final_lasvegas_dataset_v3.csv')
+    X_train,X_val,X_test,y_train,y_val,y_test=splitData(filename='../../resources/dataset/final_lasvegas_dataset_v4.csv')
 
 
     min_max_scaler = preprocessing.MinMaxScaler((0,1))
