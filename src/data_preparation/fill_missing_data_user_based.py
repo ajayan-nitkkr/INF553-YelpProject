@@ -30,7 +30,7 @@ def print_filled_data_analysis(path, data):
     for key in data.keys():
         fout.write(str(key) +" : ")
         for item in data[key]:
-            fout.write("("+ item[0]+", " + str(item[1])+ ")")
+            fout.write("("+ item[0]+", " + str(item[1])+ "), ")
         fout.write("\n")
     
     fout.close()
@@ -64,7 +64,7 @@ def fill_missing_data(path):
     empty_cols = defaultdict(list)
     filled_data_analysis = defaultdict(list)
         
-    for _, row in las_vegas_data.iterrows():
+    for index, row in las_vegas_data.iterrows():
         
         bid = row['business_id']    
         
@@ -103,13 +103,14 @@ def fill_missing_data(path):
                
                 final_data = get_user_based_data(all_sim_data)
                 
-                print(row[col])
-                row[col] = final_data
+#                 row[col] = final_data
+                las_vegas_data.at[index, col] = final_data
                 filled_data_analysis[bid].append((col,final_data))
-                print(bid, str(row[col]))
+                print(bid, col, str(final_data))
                      
         else:
-            continue
+            continue    
+        print()
     
     print(len(las_vegas_data))
     if (len(las_vegas_data)==total_data_len):   
@@ -120,7 +121,7 @@ def fill_missing_data(path):
         
     csvWriter_from_text(empty_cols, path + "empty_columns.csv")
     
-    print_filled_data_analysis(path + "filled_data_analysis.csv", filled_data_analysis)
+    print_filled_data_analysis(path + "filled_data_analysis.txt", filled_data_analysis)
     
     return
 
