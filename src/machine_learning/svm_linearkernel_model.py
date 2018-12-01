@@ -8,8 +8,11 @@ from sklearn.model_selection import train_test_split
 from sklearn import svm
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix
+from sklearn import preprocessing
 from src.data_schema.feature_names import FeatureNames
 from src.machine_learning.evaluation_metrics import EvaluationMetric
+from src.machine_learning.split_data_train_test_validation import splitData
+from src.data_analysis.plot_roc_auc import plot_roc,plot_precision_recall
 
 
 def construct_dataset():
@@ -102,26 +105,46 @@ def predict_testdata(svm_clf, X_test):
 
 if __name__ == '__main__':
 
-    ########### CONSTRUCT DATA SET ############
-    df = construct_dataset()
-    ###########################################
+    # ########### CONSTRUCT DATA SET ############
+    # df = construct_dataset()
+    # ###########################################
+    #
+    # ############# DATA SLICING ################
+    # X_train, X_test, y_train, y_test = divide_dataset(df)
+    # # print(X_train,X_test,y_train,y_test)
+    # ###########################################
+    #
+    # ################ TRAINING #################
+    # svm_clf = training_svm(X_train, y_train)
+    # ###########################################
+    #
+    # ################ PREDICTION ###############
+    # y_pred = predict_testdata(svm_clf, X_test)
+    # ###########################################
+    #
+    # ################ ACCURACY #################
+    # evaluation_metric = EvaluationMetric()
+    # # confusion_matrix = confusion_matrix(y_test.values, y_pred)
+    # result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
+    # print(result)
+    # ###########################################
 
-    ############# DATA SLICING ################
-    X_train, X_test, y_train, y_test = divide_dataset(df)
-    # print(X_train,X_test,y_train,y_test)
-    ###########################################
+    X_train, X_val, X_test, y_train, y_val, y_test = splitData(
+        filename='../../resources/dataset/dataset_alpha_0.07.csv')
+    min_max_scaler = preprocessing.MinMaxScaler((0,1))
+    X_train = min_max_scaler.fit_transform(X_train)
+    X_test = min_max_scaler.transform(X_test)
+    print(len(X_train),len(X_val),len(X_test))
 
-    ################ TRAINING #################
-    svm_clf = training_svm(X_train, y_train)
-    ###########################################
+    svm_clf=svm.SVC(kernel='linear', probability=True)
+    svm_clf.fit(X_train, y_train)
+    y_pred = svm_clf.predict(X_test)
 
-    ################ PREDICTION ###############
-    y_pred = predict_testdata(svm_clf, X_test)
-    ###########################################
-
-    ################ ACCURACY #################
     evaluation_metric = EvaluationMetric()
-    # confusion_matrix = confusion_matrix(y_test.values, y_pred)
     result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
     print(result)
-    ###########################################
+
+    probs = svm_clf.predict_proba(X_test)
+    probs = probs[:, 1]
+    plot_roc(y_test, probs)
+    plot_precision_recall(y_test, y_pred, probs)
