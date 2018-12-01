@@ -1,0 +1,14 @@
+My contribution towards the project were both in dataset preparation and building one of the four machine learning models for classification.
+
+Data Pre-Processing - 
+During the initial stages of the porject, I was involved in pre-processing the yelp_academic_dataset_business.json. I extracted out the columns which were shortlisted as potenital features by the group and defined a standard numeric range for each of them based on the unique values each feature had. I designed a schema for the above task (business.json) which defined the final features and their data types. Goal was to keep numerical/boolean data type. I also perfored  the same operation when new data was added using web scraping.
+
+Data Analysis - 
+I analyzed the Las Vegas dataset to plot a graph between Health Grade v/s Number of Restaurants. Also calculated the percentages for the same. Majority of the restaurants in the dataset received a Grade A which made the data very biased. 
+
+Feature Selection -
+Using the different values of alpha and feature importance coded by Rajdeep, I created separate datasets for each alpha value so that the testing of models and appropriate features can be selected.
+
+Machine Learning -
+To ensure smooth working of machine learning models, I built a utility file which contained the functions of saving a model (pickle format) from main memory to disk after training. It was accompanied by it's converse function to load the model (pickle format) from disk into main memory. For model building, I was responsible to train and tune a Linear SVC Kernel and test it end-to-end.
+
