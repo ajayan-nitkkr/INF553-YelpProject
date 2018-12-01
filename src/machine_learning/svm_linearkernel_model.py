@@ -102,6 +102,12 @@ def predict_testdata(svm_clf, X_test):
     y_pred = svm_clf.predict(X_test)
     return y_pred
 
+def do_feature_selection(X,y,kval):
+    data_chi2_scores = SelectKBest(chi2, k=kval).fit(X, y)
+    selected_feature_indices=data_chi2_scores.get_support(indices=True)
+    chi2_dataset = SelectKBest(mutual_info_classif, k=kval).fit_transform(X, y)
+    return chi2_dataset
+
 
 if __name__ == '__main__':
 
@@ -152,3 +158,34 @@ if __name__ == '__main__':
         # probs = probs[:, 1]
         # plot_roc(y_test, probs)
         # plot_precision_recall(y_test, y_pred, probs)
+
+
+"""
+    ########### CONSTRUCT DATA SET ############
+    df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')
+    X = df.drop(['inspection_grade'], axis=1)
+    y = df[['inspection_grade']]
+    y.replace('A', 0, inplace=True)
+    y.replace('B', 1, inplace=True)
+    y.replace('C', 1, inplace=True)
+    y.replace('D', 1, inplace=True)
+    y.replace('E', 1, inplace=True)
+    min_max_scaler = preprocessing.MinMaxScaler((0, 1))
+    X = min_max_scaler.fit_transform(X)
+
+    op=open('../../resources/Results/mutual_info_linearsvc.txt','w')
+    for k in range(1,X.shape[1]+1):
+        datasetX = do_feature_selection(X, y, k)
+
+
+        ############# DATA SLICING ################
+
+        X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle=True)
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle=True)
+
+        #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
+
+        ###########################################
+
+
+"""
