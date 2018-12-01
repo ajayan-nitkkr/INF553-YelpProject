@@ -59,7 +59,10 @@ def get_cosine_similarity(b1, b2, data):
 
 def find_best_similarity_metrics(path):
     
-    las_vegas_data = csvReader(path + "final_lasvegas_dataset.csv")
+    las_vegas_data = csvReader(path + "final_lasvegas_dataset_v2.csv")
+    
+#     las_vegas_data = csvReader(path + "v4_with_business_id.csv")
+    
     
 #     schema = ['category_name', 'violations', 'current_demerits', 'inspection_demerits', 
 #               'current_score', 'inspection_score', 'current_grade', 'inspection_grade', 
@@ -75,6 +78,21 @@ def find_best_similarity_metrics(path):
     
     schema = ['violations', 'current_demerits', 'inspection_demerits', 
               'current_score', 'inspection_score', 'rating', 'review_count']
+#     
+    
+#     schema = ['violations', 'current_demerits', 'inspection_demerits', 
+#               'rating', 'review_count', 'alcohol', 'ambience', 'byob_corkage', 
+#               'best_nights', 'bike_parking', 'business_accepts_bitcoin', 
+#               'business_accepts_creditcards', 'business_parking', 'caters', 
+#               'coat_check', 'corkage', 'dogs_allowed', 'drive_thru', 'good_for_dancing', 
+#               'good_for_kids', 'good_for_meal', 'happy_hour', 'has_tv', 'music', 
+#               'noise_level', 'open_24_hours', 'outdoor_seating', 'restaurants_attire', 
+#               'restaurants_delivery', 'restaurants_good_for_groups', 'restaurants_price_range2', 
+#               'restaurants_reservations', 'restaurants_table_service', 'restaurants_takeout', 
+#               'smoking', 'wheelchair_accessible', 'wifi', 'accepts_apple_pay', 'accepts_google_pay', 
+#               'good_for', 'has_pool_table', 'waiter_service']
+
+    
     
     business_data = defaultdict(list)
     for _, row in las_vegas_data.iterrows():
@@ -90,7 +108,7 @@ def find_best_similarity_metrics(path):
     
     similar_business_pearson = defaultdict(list)
     similar_business_cosine = defaultdict(list)
-    
+    print(len(las_vegas_data))
     for curr_bid in business_data.keys():
         for new_bid in business_data.keys():
              
@@ -107,7 +125,11 @@ def find_best_similarity_metrics(path):
             if sim_score_c>=0.962 :   ##For Cosine Sim
                 similar_business_cosine[curr_bid].append(new_bid)
 
+    
+    print(len(similar_business_pearson))
+    
     csvWriter_from_text(similar_business_pearson, path+"similar_users_pearson.csv")
+#     csvWriter_from_text(similar_business_pearson, path+"similar_users_pearson_v4.csv")
     csvWriter_from_text(similar_business_cosine, path+"similar_users_cosine.csv")
 
     print_analysis(similar_business_pearson, similar_business_cosine, path+"similar_user_analysis.txt")

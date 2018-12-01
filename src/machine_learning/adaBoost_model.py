@@ -10,11 +10,9 @@ from INF553_YelpProject.src.machine_learning.evaluation_metrics import Evaluatio
 from INF553_YelpProject.src.data_analysis.plot_roc_auc import plot_roc, plot_precision_recall
 from INF553_YelpProject.src.machine_learning.split_data_train_test_validation import splitData
 
-#############################
-########## Ajay's code for getting train and test dataset
-
 def construct_dataset():
-    file = '../../resources/dataset/final_lasvegas_dataset.csv'
+    file = '../../resources/dataset/final_lasvegas_dataset_v4.csv'
+    
     df = pd.read_csv(file)
     schema_obj = FeatureNames()
     # df = df[:100]
@@ -88,7 +86,9 @@ def run_adaBoost_model():
     df = construct_dataset()
 #     X_train, X_test, y_train, y_test = divide_dataset(df)
     
-    X_train,X_val,X_test,y_train,y_val,y_test = splitData(filename = '../../resources/dataset/final_lasvegas_dataset_v3.csv')
+    X_train,X_val,X_test,y_train,y_val,y_test = splitData(filename = '../../resources/dataset/final_lasvegas_dataset_v4.csv')
+    
+#     X_train,X_val,X_test,y_train,y_val,y_test = splitData(filename = '../../resources/dataset/dataset_alpha_0.1.csv')
     
     min_max_scaler = preprocessing.MinMaxScaler((0,1))
     X_train = min_max_scaler.fit_transform(X_train)
