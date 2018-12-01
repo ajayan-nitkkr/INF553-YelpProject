@@ -1,8 +1,11 @@
 
-
+import logging
 import numpy as np
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.svm import LinearSVC
+
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2, f_classif, mutual_info_classif
 
 import math
 from src.machine_learning.model_save_and_load import *
@@ -15,6 +18,8 @@ from src.data_schema.feature_names import FeatureNames
 from src.machine_learning.evaluation_metrics import EvaluationMetric
 from sklearn import preprocessing
 
+logging.disable(logging.WARNING)
+logging.disable(logging.CRITICAL)
 
 def construct_dataset():
     file = '../../resources/dataset/final_lasvegas_dataset.csv'
@@ -111,45 +116,63 @@ def predict_probabilities(svm_clf, X_test):
     probs = svm_clf.predict_proba(X_test)
     return probs
 
+def do_feature_selection(X,y,kval):
+    data_chi2_scores = SelectKBest(chi2, k=kval).fit(X, y)
+    selected_feature_indices=data_chi2_scores.get_support(indices=True)
+    chi2_dataset = SelectKBest(mutual_info_classif, k=kval).fit_transform(X, y)
+    return chi2_dataset
+
 if __name__ == '__main__':
 
     ########### CONSTRUCT DATA SET ############
-    #df = construct_dataset()
-    ###########################################
+    df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')
+    X = df.drop(['inspection_grade'], axis=1)
+    y = df[['inspection_grade']]
+    y.replace('A', 0, inplace=True)
+    y.replace('B', 1, inplace=True)
+    y.replace('C', 1, inplace=True)
+    y.replace('D', 1, inplace=True)
+    y.replace('E', 1, inplace=True)
+    min_max_scaler = preprocessing.MinMaxScaler((0, 1))
+    X = min_max_scaler.fit_transform(X)
+
+    op=open('../../resources/Results/mutual_info_linearsvc.txt','w')
+    for k in range(1,X.shape[1]+1):
+        datasetX = do_feature_selection(X, y, k)
 
 
-    ############# DATA SLICING ################
-    #X_train, X_test, y_train, y_test = divide_dataset(df)
-    # print(X_train,X_test,y_train,y_test)
-    ###########################################
-    X_train,X_val,X_test,y_train,y_val,y_test=splitData(filename='../../resources/dataset/dataset_alpha_0.07.csv')
+        ############# DATA SLICING ################
+
+        X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle=True)
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle=True)
+
+        #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
+
+        ###########################################
 
 
-    min_max_scaler = preprocessing.MinMaxScaler((0,1))
-    X_train = min_max_scaler.fit_transform(X_train)
-    X_test = min_max_scaler.transform(X_test)
+        #print(len(X_train),len(X_val),len(X_test))
+        clf=train_LinearSVC(X_train,y_train)
 
-    print(len(X_train),len(X_val),len(X_test))
-    clf=train_LinearSVC(X_train,y_train)
-
-    ################ PREDICTION ###############
-    y_pred = predict_testdata(clf, X_test)
-    ###########################################
-
-    ################ PREDICTION ###############
-    probs = predict_probabilities(clf, X_test)
-    ###########################################
-    new_probs=[]
-    for prob in probs:
-        new_probs.append(max(prob[0],prob[1]))
-    ################ ROC GRAPHS ###############
-    plot_roc(y_test,new_probs)
-    plot_precision_recall(y_test,y_pred,new_probs)
-    ###########################################
-
-    ################ ACCURACY #################
-    evaluation_metric = EvaluationMetric()
-    # confusion_matrix = confusion_matrix(y_test.values, y_pred)
-    result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
-    print(result)
-    ###########################################
+        ################ PREDICTION ###############
+        y_pred = predict_testdata(clf, X_test)
+        ###########################################
+        """
+        ################ PREDICTION ###############
+        probs = predict_probabilities(clf, X_test)
+        ###########################################
+        new_probs=[]
+        for prob in probs:
+            new_probs.append(max(prob[0],prob[1]))
+        ################ ROC GRAPHS ###############
+        plot_roc(y_test,new_probs)
+        plot_precision_recall(y_test,y_pred,new_probs)
+        ###########################################
+        """
+        ################ ACCURACY #################
+        evaluation_metric = EvaluationMetric()
+        # confusion_matrix = confusion_matrix(y_test.values, y_pred)
+        result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
+        ans="For top "+str(k)+" features, the result are "+ str(result)+" \n \n"
+        op.write(ans)
+        ###########################################

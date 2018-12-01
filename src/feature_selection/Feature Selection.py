@@ -1,6 +1,9 @@
 
 from sklearn.feature_selection import VarianceThreshold
 
+from src.machine_learning.split_data_train_test_validation import *
+from sklearn import preprocessing
+
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2, f_classif, mutual_info_classif
 import pandas as pd
@@ -22,6 +25,10 @@ def construct_dataset():
     print("Dataset Shape:: ", df.shape)
     return df
 
+
+def get_training_val_test_set(filename):
+    X_train,X_val,X_test,y_train,y_val,y_test=splitData(filename)
+    return X_train,X_val,X_test,y_train,y_val,y_test
 
 def divide_dataset(df):
     schema_obj = FeatureNames()
@@ -80,19 +87,25 @@ def categorize_price_as_integer(row):
 
 
 if __name__ == '__main__':
+    X_train, X_val, X_test, y_train, y_val, y_test = splitData(
+        filename='../../resources/dataset/final_lasvegas_dataset_v4.csv')
 
-    ########### CONSTRUCT DATA SET ############
-    df = construct_dataset()
-    ###########################################
+    min_max_scaler = preprocessing.MinMaxScaler((0, 1))
+    X_train = min_max_scaler.fit_transform(X_train)
+    X_test = min_max_scaler.transform(X_test)
 
-    ############# DATA SLICING ################
-    X_train, X_test, y_train, y_test = divide_dataset(df)
-    # print(X_train,X_test,y_train,y_test)
-    ###########################################
+    X_new_chi2 = SelectKBest(chi2, k=10).fit(X_train, y_train)
+    print(X_new_chi2.get_support(indices=True))
+    X_new_chi2_data = SelectKBest(chi2, k=10).fit_transform(X_train, y_train)
 
-    
-    X_new = SelectKBest(chi2, k=10).fit_transform(X_train, y_train)
+    '''
+    print(len(X_new_chi2))
 
-    X_new = SelectKBest(f_classif, k=10).fit_transform(X_train, y_train)
+    X_new_f_classif = SelectKBest(f_classif, k=10).fit(X_train, y_train)
+    print(X_new_f_classif.get_support(indices=True))
+    print(type(X_new_f_classif))
 
-    X_new = SelectKBest(mutual_info_classif, k=10).fit_transform(X_train, y_train)
+    X_new_mutual_info = SelectKBest(mutual_info_classif, k=10).fit(X_train, y_train)
+    print(X_new_mutual_info.get_support(indices=True))
+    print(type(X_new_mutual_info))
+    '''

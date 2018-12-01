@@ -1,0 +1,86 @@
+For top 1 features, the result are {'sensitivity': 0.3783783783783784, 'accuracy': 0.70796460176991149, 'specificity': 0.86842105263157898, 'FP': 10, 'f1score': 0.45901639344262296, 'TN': 66, 'FN': 23, 'TP': 14, 'precision': 0.58333333333333337} 
+ 
+For top 2 features, the result are {'sensitivity': 0.3783783783783784, 'accuracy': 0.70796460176991149, 'specificity': 0.86842105263157898, 'FP': 10, 'f1score': 0.45901639344262296, 'TN': 66, 'FN': 23, 'TP': 14, 'precision': 0.58333333333333337} 
+ 
+For top 3 features, the result are {'sensitivity': 0.3783783783783784, 'accuracy': 0.73451327433628322, 'specificity': 0.90789473684210531, 'FP': 7, 'f1score': 0.48275862068965514, 'TN': 69, 'FN': 23, 'TP': 14, 'precision': 0.66666666666666663} 
+ 
+For top 4 features, the result are {'sensitivity': 0.3783783783783784, 'accuracy': 0.72566371681415931, 'specificity': 0.89473684210526316, 'FP': 8, 'f1score': 0.47457627118644069, 'TN': 68, 'FN': 23, 'TP': 14, 'precision': 0.63636363636363635} 
+ 
+For top 5 features, the result are {'sensitivity': 0.3783783783783784, 'accuracy': 0.76106194690265483, 'specificity': 0.94736842105263153, 'FP': 4, 'f1score': 0.50909090909090915, 'TN': 72, 'FN': 23, 'TP': 14, 'precision': 0.77777777777777779} 
+ 
+For top 6 features, the result are {'sensitivity': 0.3783783783783784, 'accuracy': 0.73451327433628322, 'specificity': 0.90789473684210531, 'FP': 7, 'f1score': 0.48275862068965514, 'TN': 69, 'FN': 23, 'TP': 14, 'precision': 0.66666666666666663} 
+ 
+For top 7 features, the result are {'sensitivity': 0.3783783783783784, 'accuracy': 0.76106194690265483, 'specificity': 0.94736842105263153, 'FP': 4, 'f1score': 0.50909090909090915, 'TN': 72, 'FN': 23, 'TP': 14, 'precision': 0.77777777777777779} 
+ 
+For top 8 features, the result are {'sensitivity': 0.35135135135135137, 'accuracy': 0.73451327433628322, 'specificity': 0.92105263157894735, 'FP': 6, 'f1score': 0.4642857142857143, 'TN': 70, 'FN': 24, 'TP': 13, 'precision': 0.68421052631578949} 
+ 
+For top 9 features, the result are {'sensitivity': 0.3783783783783784, 'accuracy': 0.77876106194690264, 'specificity': 0.97368421052631582, 'FP': 2, 'f1score': 0.52830188679245282, 'TN': 74, 'FN': 23, 'TP': 14, 'precision': 0.875} 
+ 
+For top 10 features, the result are {'sensitivity': 0.35135135135135137, 'accuracy': 0.76106194690265483, 'specificity': 0.96052631578947367, 'FP': 3, 'f1score': 0.49056603773584906, 'TN': 73, 'FN': 24, 'TP': 13, 'precision': 0.8125} 
+ 
+For top 11 features, the result are {'sensitivity': 0.40540540540540543, 'accuracy': 0.75221238938053092, 'specificity': 0.92105263157894735, 'FP': 6, 'f1score': 0.51724137931034486, 'TN': 70, 'FN': 22, 'TP': 15, 'precision': 0.7142857142857143} 
+ 
+For top 12 features, the result are {'sensitivity': 0.35135135135135137, 'accuracy': 0.75221238938053092, 'specificity': 0.94736842105263153, 'FP': 4, 'f1score': 0.48148148148148157, 'TN': 72, 'FN': 24, 'TP': 13, 'precision': 0.76470588235294112} 
+ 
+For top 13 features, the result are {'sensitivity': 0.45945945945945948, 'accuracy': 0.78761061946902655, 'specificity': 0.94736842105263153, 'FP': 4, 'f1score': 0.5862068965517242, 'TN': 72, 'FN': 20, 'TP': 17, 'precision': 0.80952380952380953} 
+ 
+For top 14 features, the result are {'sensitivity': 0.35135135135135137, 'accuracy': 0.76106194690265483, 'specificity': 0.96052631578947367, 'FP': 3, 'f1score': 0.49056603773584906, 'TN': 73, 'FN': 24, 'TP': 13, 'precision': 0.8125} 
+ 
+For top 15 features, the result are {'sensitivity': 0.32432432432432434, 'accuracy': 0.72566371681415931, 'specificity': 0.92105263157894735, 'FP': 6, 'f1score': 0.4363636363636364, 'TN': 70, 'FN': 25, 'TP': 12, 'precision': 0.66666666666666663} 
+ 
+For top 16 features, the result are {'sensitivity': 0.40540540540540543, 'accuracy': 0.76991150442477874, 'specificity': 0.94736842105263153, 'FP': 4, 'f1score': 0.5357142857142857, 'TN': 72, 'FN': 22, 'TP': 15, 'precision': 0.78947368421052633} 
+ 
+For top 17 features, the result are {'sensitivity': 0.3783783783783784, 'accuracy': 0.77876106194690264, 'specificity': 0.97368421052631582, 'FP': 2, 'f1score': 0.52830188679245282, 'TN': 74, 'FN': 23, 'TP': 14, 'precision': 0.875} 
+ 
+For top 18 features, the result are {'sensitivity': 0.35135135135135137, 'accuracy': 0.7168141592920354, 'specificity': 0.89473684210526316, 'FP': 8, 'f1score': 0.44827586206896558, 'TN': 68, 'FN': 24, 'TP': 13, 'precision': 0.61904761904761907} 
+ 
+For top 19 features, the result are {'sensitivity': 0.35135135135135137, 'accuracy': 0.76991150442477874, 'specificity': 0.97368421052631582, 'FP': 2, 'f1score': 0.50000000000000011, 'TN': 74, 'FN': 24, 'TP': 13, 'precision': 0.8666666666666667} 
+ 
+For top 20 features, the result are {'sensitivity': 0.32432432432432434, 'accuracy': 0.76106194690265483, 'specificity': 0.97368421052631582, 'FP': 2, 'f1score': 0.4705882352941177, 'TN': 74, 'FN': 25, 'TP': 12, 'precision': 0.8571428571428571} 
+ 
+For top 21 features, the result are {'sensitivity': 0.29729729729729731, 'accuracy': 0.75221238938053092, 'specificity': 0.97368421052631582, 'FP': 2, 'f1score': 0.44000000000000006, 'TN': 74, 'FN': 26, 'TP': 11, 'precision': 0.84615384615384615} 
+ 
+For top 22 features, the result are {'sensitivity': 0.32432432432432434, 'accuracy': 0.76106194690265483, 'specificity': 0.97368421052631582, 'FP': 2, 'f1score': 0.4705882352941177, 'TN': 74, 'FN': 25, 'TP': 12, 'precision': 0.8571428571428571} 
+ 
+For top 23 features, the result are {'sensitivity': 0.35135135135135137, 'accuracy': 0.77876106194690264, 'specificity': 0.98684210526315785, 'FP': 1, 'f1score': 0.50980392156862753, 'TN': 75, 'FN': 24, 'TP': 13, 'precision': 0.9285714285714286} 
+ 
+For top 24 features, the result are {'sensitivity': 0.29729729729729731, 'accuracy': 0.76106194690265483, 'specificity': 0.98684210526315785, 'FP': 1, 'f1score': 0.44897959183673469, 'TN': 75, 'FN': 26, 'TP': 11, 'precision': 0.91666666666666663} 
+ 
+For top 25 features, the result are {'sensitivity': 0.40540540540540543, 'accuracy': 0.77876106194690264, 'specificity': 0.96052631578947367, 'FP': 3, 'f1score': 0.54545454545454553, 'TN': 73, 'FN': 22, 'TP': 15, 'precision': 0.83333333333333337} 
+ 
+For top 26 features, the result are {'sensitivity': 0.40540540540540543, 'accuracy': 0.79646017699115046, 'specificity': 0.98684210526315785, 'FP': 1, 'f1score': 0.56603773584905659, 'TN': 75, 'FN': 22, 'TP': 15, 'precision': 0.9375} 
+ 
+For top 27 features, the result are {'sensitivity': 0.29729729729729731, 'accuracy': 0.76991150442477874, 'specificity': 1.0, 'FP': 0, 'f1score': 0.45833333333333331, 'TN': 76, 'FN': 26, 'TP': 11, 'precision': 1.0} 
+ 
+For top 28 features, the result are {'sensitivity': 0.35135135135135137, 'accuracy': 0.77876106194690264, 'specificity': 0.98684210526315785, 'FP': 1, 'f1score': 0.50980392156862753, 'TN': 75, 'FN': 24, 'TP': 13, 'precision': 0.9285714285714286} 
+ 
+For top 29 features, the result are {'sensitivity': 0.3783783783783784, 'accuracy': 0.78761061946902655, 'specificity': 0.98684210526315785, 'FP': 1, 'f1score': 0.53846153846153855, 'TN': 75, 'FN': 23, 'TP': 14, 'precision': 0.93333333333333335} 
+ 
+For top 30 features, the result are {'sensitivity': 0.29729729729729731, 'accuracy': 0.76991150442477874, 'specificity': 1.0, 'FP': 0, 'f1score': 0.45833333333333331, 'TN': 76, 'FN': 26, 'TP': 11, 'precision': 1.0} 
+ 
+For top 31 features, the result are {'sensitivity': 0.29729729729729731, 'accuracy': 0.76991150442477874, 'specificity': 1.0, 'FP': 0, 'f1score': 0.45833333333333331, 'TN': 76, 'FN': 26, 'TP': 11, 'precision': 1.0} 
+ 
+For top 32 features, the result are {'sensitivity': 0.32432432432432434, 'accuracy': 0.77876106194690264, 'specificity': 1.0, 'FP': 0, 'f1score': 0.48979591836734698, 'TN': 76, 'FN': 25, 'TP': 12, 'precision': 1.0} 
+ 
+For top 33 features, the result are {'sensitivity': 0.32432432432432434, 'accuracy': 0.77876106194690264, 'specificity': 1.0, 'FP': 0, 'f1score': 0.48979591836734698, 'TN': 76, 'FN': 25, 'TP': 12, 'precision': 1.0} 
+ 
+For top 34 features, the result are {'sensitivity': 0.29729729729729731, 'accuracy': 0.76991150442477874, 'specificity': 1.0, 'FP': 0, 'f1score': 0.45833333333333331, 'TN': 76, 'FN': 26, 'TP': 11, 'precision': 1.0} 
+ 
+For top 35 features, the result are {'sensitivity': 0.35135135135135137, 'accuracy': 0.78761061946902655, 'specificity': 1.0, 'FP': 0, 'f1score': 0.52000000000000002, 'TN': 76, 'FN': 24, 'TP': 13, 'precision': 1.0} 
+ 
+For top 36 features, the result are {'sensitivity': 0.27027027027027029, 'accuracy': 0.75221238938053092, 'specificity': 0.98684210526315785, 'FP': 1, 'f1score': 0.41666666666666669, 'TN': 75, 'FN': 27, 'TP': 10, 'precision': 0.90909090909090906} 
+ 
+For top 37 features, the result are {'sensitivity': 0.27027027027027029, 'accuracy': 0.75221238938053092, 'specificity': 0.98684210526315785, 'FP': 1, 'f1score': 0.41666666666666669, 'TN': 75, 'FN': 27, 'TP': 10, 'precision': 0.90909090909090906} 
+ 
+For top 38 features, the result are {'sensitivity': 0.32432432432432434, 'accuracy': 0.77876106194690264, 'specificity': 1.0, 'FP': 0, 'f1score': 0.48979591836734698, 'TN': 76, 'FN': 25, 'TP': 12, 'precision': 1.0} 
+ 
+For top 39 features, the result are {'sensitivity': 0.32432432432432434, 'accuracy': 0.77876106194690264, 'specificity': 1.0, 'FP': 0, 'f1score': 0.48979591836734698, 'TN': 76, 'FN': 25, 'TP': 12, 'precision': 1.0} 
+ 
+For top 40 features, the result are {'sensitivity': 0.35135135135135137, 'accuracy': 0.78761061946902655, 'specificity': 1.0, 'FP': 0, 'f1score': 0.52000000000000002, 'TN': 76, 'FN': 24, 'TP': 13, 'precision': 1.0} 
+ 
+For top 41 features, the result are {'sensitivity': 0.32432432432432434, 'accuracy': 0.77876106194690264, 'specificity': 1.0, 'FP': 0, 'f1score': 0.48979591836734698, 'TN': 76, 'FN': 25, 'TP': 12, 'precision': 1.0} 
+ 
+For top 42 features, the result are {'sensitivity': 0.32432432432432434, 'accuracy': 0.77876106194690264, 'specificity': 1.0, 'FP': 0, 'f1score': 0.48979591836734698, 'TN': 76, 'FN': 25, 'TP': 12, 'precision': 1.0} 
+ 
+For top 43 features, the result are {'sensitivity': 0.32432432432432434, 'accuracy': 0.77876106194690264, 'specificity': 1.0, 'FP': 0, 'f1score': 0.48979591836734698, 'TN': 76, 'FN': 25, 'TP': 12, 'precision': 1.0} 
+ 
