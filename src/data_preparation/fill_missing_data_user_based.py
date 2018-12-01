@@ -59,7 +59,7 @@ def fill_missing_data(path):
     business_missing_cols = get_schema(path + "business_with_partial_data_lasVegas.csv", valid_cols)
     
     total_data_len = (len(las_vegas_data))
-    print(len(las_vegas_data))
+#     print(len(las_vegas_data))
     
     empty_cols = defaultdict(list)
     filled_data_analysis = defaultdict(list)
@@ -73,9 +73,7 @@ def fill_missing_data(path):
             similar_users = business_with_sim_data[bid]
             sim_user_count = len(similar_users)
              
-            schema = [x.strip() for x in business_missing_cols[bid]]
-#             schema = ['accepts_insurance', 'alcohol']
-            
+            schema = [x.strip() for x in business_missing_cols[bid]]            
             
             for col in schema:
                 all_sim_data = []
@@ -111,7 +109,7 @@ def fill_missing_data(path):
         else:
             continue    
     
-    print(len(las_vegas_data))
+#     print(len(las_vegas_data))
     if (len(las_vegas_data)==total_data_len):   
         csvWriter(path + "v4_with_filled_data.csv", las_vegas_data)
     
