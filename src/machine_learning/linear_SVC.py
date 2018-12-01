@@ -93,7 +93,8 @@ def train_LinearSVC(X_train,Y_train):
     Similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has more flexibility in the choice of penalties and loss functions and should scale better to large numbers of samples.
     This class supports both dense and sparse input and the multiclass support is handled according to a one-vs-the-rest scheme.
     '''
-    clf = LinearSVC(random_state=0, tol=1e-5)
+    clf = LinearSVC(random_state=None, tol=1e-5, penalty="l2",class_weight="balanced",max_iter=15)
+    clf = CalibratedClassifierCV(clf)
     #hinge loss, L2 penalty, do dual=False when n_samples>n_features
     model = clf.fit(X_train, Y_train) 
     print('Model:', clf)
@@ -121,7 +122,7 @@ if __name__ == '__main__':
     #X_train, X_test, y_train, y_test = divide_dataset(df)
     # print(X_train,X_test,y_train,y_test)
     ###########################################
-    X_train,X_val,X_test,y_train,y_val,y_test=splitData(filename='../../resources/dataset/final_lasvegas_dataset_v4.csv')
+    X_train,X_val,X_test,y_train,y_val,y_test=splitData(filename='../../resources/dataset/dataset_alpha_0.07.csv')
 
 
     min_max_scaler = preprocessing.MinMaxScaler((0,1))
@@ -129,11 +130,7 @@ if __name__ == '__main__':
     X_test = min_max_scaler.transform(X_test)
 
     print(len(X_train),len(X_val),len(X_test))
-    ################ TRAINING #################
-    svm = LinearSVC()
-    clf = CalibratedClassifierCV(svm)
-    clf = clf.fit(X_train, y_train)
-    ###########################################
+    clf=train_LinearSVC(X_train,y_train)
 
     ################ PREDICTION ###############
     y_pred = predict_testdata(clf, X_test)
