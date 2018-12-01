@@ -101,11 +101,12 @@ def fill_missing_data(path):
                     empty_cols[user].append(col)
                     continue
                
-                final_data = get_user_based_data(all_sim_data[col])
-            
+                final_data = get_user_based_data(all_sim_data)
+                
+                print(row[col])
                 row[col] = final_data
                 filled_data_analysis[bid].append((col,final_data))
-            
+                print(bid, str(row[col]))
                      
         else:
             continue
