@@ -106,11 +106,10 @@ def fill_missing_data(path):
 #                 row[col] = final_data
                 las_vegas_data.at[index, col] = final_data
                 filled_data_analysis[bid].append((col,final_data))
-                print(bid, col, str(final_data))
+#                 print(bid, col, str(final_data))
                      
         else:
             continue    
-        print()
     
     print(len(las_vegas_data))
     if (len(las_vegas_data)==total_data_len):   
