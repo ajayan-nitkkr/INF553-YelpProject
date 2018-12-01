@@ -3,7 +3,7 @@ Appendix:
 The version management and source code was maintained through GIT. The source code and the preprocced dataset used are available at:
 https://github.com/devership16/INF553-YelpProject
 
-Individual Contributions towards then project:
+Individual Contributions towards the project:
 
 1. Ajay Anand(USC ID: ):
 	-
