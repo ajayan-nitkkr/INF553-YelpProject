@@ -78,6 +78,7 @@ def fill_missing_data(path):
             for col in schema:
                 all_sim_data = []
                 final_data = row[col]
+                
                 if row[col] != -1:
                     continue
                  

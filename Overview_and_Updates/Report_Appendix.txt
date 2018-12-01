@@ -1,5 +1,4 @@
 Appendix:
-
 The version management and source code was maintained through GIT. The source code and the preprocced dataset used are available at:
 https://github.com/devership16/INF553-YelpProject
 
