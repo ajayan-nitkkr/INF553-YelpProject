@@ -5,10 +5,16 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
-from INF553_YelpProject.src.data_schema.feature_names import FeatureNames
-from INF553_YelpProject.src.machine_learning.evaluation_metrics import EvaluationMetric
-from INF553_YelpProject.src.data_analysis.plot_roc_auc import plot_roc, plot_precision_recall
-from INF553_YelpProject.src.machine_learning.split_data_train_test_validation import splitData
+from src.data_schema.feature_names import FeatureNames
+from src.machine_learning.evaluation_metrics import EvaluationMetric
+from src.data_analysis.plot_roc_auc import plot_roc, plot_precision_recall
+from src.machine_learning.split_data_train_test_validation import splitData
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2, f_classif, mutual_info_classif
+
+import logging
+logging.disable(logging.WARNING)
+logging.disable(logging.CRITICAL)
 
 def construct_dataset():
     file = '../../resources/dataset/final_lasvegas_dataset_v4.csv'
@@ -81,8 +87,15 @@ def predict_testdata(model, X_test):
     y_pred = model.predict(X_test)
     return y_pred
 
+def do_feature_selection(X,y,kval):
+    data_chi2_scores = SelectKBest(chi2, k=kval).fit(X, y)
+    selected_feature_indices=data_chi2_scores.get_support(indices=True)
+    chi2_dataset = SelectKBest(chi2, k=kval).fit_transform(X, y)
+    return chi2_dataset
+
+
 def run_adaBoost_model():
-    
+    """
     df = construct_dataset()
 #     X_train, X_test, y_train, y_test = divide_dataset(df)
     
@@ -112,6 +125,43 @@ def run_adaBoost_model():
 #     plot_roc(y_test, y_pred)
     
     return
+    """
+    ########## CONSTRUCT DATA SET ############
+    df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')
+    X = df.drop(['inspection_grade'], axis=1)
+    y = df[['inspection_grade']]
+    y.replace('A', 0, inplace=True)
+    y.replace('B', 1, inplace=True)
+    y.replace('C', 1, inplace=True)
+    y.replace('D', 1, inplace=True)
+    y.replace('E', 1, inplace=True)
+    min_max_scaler = preprocessing.MinMaxScaler((0, 1))
+    X = min_max_scaler.fit_transform(X)
+
+    op=open('../../resources/Results/chi2_adaboost.txt','w')
+    for k in range(1,X.shape[1]+1):
+        datasetX = do_feature_selection(X, y, k)
+
+
+        ############# DATA SLICING ################
+
+        X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle=True)
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle=True)
+
+        #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
+
+        ###########################################
+        adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth=5), n_estimators=30, learning_rate=0.1)
+        adaboost_model.fit(X_train, np.ravel(y_train))
+
+        y_pred = predict_testdata(adaboost_model, X_test)
+
+        evaluation_metric = EvaluationMetric()
+
+        result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
+        ans = "For top " + str(k) + " features, the result are " + str(result) + " \n \n"
+        op.write(ans)
+
 
 if __name__=='__main__':   
     
