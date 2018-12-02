@@ -131,8 +131,8 @@ def run_adaBoost_model():
     return
     """
     ########## CONSTRUCT DATA SET ############
-    df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')
-#     df = pd.read_csv('../../resources/dataset/final_v4_with_filled_data.csv')
+#     df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')
+    df = pd.read_csv('../../resources/dataset/final_v4_with_filled_data.csv')
     
     X = df.drop(['inspection_grade'], axis=1)
     y = df[['inspection_grade']]
@@ -148,14 +148,14 @@ def run_adaBoost_model():
     max_depth_ada = 0
     max_n_est = 0
     max_specificity = 0
-    op=open('../../resources/Results/f_classif_adaboost1.txt','w')
+    op=open('../../resources/Results/f_classif_adaboost2.txt','w')
     for k in range(1, X.shape[1]+1):
         
         datasetX = do_feature_selection(X, y, k)
         X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle = False)
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle = False)
 
-        for n_estimator in range(30, 200, 10):
+        for n_estimator in range(20, 200, 10):
 
             for depth in range(1, 10):
                 
@@ -171,7 +171,7 @@ def run_adaBoost_model():
                 #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
         
                 ###########################################
-                adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = depth), n_estimators = n_estimator, learning_rate = 0.1)
+                adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = depth), n_estimators = n_estimator, learning_rate = 1)
                 adaboost_model.fit(X_train, np.ravel(y_train))
         
                 y_pred = predict_testdata(adaboost_model, X_test)
