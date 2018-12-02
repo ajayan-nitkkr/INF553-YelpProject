@@ -131,7 +131,9 @@ def run_adaBoost_model():
     return
     """
     ########## CONSTRUCT DATA SET ############
-    df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')
+#     df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')
+    df = pd.read_csv('../../resources/dataset/final_v4_with_filled_data.csv')
+    
     X = df.drop(['inspection_grade'], axis=1)
     y = df[['inspection_grade']]
     y.replace('A', 0, inplace=True)
@@ -152,12 +154,13 @@ def run_adaBoost_model():
         X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle = False)
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle = False)
 
-        for n_estimator in range(1, 200):
+        for n_estimator in range(30, 200, 10):
 
             for depth in range(1, 10):
                 
                 print("K = " + str(k) +" N = " +str(n_estimator) + " D = "+ str(depth))
-                op.write("Nestimator: " + str(n_estimator)+" Depth: " + str(n_estimator) + "\n")
+                op.write(" K = "+str(k)+" Nestimator: " + str(n_estimator)+" Depth: " + str(depth) + "\n")
+
 #                 datasetX = do_feature_selection(X, y, k)
                 ############# DATA SLICING ################
         
@@ -167,7 +170,7 @@ def run_adaBoost_model():
                 #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
         
                 ###########################################
-                adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = depth), n_estimators = n_estimator, learning_rate = 0.01)
+                adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = depth), n_estimators = n_estimator, learning_rate = 0.1)
                 adaboost_model.fit(X_train, np.ravel(y_train))
         
                 y_pred = predict_testdata(adaboost_model, X_test)
@@ -194,9 +197,9 @@ def run_adaBoost_model():
         #             probs = probs[:, 1]
         #             plot_roc(y_test, probs)
         #             plot_precision_recall(y_test, y_pred, probs)
-        print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score =" + str(f1score))
+        print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score = " + str(f1score))
         
-    print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score =" + str(f1score))
+    print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score = " + str(f1score))
     print("Best Depth = " + str(depth) + " Best Estimator = " + str(n_estimator))
 
     op.close()
