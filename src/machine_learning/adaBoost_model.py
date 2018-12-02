@@ -90,8 +90,10 @@ def predict_testdata(model, X_test):
 def do_feature_selection(X,y,kval):
     
 #     data_chi2_scores = SelectKBest(chi2, k=kval).fit(X, y)
-    data_chi2_scores = SelectKBest(f_classif, k=kval).fit(X, y)
+    data_chi2_scores = SelectKBest(f_classif , k=kval).fit(X, y)
+    
     selected_feature_indices=data_chi2_scores.get_support(indices=True)
+    
     chi2_dataset = SelectKBest(f_classif, k=kval).fit_transform(X, y)
     return chi2_dataset
 
@@ -141,44 +143,64 @@ def run_adaBoost_model():
     X = min_max_scaler.fit_transform(X)
     
     max_recall_f1 = -float('inf') 
-   
+    max_depth_ada = 0
+    max_n_est = 0
     op=open('../../resources/Results/f_classif_adaboost1.txt','w')
     for k in range(1, X.shape[1]+1):
-        datasetX = do_feature_selection(X, y, k)
-
-
-        ############# DATA SLICING ################
-
-        X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle=True)
-        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle=True)
-
-        #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
-
-        ###########################################
-        adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = 5), n_estimators = 35, learning_rate=0.1)
-        adaboost_model.fit(X_train, np.ravel(y_train))
-
-        y_pred = predict_testdata(adaboost_model, X_test)
-
-        evaluation_metric = EvaluationMetric()
-
-        result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
-        ans = "For top " + str(k) + " features, the result are " + str(result) + " \n \n"
-        op.write(ans)
         
-#         if(result['sensitivity']+ result['f1score'] > max_recall_f1):
-        if(result['sensitivity'] > max_recall_f1):
-            
-            max_recall_f1 = result['sensitivity']
-            max_k_val = k
-#         if (k == 7):
-#             print(result)
-#             probs = adaboost_model.predict_proba(X_test)
-#             probs = probs[:, 1]
-#             plot_roc(y_test, probs)
-#             plot_precision_recall(y_test, y_pred, probs)
-    
-    print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1))
+        datasetX = do_feature_selection(X, y, k)
+        X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle = False)
+        X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle = False)
+
+        for n_estimator in range(1, 200):
+
+            for depth in range(1, 10):
+                
+                print("K = " + str(k) +" N = " +str(n_estimator) + " D = "+ str(depth))
+                op.write("Nestimator: " + str(n_estimator)+" Depth: " + str(n_estimator) + "\n")
+#                 datasetX = do_feature_selection(X, y, k)
+                ############# DATA SLICING ################
+        
+#                 X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle = False)
+#                 X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle = False)
+        
+                #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
+        
+                ###########################################
+                adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = depth), n_estimators = n_estimator, learning_rate = 0.01)
+                adaboost_model.fit(X_train, np.ravel(y_train))
+        
+                y_pred = predict_testdata(adaboost_model, X_test)
+        
+                evaluation_metric = EvaluationMetric()
+        
+                result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
+                ans = "For top " + str(k) + " features, the result are " + str(result) + " \n \n"
+                op.write(ans)
+                
+        #         if(result['sensitivity']+ result['f1score'] > max_recall_f1):
+                if(result['sensitivity'] > max_recall_f1):
+                    
+                    max_recall_f1 = result['sensitivity']
+                    max_k_val = k
+                    
+                    f1score = result['f1score']
+                    max_depth_ada = depth
+                    max_n_est = n_estimator
+                    
+        #         if (k == 7):
+        #             print(result)
+        #             probs = adaboost_model.predict_proba(X_test)
+        #             probs = probs[:, 1]
+        #             plot_roc(y_test, probs)
+        #             plot_precision_recall(y_test, y_pred, probs)
+        print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score =" + str(f1score))
+        
+    print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score =" + str(f1score))
+    print("Best Depth = " + str(depth) + " Best Estimator = " + str(n_estimator))
+
+    op.close()
+    return
 
 if __name__=='__main__':   
     
