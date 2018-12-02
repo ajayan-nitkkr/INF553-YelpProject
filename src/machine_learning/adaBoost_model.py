@@ -5,10 +5,10 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
-from src.data_schema.feature_names import FeatureNames
-from src.machine_learning.evaluation_metrics import EvaluationMetric
-from src.data_analysis.plot_roc_auc import plot_roc, plot_precision_recall
-from src.machine_learning.split_data_train_test_validation import splitData
+from INF553_YelpProject.src.data_schema.feature_names import FeatureNames
+from INF553_YelpProject.src.machine_learning.evaluation_metrics import EvaluationMetric
+from INF553_YelpProject.src.data_analysis.plot_roc_auc import plot_roc, plot_precision_recall
+from INF553_YelpProject.src.machine_learning.split_data_train_test_validation import splitData
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2, f_classif, mutual_info_classif
 
