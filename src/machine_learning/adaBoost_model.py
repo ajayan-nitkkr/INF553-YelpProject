@@ -155,7 +155,7 @@ def run_adaBoost_model():
         #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
 
         ###########################################
-        adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = 7), n_estimators=30, learning_rate=0.1)
+        adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = 5), n_estimators = 35, learning_rate=0.1)
         adaboost_model.fit(X_train, np.ravel(y_train))
 
         y_pred = predict_testdata(adaboost_model, X_test)
@@ -178,7 +178,7 @@ def run_adaBoost_model():
 #             plot_roc(y_test, probs)
 #             plot_precision_recall(y_test, y_pred, probs)
     
-    print(max_k_val)
+    print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1))
 
 if __name__=='__main__':   
     
