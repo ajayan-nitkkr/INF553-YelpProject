@@ -105,9 +105,9 @@ def predict_testdata(svm_clf, X_test):
     return y_pred
 
 def do_feature_selection(X,y,kval):
-    data_chi2_scores = SelectKBest(f_classif, k=kval).fit(X, y)
+    data_chi2_scores = SelectKBest(mutual_info_classif, k=kval).fit(X, y)
     selected_feature_indices=data_chi2_scores.get_support(indices=True)
-    chi2_dataset = SelectKBest(f_classif, k=kval).fit_transform(X, y)
+    chi2_dataset = SelectKBest(mutual_info_classif, k=kval).fit_transform(X, y)
     return chi2_dataset
 
 
@@ -176,24 +176,45 @@ if __name__ == '__main__':
     min_max_scaler = preprocessing.MinMaxScaler((0, 1))
     X = min_max_scaler.fit_transform(X)
 
-    op=open('../../resources/Results/f_classif_svm.txt','w')
+    C_list = [0.001, 0.01, 0.1, 1, 10]
+    gamma_list = [0.001, 0.01, 0.1, 1]
+    max_iter_list = [1, 10, 20, 50, 100, 200, 500, 1000]
+
+    op=open('../../resources/Results/mutual_info_classif_svm.txt','w')
+    max_sensitivity = 0
+    max_f1score = 0
+    count = 0
     for k in range(1,X.shape[1]+1):
         datasetX = do_feature_selection(X, y, k)
 
-
         ############# DATA SLICING ################
-
         X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle=False)
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle=False)
 
         #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
-        svm_clf = svm.SVC(kernel='linear', probability=True)
-        svm_clf.fit(X_train, y_train)
-        y_pred = svm_clf.predict(X_test)
-        evaluation_metric = EvaluationMetric()
-        result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
-        ans="For top "+str(k)+" features, the result are "+ str(result)+" \n \n"
-        op.write(ans)
+
+        # svm_clf = svm.SVC(kernel='linear', probability=True)
+        for C in C_list:
+            for gamma in gamma_list:
+                for max_iter in max_iter_list:
+                    count += 1
+                    print(count)
+                    svm_clf = svm.SVC(kernel='linear', probability=True)
+                    svm_clf.fit(X_train, y_train)
+                    y_pred = svm_clf.predict(X_test)
+                    evaluation_metric = EvaluationMetric()
+                    result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
+                    # ans="For top "+str(k)+" features, the result are "+ str(result)+" \n \n"
+                    # op.write(ans)
+                    ans = "For top "+str(k)+" features," + " C:" + str(C) + ", gamma:" + str(gamma) + ", max_iter:" + str(max_iter) + \
+                          ", sensitivity:" + str(result["sensitivity"]) + ", F1 score:" + str(result["f1score"]) + "\n \n"
+                    op.write(ans)
+                    if result["sensitivity"] > max_sensitivity:
+                        max_sensitivity = result["sensitivity"]
+                    if result["f1score"] > max_f1score:
+                        max_f1score = result["f1score"]
+
         ###########################################
 
-
+    print("max_sensitivity:", max_sensitivity)
+    print("max_f1score:", max_f1score)
