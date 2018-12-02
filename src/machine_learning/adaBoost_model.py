@@ -88,9 +88,11 @@ def predict_testdata(model, X_test):
     return y_pred
 
 def do_feature_selection(X,y,kval):
-    data_chi2_scores = SelectKBest(chi2, k=kval).fit(X, y)
+    
+#     data_chi2_scores = SelectKBest(chi2, k=kval).fit(X, y)
+    data_chi2_scores = SelectKBest(f_classif, k=kval).fit(X, y)
     selected_feature_indices=data_chi2_scores.get_support(indices=True)
-    chi2_dataset = SelectKBest(chi2, k=kval).fit_transform(X, y)
+    chi2_dataset = SelectKBest(f_classif, k=kval).fit_transform(X, y)
     return chi2_dataset
 
 
@@ -137,9 +139,11 @@ def run_adaBoost_model():
     y.replace('E', 1, inplace=True)
     min_max_scaler = preprocessing.MinMaxScaler((0, 1))
     X = min_max_scaler.fit_transform(X)
-
-    op=open('../../resources/Results/chi2_adaboost.txt','w')
-    for k in range(1,X.shape[1]+1):
+    
+    max_recall_f1 = -float('inf') 
+   
+    op=open('../../resources/Results/f_classif_adaboost1.txt','w')
+    for k in range(1, X.shape[1]+1):
         datasetX = do_feature_selection(X, y, k)
 
 
@@ -151,7 +155,7 @@ def run_adaBoost_model():
         #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
 
         ###########################################
-        adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth=5), n_estimators=30, learning_rate=0.1)
+        adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = 7), n_estimators=30, learning_rate=0.1)
         adaboost_model.fit(X_train, np.ravel(y_train))
 
         y_pred = predict_testdata(adaboost_model, X_test)
@@ -161,7 +165,20 @@ def run_adaBoost_model():
         result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
         ans = "For top " + str(k) + " features, the result are " + str(result) + " \n \n"
         op.write(ans)
-
+        
+#         if(result['sensitivity']+ result['f1score'] > max_recall_f1):
+        if(result['sensitivity'] > max_recall_f1):
+            
+            max_recall_f1 = result['sensitivity']
+            max_k_val = k
+#         if (k == 7):
+#             print(result)
+#             probs = adaboost_model.predict_proba(X_test)
+#             probs = probs[:, 1]
+#             plot_roc(y_test, probs)
+#             plot_precision_recall(y_test, y_pred, probs)
+    
+    print(max_k_val)
 
 if __name__=='__main__':   
     
