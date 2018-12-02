@@ -147,6 +147,7 @@ def run_adaBoost_model():
     max_recall_f1 = -float('inf') 
     max_depth_ada = 0
     max_n_est = 0
+    max_specificity = 0
     op=open('../../resources/Results/f_classif_adaboost1.txt','w')
     for k in range(1, X.shape[1]+1):
         
@@ -190,6 +191,7 @@ def run_adaBoost_model():
                     f1score = result['f1score']
                     max_depth_ada = depth
                     max_n_est = n_estimator
+                    max_specificity = result['specificity']
                     
         #         if (k == 7):
         #             print(result)
@@ -199,7 +201,7 @@ def run_adaBoost_model():
         #             plot_precision_recall(y_test, y_pred, probs)
         print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score = " + str(f1score))
         
-    print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score = " + str(f1score))
+    print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score = " + str(f1score) + " Specificty = " + str(max_specificity))
     print("Best Depth = " + str(depth) + " Best Estimator = " + str(n_estimator))
 
     op.close()
