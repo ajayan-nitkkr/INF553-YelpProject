@@ -131,8 +131,8 @@ def run_adaBoost_model():
     return
     """
     ########## CONSTRUCT DATA SET ############
-#     df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')
-    df = pd.read_csv('../../resources/dataset/final_v4_with_filled_data.csv')
+    df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')
+#     df = pd.read_csv('../../resources/dataset/final_v4_with_filled_data.csv')
     
     X = df.drop(['inspection_grade'], axis=1)
     y = df[['inspection_grade']]
