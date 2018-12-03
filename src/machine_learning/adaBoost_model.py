@@ -132,7 +132,7 @@ def run_adaBoost_model():
     """
     ########## CONSTRUCT DATA SET ############
 #     df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')
-    df = pd.read_csv('../../resources/dataset/final_v4_with_filled_data.csv')
+    df = pd.read_csv('../../resources/dataset/final_v4_with_filled_data_all.csv')
     
     X = df.drop(['inspection_grade'], axis=1)
     y = df[['inspection_grade']]
@@ -199,10 +199,19 @@ def run_adaBoost_model():
         #             probs = probs[:, 1]
         #             plot_roc(y_test, probs)
         #             plot_precision_recall(y_test, y_pred, probs)
-        print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score = " + str(f1score))
         
-    print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score = " + str(f1score) + " Specificty = " + str(max_specificity))
-    print("Best Depth = " + str(depth) + " Best Estimator = " + str(n_estimator))
+        print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score = " + str(f1score))
+    
+    
+    fout = open("../../resources/Results/AdaBoost_Result", "w", encoding = "utf-8") 
+    
+    fout.write("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1) + " F1 Score = " + str(f1score) + " Specificty = " + str(max_specificity))
+    fout.write("\nBest Depth = " + str(max_depth_ada) + " Best Estimator = " + str(max_n_est))
+
+    fout.close()
+        
+    print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1) + " F1 Score = " + str(f1score) + " Specificty = " + str(max_specificity))
+    print("Best Depth = " + str(max_depth_ada) + " Best Estimator = " + str(max_n_est))
 
     op.close()
     return
