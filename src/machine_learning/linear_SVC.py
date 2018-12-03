@@ -187,7 +187,6 @@ if __name__ == '__main__':
                 op.write(ans)
                 if result["sensitivity"] > max_sensitivity:
                     max_sensitivity = result["sensitivity"]
-                if result["f1score"] > max_f1score:
                     max_f1score = result["f1score"]
 
     print("max_sensitivity:", max_sensitivity)
