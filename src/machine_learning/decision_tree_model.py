@@ -47,10 +47,11 @@ def predict_testdata(svm_clf, X_test):
     return y_pred
 
 def do_feature_selection(X,y,kval):
-    data_chi2_scores = SelectKBest(mutual_info_classif, k=kval).fit(X, y)
-    selected_feature_indices=data_chi2_scores.get_support(indices=True)
-    #print(selected_feature_indices)
-    chi2_dataset = SelectKBest(mutual_info_classif, k=kval).fit_transform(X, y)
+    #data_chi2_scores = SelectKBest(f_classif, k=kval).fit(X, y)
+    #selected_feature_indices=data_chi2_scores.get_support(indices=True)
+    #if kval == 4:
+     #   print(selected_feature_indices)
+    chi2_dataset = SelectKBest(f_classif, k=kval).fit_transform(X, y)
     return chi2_dataset
 
 
@@ -83,7 +84,7 @@ if __name__ == '__main__':
     
     #criterion_list = ['gini','entropy']
 
-    op=open('/Users/apple/IdeaProjects/INF553-YelpProject/resources/Results/mutual_info_classif_decisionTree.txt','w')
+    op=open('/Users/apple/IdeaProjects/INF553-YelpProject/resources/Results/f_classif_decisionTree.txt','w')
     for k in range(1,X.shape[1]+1):
         datasetX = do_feature_selection(X, y, k)
 
@@ -111,7 +112,24 @@ if __name__ == '__main__':
     print("max_sensitivity:", max_sensitivity)
     print("max_f1score:", max_f1score)
     print("max_specificity:", max_specificity)
-        #probs = svm_clf.predict_proba(X_test)
-        #probs = probs[:, 1]
-        #plot_roc(y_test.values, probs)
-        #plot_precision_recall(y_test.values, y_pred, probs)
+    
+    #FINAL TESTING
+    k_best_features = 4
+    datasetX = do_feature_selection(X, y, k_best_features)
+    
+    X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle=False)
+    X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle=False)
+    
+    X_train_final = np.concatenate((X_train,X_test),axis=0)
+    y_train_final = np.concatenate((y_train,y_test),axis=0)
+       
+    dtree = train_DecisionTree(X_train_final, y_train_final)
+    y_pred = predict_testdata(dtree, X_val)
+    evaluation_metric = EvaluationMetric()
+        # confusion_matrix = confusion_matrix(y_test.values, y_pred)
+    result = evaluation_metric.get_evaluation_metrics(y_val.values, y_pred)
+    print(result)
+    probs = dtree.predict_proba(X_val)
+    probs = probs[:, 1]
+    plot_roc(y_val.values, probs)
+    plot_precision_recall(y_val.values, y_pred, probs)
