@@ -16,9 +16,9 @@ from sklearn.feature_selection import chi2, f_classif, mutual_info_classif
 
 
 def do_feature_selection(X,y,kval):
-    data_chi2_scores = SelectKBest(mutual_info_classif, k=kval).fit(X, y)
+    data_chi2_scores = SelectKBest(f_classif, k=kval).fit(X, y)
     selected_feature_indices=data_chi2_scores.get_support(indices=True)
-    chi2_dataset = SelectKBest(mutual_info_classif, k=kval).fit_transform(X, y)
+    chi2_dataset = SelectKBest(f_classif, k=kval).fit_transform(X, y)
     return chi2_dataset
 
 
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     gamma_list = [0.001, 0.01, 0.1, 1]
     max_iter_list = [1, 10, 20, 50, 100, 200, 500, 1000]
 
-    op=open('../../resources/Results/mutual_info_classif_svm.txt','w')
+    op=open('../../resources/Results/f_classif_svm.txt','w')
     max_sensitivity = 0
     max_f1score = 0
     count = 0
@@ -57,7 +57,7 @@ if __name__ == '__main__':
                 for max_iter in max_iter_list:
                     count += 1
                     print(count)
-                    svm_clf = svm.SVC(kernel='linear', probability=True)
+                    svm_clf = svm.SVC(kernel='linear', probability=True, C=C, gamma=gamma, max_iter=max_iter)
                     svm_clf.fit(X_train, y_train)
                     y_pred = svm_clf.predict(X_test)
                     evaluation_metric = EvaluationMetric()
