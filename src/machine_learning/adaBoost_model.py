@@ -67,7 +67,6 @@ def divide_dataset(df):
              schema_obj.COL_INSPECTION_DEMERITS]]
     Y = df[[schema_obj.COL_INSPECTION_GRADE]]
 
-    # print "Dividing data set into training and test set..."
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.3, random_state=62)
 
     positive_count = 0
@@ -77,10 +76,6 @@ def divide_dataset(df):
             positive_count+=1
         else:
             negative_count+=1
-
-#     print("Test data Shape:: ", X_test.shape, 'with ', \
-#         'Positives =', positive_count, ', Negatives =', negative_count)
-
     return X_train, X_test, y_train, y_test
 
 def predict_testdata(model, X_test):
@@ -89,12 +84,11 @@ def predict_testdata(model, X_test):
 
 def do_feature_selection(X,y,kval):
     
-#     data_chi2_scores = SelectKBest(chi2, k=kval).fit(X, y)
-    data_chi2_scores = SelectKBest(f_classif , k=kval).fit(X, y)
+    data_chi2_scores = SelectKBest(chi2 , k=kval).fit(X, y)
     
     selected_feature_indices=data_chi2_scores.get_support(indices=True)
     
-    chi2_dataset = SelectKBest(f_classif, k=kval).fit_transform(X, y)
+    chi2_dataset = SelectKBest(chi2, k=kval).fit_transform(X, y)
     return chi2_dataset
 
 
@@ -148,30 +142,23 @@ def run_adaBoost_model():
     max_depth_ada = 0
     max_n_est = 0
     max_specificity = 0
-    op=open('../../resources/Results/f_classif_adaboost2.txt','w')
+    learning_rate = 1
+    op=open('../../resources/Results/mutual_info_adaboost3.txt','w')
+    
+    hyperparameters = []
     for k in range(1, X.shape[1]+1):
         
         datasetX = do_feature_selection(X, y, k)
         X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle = False)
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle = False)
 
-        for n_estimator in range(20, 200, 10):
+        for n_estimator in range(20, 100, 10):
 
-            for depth in range(1, 10):
+            for depth in range(2, 9):
                 
-                print("K = " + str(k) +" N = " +str(n_estimator) + " D = "+ str(depth))
-                op.write(" K = "+str(k)+" Nestimator: " + str(n_estimator)+" Depth: " + str(depth) + "\n")
-
-#                 datasetX = do_feature_selection(X, y, k)
-                ############# DATA SLICING ################
-        
-#                 X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle = False)
-#                 X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle = False)
-        
-                #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
-        
-                ###########################################
-                adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = depth), n_estimators = n_estimator, learning_rate = 0.1)
+#                 print("K = " + str(k) +" N = " +str(n_estimator) + " D = "+ str(depth))
+                
+                adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = depth), n_estimators = n_estimator, learning_rate = learning_rate)
                 adaboost_model.fit(X_train, np.ravel(y_train))
         
                 y_pred = predict_testdata(adaboost_model, X_test)
@@ -179,12 +166,11 @@ def run_adaBoost_model():
                 evaluation_metric = EvaluationMetric()
         
                 result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
-                ans = "For top " + str(k) + " features, the result are " + str(result) + " \n \n"
-                op.write(ans)
-                
-        #         if(result['sensitivity']+ result['f1score'] > max_recall_f1):
-                if(result['sensitivity'] > max_recall_f1):
-                    
+                ans = "For top " + str(k) + " " + str(depth)+" " + str(n_estimator) + " " + str(learning_rate) + " features, the result are " + str(result['sensitivity']) + " " + str(result['f1score']) +" \n \n"
+#                 op.write(ans)
+
+                if(result['sensitivity'] >= max_recall_f1):
+                        
                     max_recall_f1 = result['sensitivity']
                     max_k_val = k
                     
@@ -192,14 +178,8 @@ def run_adaBoost_model():
                     max_depth_ada = depth
                     max_n_est = n_estimator
                     max_specificity = result['specificity']
+                    op.write(ans)
                     
-        #         if (k == 7):
-        #             print(result)
-        #             probs = adaboost_model.predict_proba(X_test)
-        #             probs = probs[:, 1]
-        #             plot_roc(y_test, probs)
-        #             plot_precision_recall(y_test, y_pred, probs)
-        
         print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score = " + str(f1score))
     
     
@@ -214,11 +194,61 @@ def run_adaBoost_model():
     print("Best Decision Tree Depth = " + str(max_depth_ada) + " Best Estimator = " + str(max_n_est))
 
     op.close()
+    return max_k_val, max_depth_ada, max_n_est, learning_rate
+
+
+def run_final(k, depth, n_est, learning_rate):
+    
+    df = pd.read_csv('../../resources/dataset/final_v4_with_filled_data_all.csv')
+    
+    X = df.drop(['inspection_grade'], axis=1)
+    y = df[['inspection_grade']]
+    y.replace('A', 0, inplace=True)
+    y.replace('B', 1, inplace=True)
+    y.replace('C', 1, inplace=True)
+    y.replace('D', 1, inplace=True)
+    y.replace('E', 1, inplace=True)
+    min_max_scaler = preprocessing.MinMaxScaler((0, 1))
+    X = min_max_scaler.fit_transform(X)
+    
+    datasetX = do_feature_selection(X, y, k)
+    
+    X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle=False)
+    X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle=False)
+    
+    X_train_final = np.concatenate((X_train,X_test),axis=0)
+    y_train_final = np.concatenate((y_train,y_test),axis=0)
+    
+    adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = depth), n_estimators = n_est, learning_rate = learning_rate)
+    adaboost_model.fit(X_train_final, np.ravel(y_train_final))
+        
+    y_pred = predict_testdata(adaboost_model, X_val)
+        
+    evaluation_metric = EvaluationMetric()
+        
+    result = evaluation_metric.get_evaluation_metrics(y_val.values, y_pred)
+    
+    print(result)
+    probs = adaboost_model.predict_proba(X_val)
+    probs = probs[:, 1]
+    
+    plot_roc(y_val, probs)
+    plot_precision_recall(y_val, y_pred, probs)
+
     return
 
 if __name__=='__main__':   
     
     start=time.time()
     
-    run_adaBoost_model() 
+#     k, depth, n_est, learning_rate = run_adaBoost_model() 
+    
+#     k, depth, n_est, learning_rate = 4, 6, 50, 1
+    k, depth, n_est, learning_rate = 35, 2, 70, 1
+#     k, depth, n_est, learning_rate = 26, 2, 60, 1
+    
+    print("\nHyper-Parameters: " + str(k) + " " + str(depth)+" " + str(n_est) + " " + str(learning_rate))
+    
+    run_final(k, depth, n_est, learning_rate)
+    
     print ("\nRun time: "+ str(time.time()-start)+" seconds" )  

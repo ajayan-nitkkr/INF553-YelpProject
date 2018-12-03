@@ -1,0 +1,181 @@
+ K = 1 Nestimator: 20 Depth: 2
+For top 1 features, the result are {'TP': 21, 'TN': 57, 'FP': 15, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.7916666666666666, 'precision': 0.5833333333333334, 'f1score': 0.5454545454545454, 'accuracy': 0.6902654867256637} 
+ 
+ K = 1 Nestimator: 20 Depth: 3
+For top 1 features, the result are {'TP': 22, 'TN': 55, 'FP': 17, 'FN': 19, 'sensitivity': 0.5365853658536586, 'specificity': 0.7638888888888888, 'precision': 0.5641025641025641, 'f1score': 0.55, 'accuracy': 0.6814159292035398} 
+ 
+ K = 1 Nestimator: 20 Depth: 4
+For top 1 features, the result are {'TP': 20, 'TN': 59, 'FP': 13, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.8194444444444444, 'precision': 0.6060606060606061, 'f1score': 0.5405405405405406, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 20 Depth: 5
+For top 1 features, the result are {'TP': 19, 'TN': 60, 'FP': 12, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8333333333333334, 'precision': 0.6129032258064516, 'f1score': 0.5277777777777778, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 20 Depth: 6
+For top 1 features, the result are {'TP': 20, 'TN': 59, 'FP': 13, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.8194444444444444, 'precision': 0.6060606060606061, 'f1score': 0.5405405405405406, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 20 Depth: 7
+For top 1 features, the result are {'TP': 20, 'TN': 56, 'FP': 16, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.7777777777777778, 'precision': 0.5555555555555556, 'f1score': 0.5194805194805195, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 20 Depth: 8
+For top 1 features, the result are {'TP': 19, 'TN': 59, 'FP': 13, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8194444444444444, 'precision': 0.59375, 'f1score': 0.5205479452054794, 'accuracy': 0.6902654867256637} 
+ 
+ K = 1 Nestimator: 20 Depth: 9
+For top 1 features, the result are {'TP': 20, 'TN': 58, 'FP': 14, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.8055555555555556, 'precision': 0.5882352941176471, 'f1score': 0.5333333333333332, 'accuracy': 0.6902654867256637} 
+ 
+ K = 1 Nestimator: 30 Depth: 2
+For top 1 features, the result are {'TP': 21, 'TN': 61, 'FP': 11, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.8472222222222222, 'precision': 0.65625, 'f1score': 0.5753424657534246, 'accuracy': 0.7256637168141593} 
+ 
+ K = 1 Nestimator: 30 Depth: 3
+For top 1 features, the result are {'TP': 21, 'TN': 58, 'FP': 14, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.8055555555555556, 'precision': 0.6, 'f1score': 0.5526315789473684, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 30 Depth: 4
+For top 1 features, the result are {'TP': 21, 'TN': 58, 'FP': 14, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.8055555555555556, 'precision': 0.6, 'f1score': 0.5526315789473684, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 30 Depth: 5
+For top 1 features, the result are {'TP': 19, 'TN': 60, 'FP': 12, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8333333333333334, 'precision': 0.6129032258064516, 'f1score': 0.5277777777777778, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 30 Depth: 6
+For top 1 features, the result are {'TP': 21, 'TN': 55, 'FP': 17, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.7638888888888888, 'precision': 0.5526315789473685, 'f1score': 0.5316455696202531, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 30 Depth: 7
+For top 1 features, the result are {'TP': 20, 'TN': 56, 'FP': 16, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.7777777777777778, 'precision': 0.5555555555555556, 'f1score': 0.5194805194805195, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 30 Depth: 8
+For top 1 features, the result are {'TP': 20, 'TN': 57, 'FP': 15, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.7916666666666666, 'precision': 0.5714285714285714, 'f1score': 0.5263157894736842, 'accuracy': 0.6814159292035398} 
+ 
+ K = 1 Nestimator: 30 Depth: 9
+For top 1 features, the result are {'TP': 19, 'TN': 61, 'FP': 11, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8472222222222222, 'precision': 0.6333333333333333, 'f1score': 0.5352112676056339, 'accuracy': 0.7079646017699115} 
+ 
+ K = 1 Nestimator: 40 Depth: 2
+For top 1 features, the result are {'TP': 21, 'TN': 64, 'FP': 8, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.8888888888888888, 'precision': 0.7241379310344828, 'f1score': 0.6000000000000001, 'accuracy': 0.7522123893805309} 
+ 
+ K = 1 Nestimator: 40 Depth: 3
+For top 1 features, the result are {'TP': 19, 'TN': 58, 'FP': 14, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8055555555555556, 'precision': 0.5757575757575758, 'f1score': 0.5135135135135135, 'accuracy': 0.6814159292035398} 
+ 
+ K = 1 Nestimator: 40 Depth: 4
+For top 1 features, the result are {'TP': 21, 'TN': 58, 'FP': 14, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.8055555555555556, 'precision': 0.6, 'f1score': 0.5526315789473684, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 40 Depth: 5
+For top 1 features, the result are {'TP': 19, 'TN': 60, 'FP': 12, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8333333333333334, 'precision': 0.6129032258064516, 'f1score': 0.5277777777777778, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 40 Depth: 6
+For top 1 features, the result are {'TP': 22, 'TN': 54, 'FP': 18, 'FN': 19, 'sensitivity': 0.5365853658536586, 'specificity': 0.75, 'precision': 0.55, 'f1score': 0.54320987654321, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 40 Depth: 7
+For top 1 features, the result are {'TP': 20, 'TN': 56, 'FP': 16, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.7777777777777778, 'precision': 0.5555555555555556, 'f1score': 0.5194805194805195, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 40 Depth: 8
+For top 1 features, the result are {'TP': 19, 'TN': 58, 'FP': 14, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8055555555555556, 'precision': 0.5757575757575758, 'f1score': 0.5135135135135135, 'accuracy': 0.6814159292035398} 
+ 
+ K = 1 Nestimator: 40 Depth: 9
+For top 1 features, the result are {'TP': 19, 'TN': 61, 'FP': 11, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8472222222222222, 'precision': 0.6333333333333333, 'f1score': 0.5352112676056339, 'accuracy': 0.7079646017699115} 
+ 
+ K = 1 Nestimator: 50 Depth: 2
+For top 1 features, the result are {'TP': 22, 'TN': 57, 'FP': 15, 'FN': 19, 'sensitivity': 0.5365853658536586, 'specificity': 0.7916666666666666, 'precision': 0.5945945945945946, 'f1score': 0.5641025641025641, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 50 Depth: 3
+For top 1 features, the result are {'TP': 19, 'TN': 58, 'FP': 14, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8055555555555556, 'precision': 0.5757575757575758, 'f1score': 0.5135135135135135, 'accuracy': 0.6814159292035398} 
+ 
+ K = 1 Nestimator: 50 Depth: 4
+For top 1 features, the result are {'TP': 20, 'TN': 57, 'FP': 15, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.7916666666666666, 'precision': 0.5714285714285714, 'f1score': 0.5263157894736842, 'accuracy': 0.6814159292035398} 
+ 
+ K = 1 Nestimator: 50 Depth: 5
+For top 1 features, the result are {'TP': 19, 'TN': 60, 'FP': 12, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8333333333333334, 'precision': 0.6129032258064516, 'f1score': 0.5277777777777778, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 50 Depth: 6
+For top 1 features, the result are {'TP': 22, 'TN': 54, 'FP': 18, 'FN': 19, 'sensitivity': 0.5365853658536586, 'specificity': 0.75, 'precision': 0.55, 'f1score': 0.54320987654321, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 50 Depth: 7
+For top 1 features, the result are {'TP': 20, 'TN': 56, 'FP': 16, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.7777777777777778, 'precision': 0.5555555555555556, 'f1score': 0.5194805194805195, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 50 Depth: 8
+For top 1 features, the result are {'TP': 19, 'TN': 60, 'FP': 12, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8333333333333334, 'precision': 0.6129032258064516, 'f1score': 0.5277777777777778, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 50 Depth: 9
+For top 1 features, the result are {'TP': 19, 'TN': 61, 'FP': 11, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8472222222222222, 'precision': 0.6333333333333333, 'f1score': 0.5352112676056339, 'accuracy': 0.7079646017699115} 
+ 
+ K = 1 Nestimator: 60 Depth: 2
+For top 1 features, the result are {'TP': 21, 'TN': 61, 'FP': 11, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.8472222222222222, 'precision': 0.65625, 'f1score': 0.5753424657534246, 'accuracy': 0.7256637168141593} 
+ 
+ K = 1 Nestimator: 60 Depth: 3
+For top 1 features, the result are {'TP': 19, 'TN': 56, 'FP': 16, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.7777777777777778, 'precision': 0.5428571428571428, 'f1score': 0.5, 'accuracy': 0.6637168141592921} 
+ 
+ K = 1 Nestimator: 60 Depth: 4
+For top 1 features, the result are {'TP': 20, 'TN': 58, 'FP': 14, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.8055555555555556, 'precision': 0.5882352941176471, 'f1score': 0.5333333333333332, 'accuracy': 0.6902654867256637} 
+ 
+ K = 1 Nestimator: 60 Depth: 5
+For top 1 features, the result are {'TP': 19, 'TN': 59, 'FP': 13, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8194444444444444, 'precision': 0.59375, 'f1score': 0.5205479452054794, 'accuracy': 0.6902654867256637} 
+ 
+ K = 1 Nestimator: 60 Depth: 6
+For top 1 features, the result are {'TP': 22, 'TN': 54, 'FP': 18, 'FN': 19, 'sensitivity': 0.5365853658536586, 'specificity': 0.75, 'precision': 0.55, 'f1score': 0.54320987654321, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 60 Depth: 7
+For top 1 features, the result are {'TP': 19, 'TN': 62, 'FP': 10, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8611111111111112, 'precision': 0.6551724137931034, 'f1score': 0.5428571428571429, 'accuracy': 0.7168141592920354} 
+ 
+ K = 1 Nestimator: 60 Depth: 8
+For top 1 features, the result are {'TP': 19, 'TN': 58, 'FP': 14, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8055555555555556, 'precision': 0.5757575757575758, 'f1score': 0.5135135135135135, 'accuracy': 0.6814159292035398} 
+ 
+ K = 1 Nestimator: 60 Depth: 9
+For top 1 features, the result are {'TP': 19, 'TN': 61, 'FP': 11, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8472222222222222, 'precision': 0.6333333333333333, 'f1score': 0.5352112676056339, 'accuracy': 0.7079646017699115} 
+ 
+ K = 1 Nestimator: 70 Depth: 2
+For top 1 features, the result are {'TP': 19, 'TN': 60, 'FP': 12, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8333333333333334, 'precision': 0.6129032258064516, 'f1score': 0.5277777777777778, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 70 Depth: 3
+For top 1 features, the result are {'TP': 19, 'TN': 57, 'FP': 15, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.7916666666666666, 'precision': 0.5588235294117647, 'f1score': 0.5066666666666667, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 70 Depth: 4
+For top 1 features, the result are {'TP': 21, 'TN': 58, 'FP': 14, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.8055555555555556, 'precision': 0.6, 'f1score': 0.5526315789473684, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 70 Depth: 5
+For top 1 features, the result are {'TP': 20, 'TN': 61, 'FP': 11, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.8472222222222222, 'precision': 0.6451612903225806, 'f1score': 0.5555555555555556, 'accuracy': 0.7168141592920354} 
+ 
+ K = 1 Nestimator: 70 Depth: 6
+For top 1 features, the result are {'TP': 22, 'TN': 54, 'FP': 18, 'FN': 19, 'sensitivity': 0.5365853658536586, 'specificity': 0.75, 'precision': 0.55, 'f1score': 0.54320987654321, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 70 Depth: 7
+For top 1 features, the result are {'TP': 19, 'TN': 62, 'FP': 10, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8611111111111112, 'precision': 0.6551724137931034, 'f1score': 0.5428571428571429, 'accuracy': 0.7168141592920354} 
+ 
+ K = 1 Nestimator: 70 Depth: 8
+For top 1 features, the result are {'TP': 19, 'TN': 58, 'FP': 14, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8055555555555556, 'precision': 0.5757575757575758, 'f1score': 0.5135135135135135, 'accuracy': 0.6814159292035398} 
+ 
+ K = 1 Nestimator: 70 Depth: 9
+For top 1 features, the result are {'TP': 19, 'TN': 61, 'FP': 11, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8472222222222222, 'precision': 0.6333333333333333, 'f1score': 0.5352112676056339, 'accuracy': 0.7079646017699115} 
+ 
+ K = 1 Nestimator: 80 Depth: 2
+For top 1 features, the result are {'TP': 19, 'TN': 56, 'FP': 16, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.7777777777777778, 'precision': 0.5428571428571428, 'f1score': 0.5, 'accuracy': 0.6637168141592921} 
+ 
+ K = 1 Nestimator: 80 Depth: 3
+For top 1 features, the result are {'TP': 19, 'TN': 57, 'FP': 15, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.7916666666666666, 'precision': 0.5588235294117647, 'f1score': 0.5066666666666667, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 80 Depth: 4
+For top 1 features, the result are {'TP': 20, 'TN': 57, 'FP': 15, 'FN': 21, 'sensitivity': 0.4878048780487805, 'specificity': 0.7916666666666666, 'precision': 0.5714285714285714, 'f1score': 0.5263157894736842, 'accuracy': 0.6814159292035398} 
+ 
+ K = 1 Nestimator: 80 Depth: 5
+For top 1 features, the result are {'TP': 19, 'TN': 60, 'FP': 12, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8333333333333334, 'precision': 0.6129032258064516, 'f1score': 0.5277777777777778, 'accuracy': 0.6991150442477876} 
+ 
+ K = 1 Nestimator: 80 Depth: 6
+For top 1 features, the result are {'TP': 22, 'TN': 54, 'FP': 18, 'FN': 19, 'sensitivity': 0.5365853658536586, 'specificity': 0.75, 'precision': 0.55, 'f1score': 0.54320987654321, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 80 Depth: 7
+For top 1 features, the result are {'TP': 19, 'TN': 62, 'FP': 10, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8611111111111112, 'precision': 0.6551724137931034, 'f1score': 0.5428571428571429, 'accuracy': 0.7168141592920354} 
+ 
+ K = 1 Nestimator: 80 Depth: 8
+For top 1 features, the result are {'TP': 19, 'TN': 58, 'FP': 14, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8055555555555556, 'precision': 0.5757575757575758, 'f1score': 0.5135135135135135, 'accuracy': 0.6814159292035398} 
+ 
+ K = 1 Nestimator: 80 Depth: 9
+For top 1 features, the result are {'TP': 19, 'TN': 61, 'FP': 11, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.8472222222222222, 'precision': 0.6333333333333333, 'f1score': 0.5352112676056339, 'accuracy': 0.7079646017699115} 
+ 
+ K = 1 Nestimator: 90 Depth: 2
+For top 1 features, the result are {'TP': 19, 'TN': 57, 'FP': 15, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.7916666666666666, 'precision': 0.5588235294117647, 'f1score': 0.5066666666666667, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 90 Depth: 3
+For top 1 features, the result are {'TP': 19, 'TN': 57, 'FP': 15, 'FN': 22, 'sensitivity': 0.4634146341463415, 'specificity': 0.7916666666666666, 'precision': 0.5588235294117647, 'f1score': 0.5066666666666667, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 90 Depth: 4
+For top 1 features, the result are {'TP': 21, 'TN': 55, 'FP': 17, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.7638888888888888, 'precision': 0.5526315789473685, 'f1score': 0.5316455696202531, 'accuracy': 0.672566371681416} 
+ 
+ K = 1 Nestimator: 90 Depth: 5
+For top 1 features, the result are {'TP': 21, 'TN': 59, 'FP': 13, 'FN': 20, 'sensitivity': 0.5121951219512195, 'specificity': 0.8194444444444444, 'precision': 0.6176470588235294, 'f1score': 0.56, 'accuracy': 0.7079646017699115} 
+ 
+ K = 1 Nestimator: 90 Depth: 6
