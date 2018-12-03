@@ -1,86 +1,3440 @@
-For top 1 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.86111111111111116, 'precision': 0.61538461538461542, 'accuracy': 0.69026548672566368, 'FN': 25, 'f1score': 0.47761194029850756, 'TN': 62, 'TP': 16, 'FP': 10} 
+For top 1 features, C:0.001, max_iter:1, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 2 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.86111111111111116, 'precision': 0.61538461538461542, 'accuracy': 0.69026548672566368, 'FN': 25, 'f1score': 0.47761194029850756, 'TN': 62, 'TP': 16, 'FP': 10} 
+For top 1 features, C:0.001, max_iter:10, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 3 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.86111111111111116, 'precision': 0.61538461538461542, 'accuracy': 0.69026548672566368, 'FN': 25, 'f1score': 0.47761194029850756, 'TN': 62, 'TP': 16, 'FP': 10} 
+For top 1 features, C:0.001, max_iter:20, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 4 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.90277777777777779, 'precision': 0.69565217391304346, 'accuracy': 0.7168141592920354, 'FN': 25, 'f1score': 0.50000000000000011, 'TN': 65, 'TP': 16, 'FP': 7} 
+For top 1 features, C:0.001, max_iter:50, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 5 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.88888888888888884, 'precision': 0.65217391304347827, 'accuracy': 0.69911504424778759, 'FN': 26, 'f1score': 0.46874999999999994, 'TN': 64, 'TP': 15, 'FP': 8} 
+For top 1 features, C:0.001, max_iter:100, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 6 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.88888888888888884, 'precision': 0.66666666666666663, 'accuracy': 0.70796460176991149, 'FN': 25, 'f1score': 0.49230769230769228, 'TN': 64, 'TP': 16, 'FP': 8} 
+For top 1 features, C:0.001, max_iter:200, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 7 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.91666666666666663, 'precision': 0.72727272727272729, 'accuracy': 0.72566371681415931, 'FN': 25, 'f1score': 0.50793650793650791, 'TN': 66, 'TP': 16, 'FP': 6} 
+For top 1 features, C:0.001, max_iter:500, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 8 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.91666666666666663, 'precision': 0.72727272727272729, 'accuracy': 0.72566371681415931, 'FN': 25, 'f1score': 0.50793650793650791, 'TN': 66, 'TP': 16, 'FP': 6} 
+For top 1 features, C:0.001, max_iter:1000, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 9 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.90277777777777779, 'precision': 0.69565217391304346, 'accuracy': 0.7168141592920354, 'FN': 25, 'f1score': 0.50000000000000011, 'TN': 65, 'TP': 16, 'FP': 7} 
+For top 1 features, C:0.01, max_iter:1, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 10 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.91666666666666663, 'precision': 0.72727272727272729, 'accuracy': 0.72566371681415931, 'FN': 25, 'f1score': 0.50793650793650791, 'TN': 66, 'TP': 16, 'FP': 6} 
+For top 1 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 11 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.93055555555555558, 'precision': 0.76190476190476186, 'accuracy': 0.73451327433628322, 'FN': 25, 'f1score': 0.51612903225806461, 'TN': 67, 'TP': 16, 'FP': 5} 
+For top 1 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 12 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.88888888888888884, 'precision': 0.65217391304347827, 'accuracy': 0.69911504424778759, 'FN': 26, 'f1score': 0.46874999999999994, 'TN': 64, 'TP': 15, 'FP': 8} 
+For top 1 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 13 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.90277777777777779, 'precision': 0.68181818181818177, 'accuracy': 0.70796460176991149, 'FN': 26, 'f1score': 0.47619047619047616, 'TN': 65, 'TP': 15, 'FP': 7} 
+For top 1 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 14 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.90277777777777779, 'precision': 0.69565217391304346, 'accuracy': 0.7168141592920354, 'FN': 25, 'f1score': 0.50000000000000011, 'TN': 65, 'TP': 16, 'FP': 7} 
+For top 1 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 15 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.91666666666666663, 'precision': 0.7142857142857143, 'accuracy': 0.7168141592920354, 'FN': 26, 'f1score': 0.4838709677419355, 'TN': 66, 'TP': 15, 'FP': 6} 
+For top 1 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 16 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.90277777777777779, 'precision': 0.68181818181818177, 'accuracy': 0.70796460176991149, 'FN': 26, 'f1score': 0.47619047619047616, 'TN': 65, 'TP': 15, 'FP': 7} 
+For top 1 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 17 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.90277777777777779, 'precision': 0.66666666666666663, 'accuracy': 0.69911504424778759, 'FN': 27, 'f1score': 0.45161290322580649, 'TN': 65, 'TP': 14, 'FP': 7} 
+For top 1 features, C:0.1, max_iter:1, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 18 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.91666666666666663, 'precision': 0.7142857142857143, 'accuracy': 0.7168141592920354, 'FN': 26, 'f1score': 0.4838709677419355, 'TN': 66, 'TP': 15, 'FP': 6} 
+For top 1 features, C:0.1, max_iter:10, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 19 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.91666666666666663, 'precision': 0.69999999999999996, 'accuracy': 0.70796460176991149, 'FN': 27, 'f1score': 0.45901639344262291, 'TN': 66, 'TP': 14, 'FP': 6} 
+For top 1 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 20 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.93055555555555558, 'precision': 0.73684210526315785, 'accuracy': 0.7168141592920354, 'FN': 27, 'f1score': 0.46666666666666673, 'TN': 67, 'TP': 14, 'FP': 5} 
+For top 1 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 21 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.88888888888888884, 'precision': 0.65217391304347827, 'accuracy': 0.69911504424778759, 'FN': 26, 'f1score': 0.46874999999999994, 'TN': 64, 'TP': 15, 'FP': 8} 
+For top 1 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 22 features, the result are {'sensitivity': 0.3902439024390244, 'specificity': 0.90277777777777779, 'precision': 0.69565217391304346, 'accuracy': 0.7168141592920354, 'FN': 25, 'f1score': 0.50000000000000011, 'TN': 65, 'TP': 16, 'FP': 7} 
+For top 1 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 23 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.88888888888888884, 'precision': 0.65217391304347827, 'accuracy': 0.69911504424778759, 'FN': 26, 'f1score': 0.46874999999999994, 'TN': 64, 'TP': 15, 'FP': 8} 
+For top 1 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 24 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.93055555555555558, 'precision': 0.75, 'accuracy': 0.72566371681415931, 'FN': 26, 'f1score': 0.49180327868852469, 'TN': 67, 'TP': 15, 'FP': 5} 
+For top 1 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 25 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.88888888888888884, 'precision': 0.65217391304347827, 'accuracy': 0.69911504424778759, 'FN': 26, 'f1score': 0.46874999999999994, 'TN': 64, 'TP': 15, 'FP': 8} 
+For top 1 features, C:1, max_iter:1, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 26 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.93055555555555558, 'precision': 0.75, 'accuracy': 0.72566371681415931, 'FN': 26, 'f1score': 0.49180327868852469, 'TN': 67, 'TP': 15, 'FP': 5} 
+For top 1 features, C:1, max_iter:10, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 27 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.88888888888888884, 'precision': 0.63636363636363635, 'accuracy': 0.69026548672566368, 'FN': 27, 'f1score': 0.44444444444444448, 'TN': 64, 'TP': 14, 'FP': 8} 
+For top 1 features, C:1, max_iter:20, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 28 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.88888888888888884, 'precision': 0.65217391304347827, 'accuracy': 0.69911504424778759, 'FN': 26, 'f1score': 0.46874999999999994, 'TN': 64, 'TP': 15, 'FP': 8} 
+For top 1 features, C:1, max_iter:50, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 29 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.91666666666666663, 'precision': 0.69999999999999996, 'accuracy': 0.70796460176991149, 'FN': 27, 'f1score': 0.45901639344262291, 'TN': 66, 'TP': 14, 'FP': 6} 
+For top 1 features, C:1, max_iter:100, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 30 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.88888888888888884, 'precision': 0.63636363636363635, 'accuracy': 0.69026548672566368, 'FN': 27, 'f1score': 0.44444444444444448, 'TN': 64, 'TP': 14, 'FP': 8} 
+For top 1 features, C:1, max_iter:200, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 31 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.90277777777777779, 'precision': 0.68181818181818177, 'accuracy': 0.70796460176991149, 'FN': 26, 'f1score': 0.47619047619047616, 'TN': 65, 'TP': 15, 'FP': 7} 
+For top 1 features, C:1, max_iter:500, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 32 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.91666666666666663, 'precision': 0.69999999999999996, 'accuracy': 0.70796460176991149, 'FN': 27, 'f1score': 0.45901639344262291, 'TN': 66, 'TP': 14, 'FP': 6} 
+For top 1 features, C:1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 33 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.90277777777777779, 'precision': 0.66666666666666663, 'accuracy': 0.69911504424778759, 'FN': 27, 'f1score': 0.45161290322580649, 'TN': 65, 'TP': 14, 'FP': 7} 
+For top 1 features, C:10, max_iter:1, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 34 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.94444444444444442, 'precision': 0.77777777777777779, 'accuracy': 0.72566371681415931, 'FN': 27, 'f1score': 0.47457627118644069, 'TN': 68, 'TP': 14, 'FP': 4} 
+For top 1 features, C:10, max_iter:10, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 35 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.90277777777777779, 'precision': 0.66666666666666663, 'accuracy': 0.69911504424778759, 'FN': 27, 'f1score': 0.45161290322580649, 'TN': 65, 'TP': 14, 'FP': 7} 
+For top 1 features, C:10, max_iter:20, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 36 features, the result are {'sensitivity': 0.36585365853658536, 'specificity': 0.91666666666666663, 'precision': 0.7142857142857143, 'accuracy': 0.7168141592920354, 'FN': 26, 'f1score': 0.4838709677419355, 'TN': 66, 'TP': 15, 'FP': 6} 
+For top 1 features, C:10, max_iter:50, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 37 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.91666666666666663, 'precision': 0.69999999999999996, 'accuracy': 0.70796460176991149, 'FN': 27, 'f1score': 0.45901639344262291, 'TN': 66, 'TP': 14, 'FP': 6} 
+For top 1 features, C:10, max_iter:100, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 38 features, the result are {'sensitivity': 0.31707317073170732, 'specificity': 0.94444444444444442, 'precision': 0.76470588235294112, 'accuracy': 0.7168141592920354, 'FN': 28, 'f1score': 0.44827586206896552, 'TN': 68, 'TP': 13, 'FP': 4} 
+For top 1 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 39 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.93055555555555558, 'precision': 0.73684210526315785, 'accuracy': 0.7168141592920354, 'FN': 27, 'f1score': 0.46666666666666673, 'TN': 67, 'TP': 14, 'FP': 5} 
+For top 1 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 40 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.93055555555555558, 'precision': 0.73684210526315785, 'accuracy': 0.7168141592920354, 'FN': 27, 'f1score': 0.46666666666666673, 'TN': 67, 'TP': 14, 'FP': 5} 
+For top 1 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.477611940299
  
-For top 41 features, the result are {'sensitivity': 0.31707317073170732, 'specificity': 0.95833333333333337, 'precision': 0.8125, 'accuracy': 0.72566371681415931, 'FN': 28, 'f1score': 0.45614035087719296, 'TN': 69, 'TP': 13, 'FP': 3} 
+For top 2 features, C:0.001, max_iter:1, sensitivity:0.365853658537, F1 score:0.44776119403
  
-For top 42 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.91666666666666663, 'precision': 0.69999999999999996, 'accuracy': 0.70796460176991149, 'FN': 27, 'f1score': 0.45901639344262291, 'TN': 66, 'TP': 14, 'FP': 6} 
+For top 2 features, C:0.001, max_iter:10, sensitivity:0.365853658537, F1 score:0.44776119403
  
-For top 43 features, the result are {'sensitivity': 0.34146341463414637, 'specificity': 0.91666666666666663, 'precision': 0.69999999999999996, 'accuracy': 0.70796460176991149, 'FN': 27, 'f1score': 0.45901639344262291, 'TN': 66, 'TP': 14, 'FP': 6} 
+For top 2 features, C:0.001, max_iter:20, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.001, max_iter:50, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.001, max_iter:100, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.001, max_iter:200, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.001, max_iter:500, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.001, max_iter:1000, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.01, max_iter:1, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.01, max_iter:10, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.01, max_iter:20, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.01, max_iter:50, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.01, max_iter:100, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.01, max_iter:200, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.01, max_iter:500, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.01, max_iter:1000, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.1, max_iter:1, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:1, max_iter:1, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:1, max_iter:10, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 2 features, C:1, max_iter:20, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 2 features, C:1, max_iter:50, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 2 features, C:1, max_iter:100, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 2 features, C:1, max_iter:200, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 2 features, C:1, max_iter:500, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 2 features, C:1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 2 features, C:10, max_iter:1, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 2 features, C:10, max_iter:10, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 2 features, C:10, max_iter:20, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 2 features, C:10, max_iter:50, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 2 features, C:10, max_iter:100, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 2 features, C:10, max_iter:200, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 2 features, C:10, max_iter:500, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 2 features, C:10, max_iter:1000, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 3 features, C:0.001, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 3 features, C:0.001, max_iter:10, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 3 features, C:0.001, max_iter:20, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 3 features, C:0.001, max_iter:50, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 3 features, C:0.001, max_iter:100, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 3 features, C:0.001, max_iter:200, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 3 features, C:0.001, max_iter:500, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 3 features, C:0.001, max_iter:1000, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 3 features, C:0.01, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 3 features, C:0.01, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 3 features, C:0.01, max_iter:20, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 3 features, C:0.01, max_iter:50, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 3 features, C:0.01, max_iter:100, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 3 features, C:0.01, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 3 features, C:0.01, max_iter:500, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 3 features, C:0.01, max_iter:1000, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 3 features, C:0.1, max_iter:1, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 3 features, C:0.1, max_iter:10, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 3 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 3 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 3 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 3 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 3 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 3 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 3 features, C:1, max_iter:1, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 3 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 3 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 3 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 3 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 3 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 3 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 3 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 3 features, C:10, max_iter:1, sensitivity:0.243902439024, F1 score:0.350877192982
+ 
+For top 3 features, C:10, max_iter:10, sensitivity:0.414634146341, F1 score:0.507462686567
+ 
+For top 3 features, C:10, max_iter:20, sensitivity:0.414634146341, F1 score:0.507462686567
+ 
+For top 3 features, C:10, max_iter:50, sensitivity:0.463414634146, F1 score:0.550724637681
+ 
+For top 3 features, C:10, max_iter:100, sensitivity:0.463414634146, F1 score:0.550724637681
+ 
+For top 3 features, C:10, max_iter:200, sensitivity:0.463414634146, F1 score:0.550724637681
+ 
+For top 3 features, C:10, max_iter:500, sensitivity:0.463414634146, F1 score:0.550724637681
+ 
+For top 3 features, C:10, max_iter:1000, sensitivity:0.463414634146, F1 score:0.550724637681
+ 
+For top 4 features, C:0.001, max_iter:1, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 4 features, C:0.001, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 4 features, C:0.001, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 4 features, C:0.001, max_iter:50, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 4 features, C:0.001, max_iter:100, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 4 features, C:0.001, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 4 features, C:0.001, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 4 features, C:0.001, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 4 features, C:0.01, max_iter:1, sensitivity:0.439024390244, F1 score:0.537313432836
+ 
+For top 4 features, C:0.01, max_iter:10, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 4 features, C:0.01, max_iter:20, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 4 features, C:0.01, max_iter:50, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 4 features, C:0.01, max_iter:100, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 4 features, C:0.01, max_iter:200, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 4 features, C:0.01, max_iter:500, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 4 features, C:0.01, max_iter:1000, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 4 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 4 features, C:0.1, max_iter:10, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 4 features, C:0.1, max_iter:20, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 4 features, C:0.1, max_iter:50, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 4 features, C:0.1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 4 features, C:0.1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 4 features, C:0.1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 4 features, C:0.1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 4 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 4 features, C:1, max_iter:10, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 4 features, C:1, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 4 features, C:1, max_iter:50, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 4 features, C:1, max_iter:100, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 4 features, C:1, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 4 features, C:1, max_iter:500, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 4 features, C:1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 4 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 4 features, C:10, max_iter:10, sensitivity:0.439024390244, F1 score:0.529411764706
+ 
+For top 4 features, C:10, max_iter:20, sensitivity:0.439024390244, F1 score:0.529411764706
+ 
+For top 4 features, C:10, max_iter:50, sensitivity:0.414634146341, F1 score:0.492753623188
+ 
+For top 4 features, C:10, max_iter:100, sensitivity:0.414634146341, F1 score:0.507462686567
+ 
+For top 4 features, C:10, max_iter:200, sensitivity:0.414634146341, F1 score:0.507462686567
+ 
+For top 4 features, C:10, max_iter:500, sensitivity:0.414634146341, F1 score:0.507462686567
+ 
+For top 4 features, C:10, max_iter:1000, sensitivity:0.414634146341, F1 score:0.507462686567
+ 
+For top 5 features, C:0.001, max_iter:1, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 5 features, C:0.001, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 5 features, C:0.001, max_iter:20, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 5 features, C:0.001, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 5 features, C:0.001, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 5 features, C:0.001, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 5 features, C:0.001, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 5 features, C:0.001, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 5 features, C:0.01, max_iter:1, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 5 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 5 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 5 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 5 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 5 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 5 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 5 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 5 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 5 features, C:0.1, max_iter:10, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 5 features, C:0.1, max_iter:20, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 5 features, C:0.1, max_iter:50, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 5 features, C:0.1, max_iter:100, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 5 features, C:0.1, max_iter:200, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 5 features, C:0.1, max_iter:500, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 5 features, C:0.1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 5 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 5 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 5 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 5 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 5 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 5 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 5 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 5 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 5 features, C:10, max_iter:1, sensitivity:0.317073170732, F1 score:0.433333333333
+ 
+For top 5 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 5 features, C:10, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 5 features, C:10, max_iter:50, sensitivity:0.439024390244, F1 score:0.521739130435
+ 
+For top 5 features, C:10, max_iter:100, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 5 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 5 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 5 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 6 features, C:0.001, max_iter:1, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 6 features, C:0.001, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 6 features, C:0.001, max_iter:20, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 6 features, C:0.001, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 6 features, C:0.001, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 6 features, C:0.001, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 6 features, C:0.001, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 6 features, C:0.001, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 6 features, C:0.01, max_iter:1, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 6 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 6 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 6 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 6 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 6 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 6 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 6 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 6 features, C:0.1, max_iter:1, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 6 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 6 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 6 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 6 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 6 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 6 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 6 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 6 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 6 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 6 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 6 features, C:1, max_iter:50, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 6 features, C:1, max_iter:100, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 6 features, C:1, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 6 features, C:1, max_iter:500, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 6 features, C:1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 6 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 6 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 6 features, C:10, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 6 features, C:10, max_iter:50, sensitivity:0.414634146341, F1 score:0.515151515152
+ 
+For top 6 features, C:10, max_iter:100, sensitivity:0.439024390244, F1 score:0.537313432836
+ 
+For top 6 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 6 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 6 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 7 features, C:0.001, max_iter:1, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 7 features, C:0.001, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 7 features, C:0.001, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 7 features, C:0.001, max_iter:50, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 7 features, C:0.001, max_iter:100, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 7 features, C:0.001, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 7 features, C:0.001, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 7 features, C:0.001, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 7 features, C:0.01, max_iter:1, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 7 features, C:0.01, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 7 features, C:0.01, max_iter:20, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 7 features, C:0.01, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 7 features, C:0.01, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 7 features, C:0.01, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 7 features, C:0.01, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 7 features, C:0.01, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 7 features, C:0.1, max_iter:1, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 7 features, C:0.1, max_iter:10, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 7 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 7 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 7 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 7 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 7 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 7 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 7 features, C:1, max_iter:1, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 7 features, C:1, max_iter:10, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 7 features, C:1, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 7 features, C:1, max_iter:50, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 7 features, C:1, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 7 features, C:1, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 7 features, C:1, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 7 features, C:1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 7 features, C:10, max_iter:1, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 7 features, C:10, max_iter:10, sensitivity:0.390243902439, F1 score:0.516129032258
+ 
+For top 7 features, C:10, max_iter:20, sensitivity:0.414634146341, F1 score:0.53125
+ 
+For top 7 features, C:10, max_iter:50, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 7 features, C:10, max_iter:100, sensitivity:0.439024390244, F1 score:0.553846153846
+ 
+For top 7 features, C:10, max_iter:200, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 7 features, C:10, max_iter:500, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 7 features, C:10, max_iter:1000, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 8 features, C:0.001, max_iter:1, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 8 features, C:0.001, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 8 features, C:0.001, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 8 features, C:0.001, max_iter:50, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 8 features, C:0.001, max_iter:100, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 8 features, C:0.001, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 8 features, C:0.001, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 8 features, C:0.001, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 8 features, C:0.01, max_iter:1, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 8 features, C:0.01, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 8 features, C:0.01, max_iter:20, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 8 features, C:0.01, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 8 features, C:0.01, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 8 features, C:0.01, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 8 features, C:0.01, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 8 features, C:0.01, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 8 features, C:0.1, max_iter:1, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 8 features, C:0.1, max_iter:10, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 8 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 8 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 8 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 8 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 8 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 8 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 8 features, C:1, max_iter:1, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 8 features, C:1, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 8 features, C:1, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 8 features, C:1, max_iter:50, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 8 features, C:1, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 8 features, C:1, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 8 features, C:1, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 8 features, C:1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 8 features, C:10, max_iter:1, sensitivity:0.390243902439, F1 score:0.516129032258
+ 
+For top 8 features, C:10, max_iter:10, sensitivity:0.439024390244, F1 score:0.553846153846
+ 
+For top 8 features, C:10, max_iter:20, sensitivity:0.414634146341, F1 score:0.515151515152
+ 
+For top 8 features, C:10, max_iter:50, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 8 features, C:10, max_iter:100, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 8 features, C:10, max_iter:200, sensitivity:0.439024390244, F1 score:0.553846153846
+ 
+For top 8 features, C:10, max_iter:500, sensitivity:0.439024390244, F1 score:0.553846153846
+ 
+For top 8 features, C:10, max_iter:1000, sensitivity:0.439024390244, F1 score:0.553846153846
+ 
+For top 9 features, C:0.001, max_iter:1, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 9 features, C:0.001, max_iter:10, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 9 features, C:0.001, max_iter:20, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 9 features, C:0.001, max_iter:50, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 9 features, C:0.001, max_iter:100, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 9 features, C:0.001, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 9 features, C:0.001, max_iter:500, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 9 features, C:0.001, max_iter:1000, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 9 features, C:0.01, max_iter:1, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 9 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 9 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 9 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 9 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 9 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 9 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 9 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 9 features, C:0.1, max_iter:1, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 9 features, C:0.1, max_iter:10, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 9 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 9 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 9 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 9 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 9 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 9 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 9 features, C:1, max_iter:1, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 9 features, C:1, max_iter:10, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 9 features, C:1, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 9 features, C:1, max_iter:50, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 9 features, C:1, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 9 features, C:1, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 9 features, C:1, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 9 features, C:1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 9 features, C:10, max_iter:1, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 9 features, C:10, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 9 features, C:10, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 9 features, C:10, max_iter:50, sensitivity:0.414634146341, F1 score:0.53125
+ 
+For top 9 features, C:10, max_iter:100, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 9 features, C:10, max_iter:200, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 9 features, C:10, max_iter:500, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 9 features, C:10, max_iter:1000, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 10 features, C:0.001, max_iter:1, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 10 features, C:0.001, max_iter:10, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 10 features, C:0.001, max_iter:20, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 10 features, C:0.001, max_iter:50, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 10 features, C:0.001, max_iter:100, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 10 features, C:0.001, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 10 features, C:0.001, max_iter:500, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 10 features, C:0.001, max_iter:1000, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 10 features, C:0.01, max_iter:1, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 10 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 10 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 10 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 10 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 10 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 10 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 10 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 10 features, C:0.1, max_iter:1, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 10 features, C:0.1, max_iter:10, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 10 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 10 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 10 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 10 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 10 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 10 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 10 features, C:1, max_iter:1, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 10 features, C:1, max_iter:10, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 10 features, C:1, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 10 features, C:1, max_iter:50, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 10 features, C:1, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 10 features, C:1, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 10 features, C:1, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 10 features, C:1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 10 features, C:10, max_iter:1, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 10 features, C:10, max_iter:10, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 10 features, C:10, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 10 features, C:10, max_iter:50, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 10 features, C:10, max_iter:100, sensitivity:0.414634146341, F1 score:0.515151515152
+ 
+For top 10 features, C:10, max_iter:200, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 10 features, C:10, max_iter:500, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 10 features, C:10, max_iter:1000, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 11 features, C:0.001, max_iter:1, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 11 features, C:0.001, max_iter:10, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 11 features, C:0.001, max_iter:20, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 11 features, C:0.001, max_iter:50, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 11 features, C:0.001, max_iter:100, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 11 features, C:0.001, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 11 features, C:0.001, max_iter:500, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 11 features, C:0.001, max_iter:1000, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 11 features, C:0.01, max_iter:1, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 11 features, C:0.01, max_iter:10, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 11 features, C:0.01, max_iter:20, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 11 features, C:0.01, max_iter:50, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 11 features, C:0.01, max_iter:100, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 11 features, C:0.01, max_iter:200, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 11 features, C:0.01, max_iter:500, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 11 features, C:0.01, max_iter:1000, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 11 features, C:0.1, max_iter:1, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 11 features, C:0.1, max_iter:10, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 11 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 11 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 11 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 11 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 11 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 11 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 11 features, C:1, max_iter:1, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 11 features, C:1, max_iter:10, sensitivity:0.390243902439, F1 score:0.516129032258
+ 
+For top 11 features, C:1, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 11 features, C:1, max_iter:50, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 11 features, C:1, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 11 features, C:1, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 11 features, C:1, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 11 features, C:1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 11 features, C:10, max_iter:1, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 11 features, C:10, max_iter:10, sensitivity:0.414634146341, F1 score:0.548387096774
+ 
+For top 11 features, C:10, max_iter:20, sensitivity:0.414634146341, F1 score:0.539682539683
+ 
+For top 11 features, C:10, max_iter:50, sensitivity:0.414634146341, F1 score:0.53125
+ 
+For top 11 features, C:10, max_iter:100, sensitivity:0.414634146341, F1 score:0.523076923077
+ 
+For top 11 features, C:10, max_iter:200, sensitivity:0.414634146341, F1 score:0.523076923077
+ 
+For top 11 features, C:10, max_iter:500, sensitivity:0.414634146341, F1 score:0.523076923077
+ 
+For top 11 features, C:10, max_iter:1000, sensitivity:0.414634146341, F1 score:0.523076923077
+ 
+For top 12 features, C:0.001, max_iter:1, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 12 features, C:0.001, max_iter:10, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 12 features, C:0.001, max_iter:20, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 12 features, C:0.001, max_iter:50, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 12 features, C:0.001, max_iter:100, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 12 features, C:0.001, max_iter:200, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 12 features, C:0.001, max_iter:500, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 12 features, C:0.001, max_iter:1000, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 12 features, C:0.01, max_iter:1, sensitivity:0.439024390244, F1 score:0.507042253521
+ 
+For top 12 features, C:0.01, max_iter:10, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 12 features, C:0.01, max_iter:20, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 12 features, C:0.01, max_iter:50, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 12 features, C:0.01, max_iter:100, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 12 features, C:0.01, max_iter:200, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 12 features, C:0.01, max_iter:500, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 12 features, C:0.01, max_iter:1000, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 12 features, C:0.1, max_iter:1, sensitivity:0.439024390244, F1 score:0.521739130435
+ 
+For top 12 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 12 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 12 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 12 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 12 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 12 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 12 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 12 features, C:1, max_iter:1, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 12 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 12 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 12 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 12 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 12 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 12 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 12 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 12 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 12 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 12 features, C:10, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 12 features, C:10, max_iter:50, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 12 features, C:10, max_iter:100, sensitivity:0.414634146341, F1 score:0.515151515152
+ 
+For top 12 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 12 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 12 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 13 features, C:0.001, max_iter:1, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 13 features, C:0.001, max_iter:10, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 13 features, C:0.001, max_iter:20, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 13 features, C:0.001, max_iter:50, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 13 features, C:0.001, max_iter:100, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 13 features, C:0.001, max_iter:200, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 13 features, C:0.001, max_iter:500, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 13 features, C:0.001, max_iter:1000, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 13 features, C:0.01, max_iter:1, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 13 features, C:0.01, max_iter:10, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 13 features, C:0.01, max_iter:20, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 13 features, C:0.01, max_iter:50, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 13 features, C:0.01, max_iter:100, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 13 features, C:0.01, max_iter:200, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 13 features, C:0.01, max_iter:500, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 13 features, C:0.01, max_iter:1000, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 13 features, C:0.1, max_iter:1, sensitivity:0.463414634146, F1 score:0.535211267606
+ 
+For top 13 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 13 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 13 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 13 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 13 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 13 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 13 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 13 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 13 features, C:1, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 13 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 13 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 13 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 13 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 13 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 13 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 13 features, C:10, max_iter:1, sensitivity:0.439024390244, F1 score:0.521739130435
+ 
+For top 13 features, C:10, max_iter:10, sensitivity:0.414634146341, F1 score:0.53125
+ 
+For top 13 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 13 features, C:10, max_iter:50, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 13 features, C:10, max_iter:100, sensitivity:0.414634146341, F1 score:0.53125
+ 
+For top 13 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 13 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 13 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 14 features, C:0.001, max_iter:1, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 14 features, C:0.001, max_iter:10, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 14 features, C:0.001, max_iter:20, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 14 features, C:0.001, max_iter:50, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 14 features, C:0.001, max_iter:100, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 14 features, C:0.001, max_iter:200, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 14 features, C:0.001, max_iter:500, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 14 features, C:0.001, max_iter:1000, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 14 features, C:0.01, max_iter:1, sensitivity:0.439024390244, F1 score:0.507042253521
+ 
+For top 14 features, C:0.01, max_iter:10, sensitivity:0.463414634146, F1 score:0.513513513514
+ 
+For top 14 features, C:0.01, max_iter:20, sensitivity:0.463414634146, F1 score:0.513513513514
+ 
+For top 14 features, C:0.01, max_iter:50, sensitivity:0.463414634146, F1 score:0.513513513514
+ 
+For top 14 features, C:0.01, max_iter:100, sensitivity:0.463414634146, F1 score:0.513513513514
+ 
+For top 14 features, C:0.01, max_iter:200, sensitivity:0.463414634146, F1 score:0.513513513514
+ 
+For top 14 features, C:0.01, max_iter:500, sensitivity:0.463414634146, F1 score:0.513513513514
+ 
+For top 14 features, C:0.01, max_iter:1000, sensitivity:0.463414634146, F1 score:0.513513513514
+ 
+For top 14 features, C:0.1, max_iter:1, sensitivity:0.439024390244, F1 score:0.507042253521
+ 
+For top 14 features, C:0.1, max_iter:10, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 14 features, C:0.1, max_iter:20, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 14 features, C:0.1, max_iter:50, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 14 features, C:0.1, max_iter:100, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 14 features, C:0.1, max_iter:200, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 14 features, C:0.1, max_iter:500, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 14 features, C:0.1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 14 features, C:1, max_iter:1, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 14 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 14 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 14 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 14 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 14 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 14 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 14 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 14 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.417910447761
+ 
+For top 14 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 14 features, C:10, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 14 features, C:10, max_iter:50, sensitivity:0.414634146341, F1 score:0.539682539683
+ 
+For top 14 features, C:10, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 14 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 14 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 14 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 15 features, C:0.001, max_iter:1, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 15 features, C:0.001, max_iter:10, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 15 features, C:0.001, max_iter:20, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 15 features, C:0.001, max_iter:50, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 15 features, C:0.001, max_iter:100, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 15 features, C:0.001, max_iter:200, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 15 features, C:0.001, max_iter:500, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 15 features, C:0.001, max_iter:1000, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 15 features, C:0.01, max_iter:1, sensitivity:0.463414634146, F1 score:0.520547945205
+ 
+For top 15 features, C:0.01, max_iter:10, sensitivity:0.439024390244, F1 score:0.5
+ 
+For top 15 features, C:0.01, max_iter:20, sensitivity:0.439024390244, F1 score:0.5
+ 
+For top 15 features, C:0.01, max_iter:50, sensitivity:0.439024390244, F1 score:0.5
+ 
+For top 15 features, C:0.01, max_iter:100, sensitivity:0.439024390244, F1 score:0.5
+ 
+For top 15 features, C:0.01, max_iter:200, sensitivity:0.439024390244, F1 score:0.5
+ 
+For top 15 features, C:0.01, max_iter:500, sensitivity:0.439024390244, F1 score:0.5
+ 
+For top 15 features, C:0.01, max_iter:1000, sensitivity:0.439024390244, F1 score:0.5
+ 
+For top 15 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.417910447761
+ 
+For top 15 features, C:0.1, max_iter:10, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 15 features, C:0.1, max_iter:20, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 15 features, C:0.1, max_iter:50, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 15 features, C:0.1, max_iter:100, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 15 features, C:0.1, max_iter:200, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 15 features, C:0.1, max_iter:500, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 15 features, C:0.1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 15 features, C:1, max_iter:1, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 15 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 15 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 15 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 15 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 15 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 15 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 15 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 15 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 15 features, C:10, max_iter:10, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 15 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.5
+ 
+For top 15 features, C:10, max_iter:50, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 15 features, C:10, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 15 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 15 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 15 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 16 features, C:0.001, max_iter:1, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 16 features, C:0.001, max_iter:10, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 16 features, C:0.001, max_iter:20, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 16 features, C:0.001, max_iter:50, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 16 features, C:0.001, max_iter:100, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 16 features, C:0.001, max_iter:200, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 16 features, C:0.001, max_iter:500, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 16 features, C:0.001, max_iter:1000, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 16 features, C:0.01, max_iter:1, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 16 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 16 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 16 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 16 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 16 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 16 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 16 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 16 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.417910447761
+ 
+For top 16 features, C:0.1, max_iter:10, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 16 features, C:0.1, max_iter:20, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 16 features, C:0.1, max_iter:50, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 16 features, C:0.1, max_iter:100, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 16 features, C:0.1, max_iter:200, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 16 features, C:0.1, max_iter:500, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 16 features, C:0.1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 16 features, C:1, max_iter:1, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 16 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 16 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 16 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 16 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 16 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 16 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 16 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 16 features, C:10, max_iter:1, sensitivity:0.414634146341, F1 score:0.492753623188
+ 
+For top 16 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 16 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 16 features, C:10, max_iter:50, sensitivity:0.414634146341, F1 score:0.523076923077
+ 
+For top 16 features, C:10, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 16 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 16 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 16 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 17 features, C:0.001, max_iter:1, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 17 features, C:0.001, max_iter:10, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 17 features, C:0.001, max_iter:20, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 17 features, C:0.001, max_iter:50, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 17 features, C:0.001, max_iter:100, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 17 features, C:0.001, max_iter:200, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 17 features, C:0.001, max_iter:500, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 17 features, C:0.001, max_iter:1000, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 17 features, C:0.01, max_iter:1, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 17 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 17 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 17 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 17 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 17 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 17 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 17 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 17 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 17 features, C:0.1, max_iter:10, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 17 features, C:0.1, max_iter:20, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 17 features, C:0.1, max_iter:50, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 17 features, C:0.1, max_iter:100, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 17 features, C:0.1, max_iter:200, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 17 features, C:0.1, max_iter:500, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 17 features, C:0.1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 17 features, C:1, max_iter:1, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 17 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 17 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 17 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 17 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 17 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 17 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 17 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 17 features, C:10, max_iter:1, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 17 features, C:10, max_iter:10, sensitivity:0.439024390244, F1 score:0.545454545455
+ 
+For top 17 features, C:10, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 17 features, C:10, max_iter:50, sensitivity:0.414634146341, F1 score:0.53125
+ 
+For top 17 features, C:10, max_iter:100, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 17 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 17 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 17 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 18 features, C:0.001, max_iter:1, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 18 features, C:0.001, max_iter:10, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 18 features, C:0.001, max_iter:20, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 18 features, C:0.001, max_iter:50, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 18 features, C:0.001, max_iter:100, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 18 features, C:0.001, max_iter:200, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 18 features, C:0.001, max_iter:500, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 18 features, C:0.001, max_iter:1000, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 18 features, C:0.01, max_iter:1, sensitivity:0.463414634146, F1 score:0.520547945205
+ 
+For top 18 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 18 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 18 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 18 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 18 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 18 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 18 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 18 features, C:0.1, max_iter:1, sensitivity:0.463414634146, F1 score:0.527777777778
+ 
+For top 18 features, C:0.1, max_iter:10, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 18 features, C:0.1, max_iter:20, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 18 features, C:0.1, max_iter:50, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 18 features, C:0.1, max_iter:100, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 18 features, C:0.1, max_iter:200, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 18 features, C:0.1, max_iter:500, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 18 features, C:0.1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 18 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 18 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 18 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 18 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 18 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 18 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 18 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 18 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 18 features, C:10, max_iter:1, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 18 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 18 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 18 features, C:10, max_iter:50, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 18 features, C:10, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 18 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 18 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 18 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 19 features, C:0.001, max_iter:1, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 19 features, C:0.001, max_iter:10, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 19 features, C:0.001, max_iter:20, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 19 features, C:0.001, max_iter:50, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 19 features, C:0.001, max_iter:100, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 19 features, C:0.001, max_iter:200, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 19 features, C:0.001, max_iter:500, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 19 features, C:0.001, max_iter:1000, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 19 features, C:0.01, max_iter:1, sensitivity:0.414634146341, F1 score:0.492753623188
+ 
+For top 19 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 19 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 19 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 19 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 19 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 19 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 19 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.463768115942
+ 
+For top 19 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 19 features, C:0.1, max_iter:10, sensitivity:0.317073170732, F1 score:0.4
+ 
+For top 19 features, C:0.1, max_iter:20, sensitivity:0.317073170732, F1 score:0.4
+ 
+For top 19 features, C:0.1, max_iter:50, sensitivity:0.317073170732, F1 score:0.4
+ 
+For top 19 features, C:0.1, max_iter:100, sensitivity:0.317073170732, F1 score:0.4
+ 
+For top 19 features, C:0.1, max_iter:200, sensitivity:0.317073170732, F1 score:0.4
+ 
+For top 19 features, C:0.1, max_iter:500, sensitivity:0.317073170732, F1 score:0.4
+ 
+For top 19 features, C:0.1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.4
+ 
+For top 19 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 19 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 19 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 19 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 19 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 19 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 19 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 19 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 19 features, C:10, max_iter:1, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 19 features, C:10, max_iter:10, sensitivity:0.390243902439, F1 score:0.524590163934
+ 
+For top 19 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 19 features, C:10, max_iter:50, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 19 features, C:10, max_iter:100, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 19 features, C:10, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 19 features, C:10, max_iter:500, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 19 features, C:10, max_iter:1000, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 20 features, C:0.001, max_iter:1, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 20 features, C:0.001, max_iter:10, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 20 features, C:0.001, max_iter:20, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 20 features, C:0.001, max_iter:50, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 20 features, C:0.001, max_iter:100, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 20 features, C:0.001, max_iter:200, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 20 features, C:0.001, max_iter:500, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 20 features, C:0.001, max_iter:1000, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 20 features, C:0.01, max_iter:1, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 20 features, C:0.01, max_iter:10, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 20 features, C:0.01, max_iter:20, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 20 features, C:0.01, max_iter:50, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 20 features, C:0.01, max_iter:100, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 20 features, C:0.01, max_iter:200, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 20 features, C:0.01, max_iter:500, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 20 features, C:0.01, max_iter:1000, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 20 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 20 features, C:0.1, max_iter:10, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 20 features, C:0.1, max_iter:20, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 20 features, C:0.1, max_iter:50, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 20 features, C:0.1, max_iter:100, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 20 features, C:0.1, max_iter:200, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 20 features, C:0.1, max_iter:500, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 20 features, C:0.1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 20 features, C:1, max_iter:1, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 20 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 20 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 20 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 20 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 20 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 20 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 20 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 20 features, C:10, max_iter:1, sensitivity:0.268292682927, F1 score:0.372881355932
+ 
+For top 20 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 20 features, C:10, max_iter:20, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 20 features, C:10, max_iter:50, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 20 features, C:10, max_iter:100, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 20 features, C:10, max_iter:200, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 20 features, C:10, max_iter:500, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 20 features, C:10, max_iter:1000, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 21 features, C:0.001, max_iter:1, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 21 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 21 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 21 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 21 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 21 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 21 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 21 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 21 features, C:0.01, max_iter:1, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 21 features, C:0.01, max_iter:10, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 21 features, C:0.01, max_iter:20, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 21 features, C:0.01, max_iter:50, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 21 features, C:0.01, max_iter:100, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 21 features, C:0.01, max_iter:200, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 21 features, C:0.01, max_iter:500, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 21 features, C:0.01, max_iter:1000, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 21 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.405797101449
+ 
+For top 21 features, C:0.1, max_iter:10, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 21 features, C:0.1, max_iter:20, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 21 features, C:0.1, max_iter:50, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 21 features, C:0.1, max_iter:100, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 21 features, C:0.1, max_iter:200, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 21 features, C:0.1, max_iter:500, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 21 features, C:0.1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 21 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.405797101449
+ 
+For top 21 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 21 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 21 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 21 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 21 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 21 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 21 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 21 features, C:10, max_iter:1, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 21 features, C:10, max_iter:10, sensitivity:0.390243902439, F1 score:0.524590163934
+ 
+For top 21 features, C:10, max_iter:20, sensitivity:0.390243902439, F1 score:0.524590163934
+ 
+For top 21 features, C:10, max_iter:50, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 21 features, C:10, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 21 features, C:10, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 21 features, C:10, max_iter:500, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 21 features, C:10, max_iter:1000, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 22 features, C:0.001, max_iter:1, sensitivity:0.268292682927, F1 score:0.360655737705
+ 
+For top 22 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 22 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 22 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 22 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 22 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 22 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 22 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 22 features, C:0.01, max_iter:1, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 22 features, C:0.01, max_iter:10, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 22 features, C:0.01, max_iter:20, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 22 features, C:0.01, max_iter:50, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 22 features, C:0.01, max_iter:100, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 22 features, C:0.01, max_iter:200, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 22 features, C:0.01, max_iter:500, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 22 features, C:0.01, max_iter:1000, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 22 features, C:0.1, max_iter:1, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 22 features, C:0.1, max_iter:10, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 22 features, C:0.1, max_iter:20, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 22 features, C:0.1, max_iter:50, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 22 features, C:0.1, max_iter:100, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 22 features, C:0.1, max_iter:200, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 22 features, C:0.1, max_iter:500, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 22 features, C:0.1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 22 features, C:1, max_iter:1, sensitivity:0.317073170732, F1 score:0.4
+ 
+For top 22 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 22 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 22 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 22 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 22 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 22 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 22 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 22 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.417910447761
+ 
+For top 22 features, C:10, max_iter:10, sensitivity:0.414634146341, F1 score:0.515151515152
+ 
+For top 22 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 22 features, C:10, max_iter:50, sensitivity:0.390243902439, F1 score:0.516129032258
+ 
+For top 22 features, C:10, max_iter:100, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 22 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 22 features, C:10, max_iter:500, sensitivity:0.414634146341, F1 score:0.53125
+ 
+For top 22 features, C:10, max_iter:1000, sensitivity:0.414634146341, F1 score:0.53125
+ 
+For top 23 features, C:0.001, max_iter:1, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 23 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 23 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 23 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 23 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 23 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 23 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 23 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 23 features, C:0.01, max_iter:1, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 23 features, C:0.01, max_iter:10, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 23 features, C:0.01, max_iter:20, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 23 features, C:0.01, max_iter:50, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 23 features, C:0.01, max_iter:100, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 23 features, C:0.01, max_iter:200, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 23 features, C:0.01, max_iter:500, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 23 features, C:0.01, max_iter:1000, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 23 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.411764705882
+ 
+For top 23 features, C:0.1, max_iter:10, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 23 features, C:0.1, max_iter:20, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 23 features, C:0.1, max_iter:50, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 23 features, C:0.1, max_iter:100, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 23 features, C:0.1, max_iter:200, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 23 features, C:0.1, max_iter:500, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 23 features, C:0.1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.382352941176
+ 
+For top 23 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.411764705882
+ 
+For top 23 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 23 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 23 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 23 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 23 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 23 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 23 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 23 features, C:10, max_iter:1, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 23 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.5
+ 
+For top 23 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 23 features, C:10, max_iter:50, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 23 features, C:10, max_iter:100, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 23 features, C:10, max_iter:200, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 23 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 23 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 24 features, C:0.001, max_iter:1, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 24 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 24 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 24 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 24 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 24 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 24 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 24 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 24 features, C:0.01, max_iter:1, sensitivity:0.317073170732, F1 score:0.4
+ 
+For top 24 features, C:0.01, max_iter:10, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 24 features, C:0.01, max_iter:20, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 24 features, C:0.01, max_iter:50, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 24 features, C:0.01, max_iter:100, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 24 features, C:0.01, max_iter:200, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 24 features, C:0.01, max_iter:500, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 24 features, C:0.01, max_iter:1000, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 24 features, C:0.1, max_iter:1, sensitivity:0.365853658537, F1 score:0.434782608696
+ 
+For top 24 features, C:0.1, max_iter:10, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 24 features, C:0.1, max_iter:20, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 24 features, C:0.1, max_iter:50, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 24 features, C:0.1, max_iter:100, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 24 features, C:0.1, max_iter:200, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 24 features, C:0.1, max_iter:500, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 24 features, C:0.1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 24 features, C:1, max_iter:1, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 24 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 24 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 24 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 24 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 24 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 24 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 24 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 24 features, C:10, max_iter:1, sensitivity:0.365853658537, F1 score:0.441176470588
+ 
+For top 24 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 24 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 24 features, C:10, max_iter:50, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 24 features, C:10, max_iter:100, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 24 features, C:10, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 24 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 24 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 25 features, C:0.001, max_iter:1, sensitivity:0.268292682927, F1 score:0.354838709677
+ 
+For top 25 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 25 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 25 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 25 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 25 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 25 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 25 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 25 features, C:0.01, max_iter:1, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 25 features, C:0.01, max_iter:10, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 25 features, C:0.01, max_iter:20, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 25 features, C:0.01, max_iter:50, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 25 features, C:0.01, max_iter:100, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 25 features, C:0.01, max_iter:200, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 25 features, C:0.01, max_iter:500, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 25 features, C:0.01, max_iter:1000, sensitivity:0.317073170732, F1 score:0.388059701493
+ 
+For top 25 features, C:0.1, max_iter:1, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 25 features, C:0.1, max_iter:10, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 25 features, C:0.1, max_iter:20, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 25 features, C:0.1, max_iter:50, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 25 features, C:0.1, max_iter:100, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 25 features, C:0.1, max_iter:200, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 25 features, C:0.1, max_iter:500, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 25 features, C:0.1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 25 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 25 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 25 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 25 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 25 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 25 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 25 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 25 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 25 features, C:10, max_iter:1, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 25 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.5
+ 
+For top 25 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 25 features, C:10, max_iter:50, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 25 features, C:10, max_iter:100, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 25 features, C:10, max_iter:200, sensitivity:0.390243902439, F1 score:0.516129032258
+ 
+For top 25 features, C:10, max_iter:500, sensitivity:0.390243902439, F1 score:0.516129032258
+ 
+For top 25 features, C:10, max_iter:1000, sensitivity:0.390243902439, F1 score:0.516129032258
+ 
+For top 26 features, C:0.001, max_iter:1, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 26 features, C:0.001, max_iter:10, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 26 features, C:0.001, max_iter:20, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 26 features, C:0.001, max_iter:50, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 26 features, C:0.001, max_iter:100, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 26 features, C:0.001, max_iter:200, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 26 features, C:0.001, max_iter:500, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 26 features, C:0.001, max_iter:1000, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 26 features, C:0.01, max_iter:1, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 26 features, C:0.01, max_iter:10, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 26 features, C:0.01, max_iter:20, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 26 features, C:0.01, max_iter:50, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 26 features, C:0.01, max_iter:100, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 26 features, C:0.01, max_iter:200, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 26 features, C:0.01, max_iter:500, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 26 features, C:0.01, max_iter:1000, sensitivity:0.317073170732, F1 score:0.393939393939
+ 
+For top 26 features, C:0.1, max_iter:1, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 26 features, C:0.1, max_iter:10, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 26 features, C:0.1, max_iter:20, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 26 features, C:0.1, max_iter:50, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 26 features, C:0.1, max_iter:100, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 26 features, C:0.1, max_iter:200, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 26 features, C:0.1, max_iter:500, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 26 features, C:0.1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 26 features, C:1, max_iter:1, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 26 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.508474576271
+ 
+For top 26 features, C:1, max_iter:20, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 26 features, C:1, max_iter:50, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 26 features, C:1, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 26 features, C:1, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 26 features, C:1, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 26 features, C:1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 26 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 26 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 26 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.508474576271
+ 
+For top 26 features, C:10, max_iter:50, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 26 features, C:10, max_iter:100, sensitivity:0.390243902439, F1 score:0.516129032258
+ 
+For top 26 features, C:10, max_iter:200, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 26 features, C:10, max_iter:500, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 26 features, C:10, max_iter:1000, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 27 features, C:0.001, max_iter:1, sensitivity:0.219512195122, F1 score:0.305084745763
+ 
+For top 27 features, C:0.001, max_iter:10, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 27 features, C:0.001, max_iter:20, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 27 features, C:0.001, max_iter:50, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 27 features, C:0.001, max_iter:100, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 27 features, C:0.001, max_iter:200, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 27 features, C:0.001, max_iter:500, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 27 features, C:0.001, max_iter:1000, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 27 features, C:0.01, max_iter:1, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 27 features, C:0.01, max_iter:10, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 27 features, C:0.01, max_iter:20, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 27 features, C:0.01, max_iter:50, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 27 features, C:0.01, max_iter:100, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 27 features, C:0.01, max_iter:200, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 27 features, C:0.01, max_iter:500, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 27 features, C:0.01, max_iter:1000, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 27 features, C:0.1, max_iter:1, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 27 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 27 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 27 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 27 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 27 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 27 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 27 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 27 features, C:1, max_iter:1, sensitivity:0.317073170732, F1 score:0.440677966102
+ 
+For top 27 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 27 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 27 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 27 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 27 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 27 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 27 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 27 features, C:10, max_iter:1, sensitivity:0.243902439024, F1 score:0.357142857143
+ 
+For top 27 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.48275862069
+ 
+For top 27 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.5
+ 
+For top 27 features, C:10, max_iter:50, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 27 features, C:10, max_iter:100, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 27 features, C:10, max_iter:200, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 27 features, C:10, max_iter:500, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 27 features, C:10, max_iter:1000, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 28 features, C:0.001, max_iter:1, sensitivity:0.243902439024, F1 score:0.327868852459
+ 
+For top 28 features, C:0.001, max_iter:10, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 28 features, C:0.001, max_iter:20, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 28 features, C:0.001, max_iter:50, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 28 features, C:0.001, max_iter:100, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 28 features, C:0.001, max_iter:200, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 28 features, C:0.001, max_iter:500, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 28 features, C:0.001, max_iter:1000, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 28 features, C:0.01, max_iter:1, sensitivity:0.292682926829, F1 score:0.387096774194
+ 
+For top 28 features, C:0.01, max_iter:10, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 28 features, C:0.01, max_iter:20, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 28 features, C:0.01, max_iter:50, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 28 features, C:0.01, max_iter:100, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 28 features, C:0.01, max_iter:200, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 28 features, C:0.01, max_iter:500, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 28 features, C:0.01, max_iter:1000, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 28 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 28 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 28 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 28 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 28 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 28 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 28 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 28 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 28 features, C:1, max_iter:1, sensitivity:0.243902439024, F1 score:0.357142857143
+ 
+For top 28 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 28 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 28 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 28 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 28 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 28 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 28 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 28 features, C:10, max_iter:1, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 28 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 28 features, C:10, max_iter:20, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 28 features, C:10, max_iter:50, sensitivity:0.341463414634, F1 score:0.48275862069
+ 
+For top 28 features, C:10, max_iter:100, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 28 features, C:10, max_iter:200, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 28 features, C:10, max_iter:500, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 28 features, C:10, max_iter:1000, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 29 features, C:0.001, max_iter:1, sensitivity:0.268292682927, F1 score:0.349206349206
+ 
+For top 29 features, C:0.001, max_iter:10, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 29 features, C:0.001, max_iter:20, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 29 features, C:0.001, max_iter:50, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 29 features, C:0.001, max_iter:100, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 29 features, C:0.001, max_iter:200, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 29 features, C:0.001, max_iter:500, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 29 features, C:0.001, max_iter:1000, sensitivity:0.243902439024, F1 score:0.322580645161
+ 
+For top 29 features, C:0.01, max_iter:1, sensitivity:0.317073170732, F1 score:0.4
+ 
+For top 29 features, C:0.01, max_iter:10, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 29 features, C:0.01, max_iter:20, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 29 features, C:0.01, max_iter:50, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 29 features, C:0.01, max_iter:100, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 29 features, C:0.01, max_iter:200, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 29 features, C:0.01, max_iter:500, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 29 features, C:0.01, max_iter:1000, sensitivity:0.317073170732, F1 score:0.40625
+ 
+For top 29 features, C:0.1, max_iter:1, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 29 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 29 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 29 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 29 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 29 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 29 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 29 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 29 features, C:1, max_iter:1, sensitivity:0.292682926829, F1 score:0.4
+ 
+For top 29 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 29 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 29 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 29 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 29 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 29 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 29 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 29 features, C:10, max_iter:1, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 29 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 29 features, C:10, max_iter:20, sensitivity:0.341463414634, F1 score:0.48275862069
+ 
+For top 29 features, C:10, max_iter:50, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 29 features, C:10, max_iter:100, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 29 features, C:10, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 29 features, C:10, max_iter:500, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 29 features, C:10, max_iter:1000, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 30 features, C:0.001, max_iter:1, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 30 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 30 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 30 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 30 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 30 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 30 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 30 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 30 features, C:0.01, max_iter:1, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 30 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.470588235294
+ 
+For top 30 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.470588235294
+ 
+For top 30 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.470588235294
+ 
+For top 30 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.470588235294
+ 
+For top 30 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.470588235294
+ 
+For top 30 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.470588235294
+ 
+For top 30 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.470588235294
+ 
+For top 30 features, C:0.1, max_iter:1, sensitivity:0.268292682927, F1 score:0.366666666667
+ 
+For top 30 features, C:0.1, max_iter:10, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 30 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 30 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 30 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 30 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 30 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 30 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.484848484848
+ 
+For top 30 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 30 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 30 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 30 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 30 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 30 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 30 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 30 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 30 features, C:10, max_iter:1, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 30 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 30 features, C:10, max_iter:20, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 30 features, C:10, max_iter:50, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 30 features, C:10, max_iter:100, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 30 features, C:10, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 30 features, C:10, max_iter:500, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 30 features, C:10, max_iter:1000, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 31 features, C:0.001, max_iter:1, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 31 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 31 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 31 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 31 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 31 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 31 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 31 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.375
+ 
+For top 31 features, C:0.01, max_iter:1, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 31 features, C:0.01, max_iter:10, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 31 features, C:0.01, max_iter:20, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 31 features, C:0.01, max_iter:50, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 31 features, C:0.01, max_iter:100, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 31 features, C:0.01, max_iter:200, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 31 features, C:0.01, max_iter:500, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 31 features, C:0.01, max_iter:1000, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 31 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 31 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 31 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 31 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 31 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 31 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 31 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 31 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 31 features, C:1, max_iter:1, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 31 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 31 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 31 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 31 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 31 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 31 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 31 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 31 features, C:10, max_iter:1, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 31 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 31 features, C:10, max_iter:20, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 31 features, C:10, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 31 features, C:10, max_iter:100, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 31 features, C:10, max_iter:200, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 31 features, C:10, max_iter:500, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 31 features, C:10, max_iter:1000, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 32 features, C:0.001, max_iter:1, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 32 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 32 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 32 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 32 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 32 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 32 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 32 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 32 features, C:0.01, max_iter:1, sensitivity:0.341463414634, F1 score:0.424242424242
+ 
+For top 32 features, C:0.01, max_iter:10, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 32 features, C:0.01, max_iter:20, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 32 features, C:0.01, max_iter:50, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 32 features, C:0.01, max_iter:100, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 32 features, C:0.01, max_iter:200, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 32 features, C:0.01, max_iter:500, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 32 features, C:0.01, max_iter:1000, sensitivity:0.341463414634, F1 score:0.430769230769
+ 
+For top 32 features, C:0.1, max_iter:1, sensitivity:0.365853658537, F1 score:0.454545454545
+ 
+For top 32 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 32 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 32 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 32 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 32 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 32 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 32 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 32 features, C:1, max_iter:1, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 32 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 32 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 32 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 32 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 32 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 32 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 32 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 32 features, C:10, max_iter:1, sensitivity:0.292682926829, F1 score:0.380952380952
+ 
+For top 32 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 32 features, C:10, max_iter:20, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 32 features, C:10, max_iter:50, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 32 features, C:10, max_iter:100, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 32 features, C:10, max_iter:200, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 32 features, C:10, max_iter:500, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 32 features, C:10, max_iter:1000, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 33 features, C:0.001, max_iter:1, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 33 features, C:0.001, max_iter:10, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 33 features, C:0.001, max_iter:20, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 33 features, C:0.001, max_iter:50, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 33 features, C:0.001, max_iter:100, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 33 features, C:0.001, max_iter:200, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 33 features, C:0.001, max_iter:500, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 33 features, C:0.001, max_iter:1000, sensitivity:0.317073170732, F1 score:0.41935483871
+ 
+For top 33 features, C:0.01, max_iter:1, sensitivity:0.365853658537, F1 score:0.44776119403
+ 
+For top 33 features, C:0.01, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.01, max_iter:20, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.01, max_iter:50, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.01, max_iter:100, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.01, max_iter:200, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.01, max_iter:500, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.01, max_iter:1000, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.1, max_iter:1, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 33 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 33 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 33 features, C:1, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 33 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 33 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 33 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 33 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 33 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 33 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 33 features, C:10, max_iter:1, sensitivity:0.268292682927, F1 score:0.392857142857
+ 
+For top 33 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 33 features, C:10, max_iter:20, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 33 features, C:10, max_iter:50, sensitivity:0.365853658537, F1 score:0.5
+ 
+For top 33 features, C:10, max_iter:100, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 33 features, C:10, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 33 features, C:10, max_iter:500, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 33 features, C:10, max_iter:1000, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 34 features, C:0.001, max_iter:1, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 34 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.4
+ 
+For top 34 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.4
+ 
+For top 34 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.4
+ 
+For top 34 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.4
+ 
+For top 34 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.4
+ 
+For top 34 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.4
+ 
+For top 34 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.4
+ 
+For top 34 features, C:0.01, max_iter:1, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 34 features, C:0.01, max_iter:10, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 34 features, C:0.01, max_iter:20, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 34 features, C:0.01, max_iter:50, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 34 features, C:0.01, max_iter:100, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 34 features, C:0.01, max_iter:200, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 34 features, C:0.01, max_iter:500, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 34 features, C:0.01, max_iter:1000, sensitivity:0.317073170732, F1 score:0.412698412698
+ 
+For top 34 features, C:0.1, max_iter:1, sensitivity:0.243902439024, F1 score:0.350877192982
+ 
+For top 34 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 34 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 34 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 34 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 34 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 34 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 34 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.461538461538
+ 
+For top 34 features, C:1, max_iter:1, sensitivity:0.268292682927, F1 score:0.385964912281
+ 
+For top 34 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 34 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 34 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 34 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 34 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 34 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 34 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 34 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 34 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.48275862069
+ 
+For top 34 features, C:10, max_iter:20, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 34 features, C:10, max_iter:50, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 34 features, C:10, max_iter:100, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 34 features, C:10, max_iter:200, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 34 features, C:10, max_iter:500, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 34 features, C:10, max_iter:1000, sensitivity:0.317073170732, F1 score:0.440677966102
+ 
+For top 35 features, C:0.001, max_iter:1, sensitivity:0.268292682927, F1 score:0.379310344828
+ 
+For top 35 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 35 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 35 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 35 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 35 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 35 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 35 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 35 features, C:0.01, max_iter:1, sensitivity:0.292682926829, F1 score:0.4
+ 
+For top 35 features, C:0.01, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 35 features, C:0.01, max_iter:20, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 35 features, C:0.01, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 35 features, C:0.01, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 35 features, C:0.01, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 35 features, C:0.01, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 35 features, C:0.01, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 35 features, C:0.1, max_iter:1, sensitivity:0.219512195122, F1 score:0.339622641509
+ 
+For top 35 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 35 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 35 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 35 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 35 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 35 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 35 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 35 features, C:1, max_iter:1, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 35 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 35 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 35 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 35 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 35 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 35 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 35 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 35 features, C:10, max_iter:1, sensitivity:0.243902439024, F1 score:0.357142857143
+ 
+For top 35 features, C:10, max_iter:10, sensitivity:0.317073170732, F1 score:0.456140350877
+ 
+For top 35 features, C:10, max_iter:20, sensitivity:0.292682926829, F1 score:0.428571428571
+ 
+For top 35 features, C:10, max_iter:50, sensitivity:0.317073170732, F1 score:0.464285714286
+ 
+For top 35 features, C:10, max_iter:100, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 35 features, C:10, max_iter:200, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 35 features, C:10, max_iter:500, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 35 features, C:10, max_iter:1000, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 36 features, C:0.001, max_iter:1, sensitivity:0.268292682927, F1 score:0.385964912281
+ 
+For top 36 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 36 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 36 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 36 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 36 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 36 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 36 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 36 features, C:0.01, max_iter:1, sensitivity:0.268292682927, F1 score:0.379310344828
+ 
+For top 36 features, C:0.01, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 36 features, C:0.01, max_iter:20, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 36 features, C:0.01, max_iter:50, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 36 features, C:0.01, max_iter:100, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 36 features, C:0.01, max_iter:200, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 36 features, C:0.01, max_iter:500, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 36 features, C:0.01, max_iter:1000, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 36 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 36 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.491803278689
+ 
+For top 36 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 36 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 36 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 36 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 36 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 36 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 36 features, C:1, max_iter:1, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 36 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 36 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 36 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 36 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 36 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 36 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 36 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 36 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 36 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 36 features, C:10, max_iter:20, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 36 features, C:10, max_iter:50, sensitivity:0.317073170732, F1 score:0.456140350877
+ 
+For top 36 features, C:10, max_iter:100, sensitivity:0.365853658537, F1 score:0.508474576271
+ 
+For top 36 features, C:10, max_iter:200, sensitivity:0.292682926829, F1 score:0.421052631579
+ 
+For top 36 features, C:10, max_iter:500, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 36 features, C:10, max_iter:1000, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 37 features, C:0.001, max_iter:1, sensitivity:0.243902439024, F1 score:0.350877192982
+ 
+For top 37 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 37 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 37 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 37 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 37 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 37 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 37 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.393442622951
+ 
+For top 37 features, C:0.01, max_iter:1, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 37 features, C:0.01, max_iter:10, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 37 features, C:0.01, max_iter:20, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 37 features, C:0.01, max_iter:50, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 37 features, C:0.01, max_iter:100, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 37 features, C:0.01, max_iter:200, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 37 features, C:0.01, max_iter:500, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 37 features, C:0.01, max_iter:1000, sensitivity:0.365853658537, F1 score:0.46875
+ 
+For top 37 features, C:0.1, max_iter:1, sensitivity:0.317073170732, F1 score:0.433333333333
+ 
+For top 37 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 37 features, C:0.1, max_iter:20, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 37 features, C:0.1, max_iter:50, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 37 features, C:0.1, max_iter:100, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 37 features, C:0.1, max_iter:200, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 37 features, C:0.1, max_iter:500, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 37 features, C:0.1, max_iter:1000, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 37 features, C:1, max_iter:1, sensitivity:0.439024390244, F1 score:0.553846153846
+ 
+For top 37 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 37 features, C:1, max_iter:20, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 37 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 37 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 37 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 37 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 37 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 37 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 37 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 37 features, C:10, max_iter:20, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 37 features, C:10, max_iter:50, sensitivity:0.292682926829, F1 score:0.444444444444
+ 
+For top 37 features, C:10, max_iter:100, sensitivity:0.317073170732, F1 score:0.456140350877
+ 
+For top 37 features, C:10, max_iter:200, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 37 features, C:10, max_iter:500, sensitivity:0.317073170732, F1 score:0.440677966102
+ 
+For top 37 features, C:10, max_iter:1000, sensitivity:0.317073170732, F1 score:0.440677966102
+ 
+For top 38 features, C:0.001, max_iter:1, sensitivity:0.0731707317073, F1 score:0.133333333333
+ 
+For top 38 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 38 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 38 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 38 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 38 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 38 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 38 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 38 features, C:0.01, max_iter:1, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 38 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 38 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 38 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 38 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 38 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 38 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 38 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 38 features, C:0.1, max_iter:1, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 38 features, C:0.1, max_iter:10, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 38 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 38 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 38 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 38 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 38 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 38 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 38 features, C:1, max_iter:1, sensitivity:0.243902439024, F1 score:0.363636363636
+ 
+For top 38 features, C:1, max_iter:10, sensitivity:0.317073170732, F1 score:0.433333333333
+ 
+For top 38 features, C:1, max_iter:20, sensitivity:0.317073170732, F1 score:0.440677966102
+ 
+For top 38 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 38 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 38 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 38 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 38 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 38 features, C:10, max_iter:1, sensitivity:0.243902439024, F1 score:0.377358490566
+ 
+For top 38 features, C:10, max_iter:10, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 38 features, C:10, max_iter:20, sensitivity:0.292682926829, F1 score:0.406779661017
+ 
+For top 38 features, C:10, max_iter:50, sensitivity:0.292682926829, F1 score:0.436363636364
+ 
+For top 38 features, C:10, max_iter:100, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 38 features, C:10, max_iter:200, sensitivity:0.317073170732, F1 score:0.433333333333
+ 
+For top 38 features, C:10, max_iter:500, sensitivity:0.317073170732, F1 score:0.440677966102
+ 
+For top 38 features, C:10, max_iter:1000, sensitivity:0.317073170732, F1 score:0.440677966102
+ 
+For top 39 features, C:0.001, max_iter:1, sensitivity:0.268292682927, F1 score:0.385964912281
+ 
+For top 39 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 39 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 39 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 39 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 39 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 39 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 39 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 39 features, C:0.01, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 39 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 39 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 39 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 39 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 39 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 39 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 39 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 39 features, C:0.1, max_iter:1, sensitivity:0.219512195122, F1 score:0.333333333333
+ 
+For top 39 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 39 features, C:0.1, max_iter:20, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 39 features, C:0.1, max_iter:50, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 39 features, C:0.1, max_iter:100, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 39 features, C:0.1, max_iter:200, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 39 features, C:0.1, max_iter:500, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 39 features, C:0.1, max_iter:1000, sensitivity:0.390243902439, F1 score:0.507936507937
+ 
+For top 39 features, C:1, max_iter:1, sensitivity:0.268292682927, F1 score:0.379310344828
+ 
+For top 39 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 39 features, C:1, max_iter:20, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 39 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 39 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.4375
+ 
+For top 39 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 39 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 39 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 39 features, C:10, max_iter:1, sensitivity:0.243902439024, F1 score:0.357142857143
+ 
+For top 39 features, C:10, max_iter:10, sensitivity:0.317073170732, F1 score:0.456140350877
+ 
+For top 39 features, C:10, max_iter:20, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 39 features, C:10, max_iter:50, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 39 features, C:10, max_iter:100, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 39 features, C:10, max_iter:200, sensitivity:0.292682926829, F1 score:0.421052631579
+ 
+For top 39 features, C:10, max_iter:500, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 39 features, C:10, max_iter:1000, sensitivity:0.317073170732, F1 score:0.440677966102
+ 
+For top 40 features, C:0.001, max_iter:1, sensitivity:0.146341463415, F1 score:0.25
+ 
+For top 40 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 40 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 40 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 40 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 40 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 40 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 40 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 40 features, C:0.01, max_iter:1, sensitivity:0.268292682927, F1 score:0.379310344828
+ 
+For top 40 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 40 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 40 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 40 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 40 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 40 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 40 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 40 features, C:0.1, max_iter:1, sensitivity:0.146341463415, F1 score:0.24
+ 
+For top 40 features, C:0.1, max_iter:10, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 40 features, C:0.1, max_iter:20, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 40 features, C:0.1, max_iter:50, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 40 features, C:0.1, max_iter:100, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 40 features, C:0.1, max_iter:200, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 40 features, C:0.1, max_iter:500, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 40 features, C:0.1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 40 features, C:1, max_iter:1, sensitivity:0.243902439024, F1 score:0.338983050847
+ 
+For top 40 features, C:1, max_iter:10, sensitivity:0.317073170732, F1 score:0.433333333333
+ 
+For top 40 features, C:1, max_iter:20, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 40 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 40 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 40 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 40 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 40 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 40 features, C:10, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 40 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 40 features, C:10, max_iter:20, sensitivity:0.317073170732, F1 score:0.433333333333
+ 
+For top 40 features, C:10, max_iter:50, sensitivity:0.317073170732, F1 score:0.456140350877
+ 
+For top 40 features, C:10, max_iter:100, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 40 features, C:10, max_iter:200, sensitivity:0.341463414634, F1 score:0.48275862069
+ 
+For top 40 features, C:10, max_iter:500, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 40 features, C:10, max_iter:1000, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 41 features, C:0.001, max_iter:1, sensitivity:0.0975609756098, F1 score:0.173913043478
+ 
+For top 41 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 41 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 41 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 41 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 41 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 41 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 41 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 41 features, C:0.01, max_iter:1, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 41 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 41 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 41 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 41 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 41 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 41 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 41 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 41 features, C:0.1, max_iter:1, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 41 features, C:0.1, max_iter:10, sensitivity:0.365853658537, F1 score:0.47619047619
+ 
+For top 41 features, C:0.1, max_iter:20, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 41 features, C:0.1, max_iter:50, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 41 features, C:0.1, max_iter:100, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 41 features, C:0.1, max_iter:200, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 41 features, C:0.1, max_iter:500, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 41 features, C:0.1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 41 features, C:1, max_iter:1, sensitivity:0.19512195122, F1 score:0.313725490196
+ 
+For top 41 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 41 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.444444444444
+ 
+For top 41 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 41 features, C:1, max_iter:100, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 41 features, C:1, max_iter:200, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 41 features, C:1, max_iter:500, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 41 features, C:1, max_iter:1000, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 41 features, C:10, max_iter:1, sensitivity:0.219512195122, F1 score:0.321428571429
+ 
+For top 41 features, C:10, max_iter:10, sensitivity:0.365853658537, F1 score:0.483870967742
+ 
+For top 41 features, C:10, max_iter:20, sensitivity:0.317073170732, F1 score:0.456140350877
+ 
+For top 41 features, C:10, max_iter:50, sensitivity:0.317073170732, F1 score:0.456140350877
+ 
+For top 41 features, C:10, max_iter:100, sensitivity:0.341463414634, F1 score:0.459016393443
+ 
+For top 41 features, C:10, max_iter:200, sensitivity:0.341463414634, F1 score:0.466666666667
+ 
+For top 41 features, C:10, max_iter:500, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 41 features, C:10, max_iter:1000, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 42 features, C:0.001, max_iter:1, sensitivity:0.146341463415, F1 score:0.24
+ 
+For top 42 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 42 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 42 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 42 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 42 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 42 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 42 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 42 features, C:0.01, max_iter:1, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 42 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 42 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 42 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 42 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 42 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 42 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 42 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 42 features, C:0.1, max_iter:1, sensitivity:0.390243902439, F1 score:0.5
+ 
+For top 42 features, C:0.1, max_iter:10, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:0.1, max_iter:20, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:0.1, max_iter:50, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:0.1, max_iter:100, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:0.1, max_iter:200, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:0.1, max_iter:500, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:0.1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:1, max_iter:1, sensitivity:0.219512195122, F1 score:0.327272727273
+ 
+For top 42 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 42 features, C:1, max_iter:20, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 42 features, C:1, max_iter:50, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:1, max_iter:100, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:1, max_iter:200, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:1, max_iter:500, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 42 features, C:10, max_iter:1, sensitivity:0.19512195122, F1 score:0.313725490196
+ 
+For top 42 features, C:10, max_iter:10, sensitivity:0.317073170732, F1 score:0.440677966102
+ 
+For top 42 features, C:10, max_iter:20, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 42 features, C:10, max_iter:50, sensitivity:0.317073170732, F1 score:0.456140350877
+ 
+For top 42 features, C:10, max_iter:100, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 42 features, C:10, max_iter:200, sensitivity:0.341463414634, F1 score:0.48275862069
+ 
+For top 42 features, C:10, max_iter:500, sensitivity:0.292682926829, F1 score:0.421052631579
+ 
+For top 42 features, C:10, max_iter:1000, sensitivity:0.292682926829, F1 score:0.421052631579
+ 
+For top 43 features, C:0.001, max_iter:1, sensitivity:0.19512195122, F1 score:0.301886792453
+ 
+For top 43 features, C:0.001, max_iter:10, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 43 features, C:0.001, max_iter:20, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 43 features, C:0.001, max_iter:50, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 43 features, C:0.001, max_iter:100, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 43 features, C:0.001, max_iter:200, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 43 features, C:0.001, max_iter:500, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 43 features, C:0.001, max_iter:1000, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 43 features, C:0.01, max_iter:1, sensitivity:0.243902439024, F1 score:0.37037037037
+ 
+For top 43 features, C:0.01, max_iter:10, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 43 features, C:0.01, max_iter:20, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 43 features, C:0.01, max_iter:50, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 43 features, C:0.01, max_iter:100, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 43 features, C:0.01, max_iter:200, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 43 features, C:0.01, max_iter:500, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 43 features, C:0.01, max_iter:1000, sensitivity:0.390243902439, F1 score:0.492307692308
+ 
+For top 43 features, C:0.1, max_iter:1, sensitivity:0.268292682927, F1 score:0.372881355932
+ 
+For top 43 features, C:0.1, max_iter:10, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 43 features, C:0.1, max_iter:20, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 43 features, C:0.1, max_iter:50, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 43 features, C:0.1, max_iter:100, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 43 features, C:0.1, max_iter:200, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 43 features, C:0.1, max_iter:500, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 43 features, C:0.1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 43 features, C:1, max_iter:1, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 43 features, C:1, max_iter:10, sensitivity:0.341463414634, F1 score:0.474576271186
+ 
+For top 43 features, C:1, max_iter:20, sensitivity:0.317073170732, F1 score:0.456140350877
+ 
+For top 43 features, C:1, max_iter:50, sensitivity:0.341463414634, F1 score:0.451612903226
+ 
+For top 43 features, C:1, max_iter:100, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 43 features, C:1, max_iter:200, sensitivity:0.317073170732, F1 score:0.433333333333
+ 
+For top 43 features, C:1, max_iter:500, sensitivity:0.317073170732, F1 score:0.433333333333
+ 
+For top 43 features, C:1, max_iter:1000, sensitivity:0.317073170732, F1 score:0.433333333333
+ 
+For top 43 features, C:10, max_iter:1, sensitivity:0.243902439024, F1 score:0.357142857143
+ 
+For top 43 features, C:10, max_iter:10, sensitivity:0.317073170732, F1 score:0.456140350877
+ 
+For top 43 features, C:10, max_iter:20, sensitivity:0.317073170732, F1 score:0.426229508197
+ 
+For top 43 features, C:10, max_iter:50, sensitivity:0.317073170732, F1 score:0.440677966102
+ 
+For top 43 features, C:10, max_iter:100, sensitivity:0.292682926829, F1 score:0.413793103448
+ 
+For top 43 features, C:10, max_iter:200, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 43 features, C:10, max_iter:500, sensitivity:0.317073170732, F1 score:0.448275862069
+ 
+For top 43 features, C:10, max_iter:1000, sensitivity:0.317073170732, F1 score:0.448275862069
  

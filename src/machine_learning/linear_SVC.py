@@ -93,12 +93,12 @@ def get_training_val_test_set(filename):
     X_train,X_val,X_test,y_train,y_val,y_test=splitData(filename)
     return X_train,X_val,X_test,y_train,y_val,y_test
 
-def train_LinearSVC(X_train,Y_train):
+def train_LinearSVC(X_train,Y_train,max_iter,C):
     '''
     Similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has more flexibility in the choice of penalties and loss functions and should scale better to large numbers of samples.
     This class supports both dense and sparse input and the multiclass support is handled according to a one-vs-the-rest scheme.
     '''
-    clf = LinearSVC(random_state=None, tol=1e-5, penalty="l2",class_weight="balanced",max_iter=15)
+    clf = LinearSVC(random_state=None, tol=1e-5, penalty="l2",class_weight="balanced",max_iter=max_iter,C=C)
     clf = CalibratedClassifierCV(clf)
     #hinge loss, L2 penalty, do dual=False when n_samples>n_features
     model = clf.fit(X_train, Y_train) 
@@ -117,9 +117,9 @@ def predict_probabilities(svm_clf, X_test):
     return probs
 
 def do_feature_selection(X,y,kval):
-    data_chi2_scores = SelectKBest(chi2, k=kval).fit(X, y)
+    data_chi2_scores = SelectKBest(mutual_info_classif, k=kval).fit(X, y)
     selected_feature_indices=data_chi2_scores.get_support(indices=True)
-    chi2_dataset = SelectKBest(chi2, k=kval).fit_transform(X, y)
+    chi2_dataset = SelectKBest(mutual_info_classif, k=kval).fit_transform(X, y)
     return chi2_dataset
 
 if __name__ == '__main__':
@@ -136,7 +136,14 @@ if __name__ == '__main__':
     min_max_scaler = preprocessing.MinMaxScaler((0, 1))
     X = min_max_scaler.fit_transform(X)
 
-    op=open('../../resources/Results/chi2_linearsvc.txt','w')
+    C_list = [0.001, 0.01, 0.1, 1, 10]
+    gamma_list = [0.001, 0.01, 0.1, 1]
+    max_iter_list = [1, 10, 20, 50, 100, 200, 500, 1000]
+
+    op=open('../../resources/Results/mutual_classif_linearsvc.txt','w')
+    max_sensitivity = 0
+    max_f1score = 0
+
     for k in range(1,X.shape[1]+1):
         datasetX = do_feature_selection(X, y, k)
 
@@ -149,30 +156,39 @@ if __name__ == '__main__':
         #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
 
         ###########################################
+        for C in C_list:
+            for max_iter in max_iter_list:
 
+                #print(len(X_train),len(X_val),len(X_test))
+                clf=train_LinearSVC(X_train,y_train,max_iter,C)
 
-        #print(len(X_train),len(X_val),len(X_test))
-        clf=train_LinearSVC(X_train,y_train)
+                ################ PREDICTION ###############
+                y_pred = predict_testdata(clf, X_test)
+                ###########################################
+                """
+                ################ PREDICTION ###############
+                probs = predict_probabilities(clf, X_test)
+                ###########################################
+                new_probs=[]
+                for prob in probs:
+                    new_probs.append(max(prob[0],prob[1]))
+                ################ ROC GRAPHS ###############
+                plot_roc(y_test,new_probs)
+                plot_precision_recall(y_test,y_pred,new_probs)
+                ###########################################
+                """
+                ################ ACCURACY #################
+                evaluation_metric = EvaluationMetric()
+                # confusion_matrix = confusion_matrix(y_test.values, y_pred)
+                result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
+                ans = "For top " + str(k) + " features," + " C:" + str(C)  + ", max_iter:" + str(max_iter) + \
+                      ", sensitivity:" + str(result["sensitivity"]) + ", F1 score:" + str(
+                    result["f1score"]) + "\n \n"
+                op.write(ans)
+                if result["sensitivity"] > max_sensitivity:
+                    max_sensitivity = result["sensitivity"]
+                if result["f1score"] > max_f1score:
+                    max_f1score = result["f1score"]
 
-        ################ PREDICTION ###############
-        y_pred = predict_testdata(clf, X_test)
-        ###########################################
-        """
-        ################ PREDICTION ###############
-        probs = predict_probabilities(clf, X_test)
-        ###########################################
-        new_probs=[]
-        for prob in probs:
-            new_probs.append(max(prob[0],prob[1]))
-        ################ ROC GRAPHS ###############
-        plot_roc(y_test,new_probs)
-        plot_precision_recall(y_test,y_pred,new_probs)
-        ###########################################
-        """
-        ################ ACCURACY #################
-        evaluation_metric = EvaluationMetric()
-        # confusion_matrix = confusion_matrix(y_test.values, y_pred)
-        result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
-        ans="For top "+str(k)+" features, the result are "+ str(result)+" \n \n"
-        op.write(ans)
-        ###########################################
+    print("max_sensitivity:", max_sensitivity)
+    print("max_f1score:", max_f1score)
