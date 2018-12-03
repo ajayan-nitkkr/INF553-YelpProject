@@ -171,7 +171,7 @@ def run_adaBoost_model():
                 #X_train, X_val, X_test, y_train, y_val, y_test = splitData(filename='../../resources/dataset/final_lasvegas_dataset.csv')
         
                 ###########################################
-                adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = depth), n_estimators = n_estimator, learning_rate = 1)
+                adaboost_model = AdaBoostClassifier(DecisionTreeClassifier(max_depth = depth), n_estimators = n_estimator, learning_rate = 0.1)
                 adaboost_model.fit(X_train, np.ravel(y_train))
         
                 y_pred = predict_testdata(adaboost_model, X_test)
@@ -203,7 +203,7 @@ def run_adaBoost_model():
         print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1), " F1 Score = " + str(f1score))
     
     
-    fout = open("../../resources/Results/AdaBoost_Result", "w", encoding = "utf-8") 
+    fout = open("../../resources/Results/AdaBoost_Result.txt", "w", encoding = "utf-8") 
     
     fout.write("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1) + " F1 Score = " + str(f1score) + " Specificty = " + str(max_specificity))
     fout.write("\nBest Depth = " + str(max_depth_ada) + " Best Estimator = " + str(max_n_est))
@@ -211,7 +211,7 @@ def run_adaBoost_model():
     fout.close()
         
     print("\nk = " + str(max_k_val) + " Sensitivity = " + str(max_recall_f1) + " F1 Score = " + str(f1score) + " Specificty = " + str(max_specificity))
-    print("Best Depth = " + str(max_depth_ada) + " Best Estimator = " + str(max_n_est))
+    print("Best Decision Tree Depth = " + str(max_depth_ada) + " Best Estimator = " + str(max_n_est))
 
     op.close()
     return
