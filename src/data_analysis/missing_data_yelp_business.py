@@ -19,12 +19,16 @@ def missing_data_details(data, data_schema):
     for _,row in data.iterrows():
         full = True
         b_id = row['business_id']
+        
         if b_id in partial_data_bIds.keys():
+            print("Duplicate Partial")
             continue
+        
         for col in data_schema:
-            if row[col]=="Null":
+            if row[col]==-1:
                 partial_data_bIds[b_id].append(col)
                 full = False
+        
         if b_id in full_data_bIds:
             continue
         
@@ -43,7 +47,8 @@ def print_full_data_details(data, path):
     return
 
 def print_partial_data_details(data, path):
-    fout =  open(path+"business_with_partial_data_lasVegas.csv", "w+", encoding = "utf-8")
+#     fout =  open(path+"business_with_partial_data_lasVegas.csv", "w+", encoding = "utf-8")
+    fout =  open(path+"business_with_partial_data_lasVegas_final.csv", "w+", encoding = "utf-8")
     
     for key in data.keys():
         fout.write(str(key))
@@ -106,10 +111,13 @@ def get_partial_data_percentage(data, total_cols, total_data):
     return partial_data_analysis_row, partial_data_analysis_col     
     
 def find_missing_data(path):
-    yelp_data = csvReader(path+"final_lasvegas_dataset.csv")
+    yelp_data = csvReader(path+"v4_with_business_id.csv")
 #     yelp_data = csvReader(path+"valid_business_yelp_data.csv")    
       
-    data_schema = get_schema("../../resources/schema/Final_Schema.txt")
+#     data_schema = get_schema("../../resources/schema/Final_Schema.txt")
+    data_schema = get_schema("../../resources/schema/Final_Schema_new.txt")
+    
+    
     data_schema.remove("business_id")
     
     print(data_schema)
