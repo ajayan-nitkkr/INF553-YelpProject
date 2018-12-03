@@ -98,7 +98,7 @@ def train_LinearSVC(X_train,Y_train,max_iter,C):
     Similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has more flexibility in the choice of penalties and loss functions and should scale better to large numbers of samples.
     This class supports both dense and sparse input and the multiclass support is handled according to a one-vs-the-rest scheme.
     '''
-    clf = LinearSVC(random_state=None, tol=1e-5, penalty="l2",class_weight="balanced",max_iter=max_iter,C=C)
+    clf = LinearSVC(max_iter=max_iter,C=C)
     clf = CalibratedClassifierCV(clf)
     #hinge loss, L2 penalty, do dual=False when n_samples>n_features
     model = clf.fit(X_train, Y_train) 
@@ -117,9 +117,9 @@ def predict_probabilities(svm_clf, X_test):
     return probs
 
 def do_feature_selection(X,y,kval):
-    data_chi2_scores = SelectKBest(mutual_info_classif, k=kval).fit(X, y)
-    selected_feature_indices=data_chi2_scores.get_support(indices=True)
-    chi2_dataset = SelectKBest(mutual_info_classif, k=kval).fit_transform(X, y)
+    #data_chi2_scores = SelectKBest(f_classif, k=kval).fit(X, y)
+    #selected_feature_indices=data_chi2_scores.get_support(indices=True)
+    chi2_dataset = SelectKBest(chi2, k=kval).fit_transform(X, y)
     return chi2_dataset
 
 if __name__ == '__main__':
@@ -137,10 +137,9 @@ if __name__ == '__main__':
     X = min_max_scaler.fit_transform(X)
 
     C_list = [0.001, 0.01, 0.1, 1, 10]
-    gamma_list = [0.001, 0.01, 0.1, 1]
     max_iter_list = [1, 10, 20, 50, 100, 200, 500, 1000]
 
-    op=open('../../resources/Results/mutual_classif_linearsvc.txt','w')
+    op=open('../../resources/Results/chi2_linearsvc.txt','w')
     max_sensitivity = 0
     max_f1score = 0
 
@@ -188,6 +187,8 @@ if __name__ == '__main__':
                 if result["sensitivity"] > max_sensitivity:
                     max_sensitivity = result["sensitivity"]
                     max_f1score = result["f1score"]
+                    k_feat=k
 
     print("max_sensitivity:", max_sensitivity)
     print("max_f1score:", max_f1score)
+    print("k",k_feat)
