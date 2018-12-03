@@ -84,8 +84,8 @@ if __name__ == '__main__':
     # FINAL TESTING
     k_best_features = 15
     max_iter = 20
-    C = 0.1
-    gamma = 1
+    C = 0.01
+    gamma = 0.01
     datasetX = do_feature_selection(X, y, k_best_features)
 
     X_train, X_test, y_train, y_test = train_test_split(datasetX, y, test_size=0.2, random_state=1, shuffle=False)
@@ -100,7 +100,8 @@ if __name__ == '__main__':
     evaluation_metric = EvaluationMetric()
     result = evaluation_metric.get_evaluation_metrics(y_val.values, y_pred)
     print(result)
-    # probs = dtree.predict_proba(X_val)
-    # probs = probs[:, 1]
-    # plot_roc(y_val.values, probs)
-    # plot_precision_recall(y_val.values, y_pred, probs)
+
+    probs = svm_clf.predict_proba(X_val)
+    probs = probs[:, 1]
+    plot_roc(y_val, probs)
+    plot_precision_recall(y_val, y_pred, probs)

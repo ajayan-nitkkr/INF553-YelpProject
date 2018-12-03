@@ -1,0 +1,10 @@
+For top 1 features, C:0.001, max_iter:1, sensitivity:0.390243902439, F1 score:0.477611940299
+ 
+For top 2 features, C:10, max_iter:10, sensitivity:0.414634146341, F1 score:0.5
+ 
+For top 4 features, C:10, max_iter:20, sensitivity:0.439024390244, F1 score:0.529411764706
+ 
+For top 5 features, C:10, max_iter:100, sensitivity:0.463414634146, F1 score:0.558823529412
+ 
+For top 7 features, C:10, max_iter:100, sensitivity:0.487804878049, F1 score:0.571428571429
+ 
