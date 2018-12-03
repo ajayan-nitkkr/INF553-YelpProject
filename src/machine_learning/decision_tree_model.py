@@ -47,10 +47,10 @@ def predict_testdata(svm_clf, X_test):
     return y_pred
 
 def do_feature_selection(X,y,kval):
-    data_chi2_scores = SelectKBest(f_classif, k=kval).fit(X, y)
+    data_chi2_scores = SelectKBest(mutual_info_classif, k=kval).fit(X, y)
     selected_feature_indices=data_chi2_scores.get_support(indices=True)
     #print(selected_feature_indices)
-    chi2_dataset = SelectKBest(f_classif, k=kval).fit_transform(X, y)
+    chi2_dataset = SelectKBest(mutual_info_classif, k=kval).fit_transform(X, y)
     return chi2_dataset
 
 
@@ -83,7 +83,7 @@ if __name__ == '__main__':
     
     #criterion_list = ['gini','entropy']
 
-    op=open('/Users/apple/IdeaProjects/INF553-YelpProject/resources/Results/chi2_decisionTree.txt','w')
+    op=open('/Users/apple/IdeaProjects/INF553-YelpProject/resources/Results/mutual_info_classif_decisionTree.txt','w')
     for k in range(1,X.shape[1]+1):
         datasetX = do_feature_selection(X, y, k)
 
@@ -94,8 +94,8 @@ if __name__ == '__main__':
         X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.25, random_state=1, shuffle=False)
 
         #for criterionAtt in criterion_list:
-        svm_clf = train_DecisionTree(X_train, y_train)
-        y_pred = predict_testdata(svm_clf, X_test)
+        dtree = train_DecisionTree(X_train, y_train)
+        y_pred = predict_testdata(dtree, X_test)
         evaluation_metric = EvaluationMetric()
         # confusion_matrix = confusion_matrix(y_test.values, y_pred)
         result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
@@ -113,11 +113,5 @@ if __name__ == '__main__':
     print("max_specificity:", max_specificity)
         #probs = svm_clf.predict_proba(X_test)
         #probs = probs[:, 1]
-        ################ ACCURACY #################
-        ##evaluation_metric = EvaluationMetric()
-        # confusion_matrix = confusion_matrix(y_test.values, y_pred)
-        ##result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
-        ###ans="For top "+str(k)+" features, the result are "+ str(result)+" \n \n"
-        ###op.write(ans)
         #plot_roc(y_test.values, probs)
         #plot_precision_recall(y_test.values, y_pred, probs)
