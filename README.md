@@ -1,5 +1,8 @@
 # INF553-Yelp Dataset Challenge
+-----------------------------------------------------------------------------------
+
 Objective: Predicting Restaurant Health using Yelp data and Government Inspections
+
 
 Stakeholders: Yelp, Government
 
@@ -33,7 +36,7 @@ How you plan to evaluate?
 2. ROC and Area Under Curve
 
 
-Possible Datasets to use: Yelp Dataset, Data provided by country government(Health)
+Datasets used: Yelp Dataset, Data provided by country government(Health)
 
 -----------------------------------------------------------------------------------
 How To run:
@@ -47,7 +50,7 @@ How To run:
 	- Decision Tree (decision_tree_model.py)
 	- AdaBoost Model (adaBoost_model.py)
 
-
+-----------------------------------------------------------------------------------
 Team
 
 Ajay Anand        	: ajayanan@usc.edu, anandajay1834@gmail.com
