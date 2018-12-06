@@ -5,12 +5,16 @@ from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
-from INF553_YelpProject.src.data_schema.feature_names import FeatureNames
-from INF553_YelpProject.src.machine_learning.evaluation_metrics import EvaluationMetric
-from INF553_YelpProject.src.data_analysis.plot_roc_auc import plot_roc, plot_precision_recall
-from INF553_YelpProject.src.machine_learning.split_data_train_test_validation import splitData
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2, f_classif, mutual_info_classif
+# from INF553_YelpProject.src.data_schema.feature_names import FeatureNames
+# from INF553_YelpProject.src.machine_learning.evaluation_metrics import EvaluationMetric
+# from INF553_YelpProject.src.data_analysis.plot_roc_auc import plot_roc, plot_precision_recall
+# from INF553_YelpProject.src.machine_learning.split_data_train_test_validation import splitData
+from src.data_schema.feature_names import FeatureNames
+from src.machine_learning.evaluation_metrics import EvaluationMetric
+from src.data_analysis.plot_roc_auc import plot_roc, plot_precision_recall
+from src.machine_learning.split_data_train_test_validation import splitData
 
 import logging
 logging.disable(logging.WARNING)
@@ -94,35 +98,11 @@ def do_feature_selection(X,y,kval):
 
 def run_adaBoost_model():
     """
-    df = construct_dataset()
-#     X_train, X_test, y_train, y_test = divide_dataset(df)
+    1. Construct Dataset.
+    2. Run AdaBoost Model on Train data and validate on validation set.
+    3. Determin the best hyperparameters by running all possible combinations.
+    4. Run on test dataset.
     
-    X_train,X_val,X_test,y_train,y_val,y_test = splitData(filename = '../../resources/dataset/final_lasvegas_dataset_v4.csv')
-    
-#     X_train,X_val,X_test,y_train,y_val,y_test = splitData(filename = '../../resources/dataset/dataset_alpha_0.1.csv')
-    
-    min_max_scaler = preprocessing.MinMaxScaler((0,1))
-    X_train = min_max_scaler.fit_transform(X_train)
-    X_test = min_max_scaler.transform(X_test)
-
-    adaboost_model = AdaBoostClassifier( DecisionTreeClassifier(max_depth=5), n_estimators = 30, learning_rate=0.1)
-    adaboost_model.fit(X_train, np.ravel(y_train))
-    
-    y_pred = predict_testdata(adaboost_model, X_test)
-    
-    evaluation_metric = EvaluationMetric()
-  
-    result = evaluation_metric.get_evaluation_metrics(y_test.values, y_pred)
-  
-    print(result)
-    probs = adaboost_model.predict_proba(X_test)
-    probs = probs[:, 1]
-    plot_roc(y_test, probs)
-    plot_precision_recall(y_test, y_pred, probs)
-    
-#     plot_roc(y_test, y_pred)
-    
-    return
     """
     ########## CONSTRUCT DATA SET ############
 #     df = pd.read_csv('../../resources/dataset/final_lasvegas_dataset_v4.csv')

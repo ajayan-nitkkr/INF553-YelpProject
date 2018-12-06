@@ -1,4 +1,3 @@
-
 # INF553-Yelp Dataset Challenge
 Objective: Predicting Restaurant Health using Yelp data and Government Inspections
 
@@ -36,6 +35,18 @@ How you plan to evaluate?
 
 Possible Datasets to use: Yelp Dataset, Data provided by country government(Health)
 
+-----------------------------------------------------------------------------------
+How To run:
+
+1. git clone https://github.com/devership16/INF553-YelpProject.git
+2. cd INF553-YelpProject/src/machine_learning/
+3. python <machine_learning_model.py>
+   Eg.: python svm_linearkernel_model.py
+	- SVM Linear_Kernel (svm_linearkernel_model.py)
+	- Linear SVC (linear_SVC.py)
+	- Decision Tree (decision_tree_model.py)
+	- AdaBoost Model (adaBoost_model.py)
+
 
 Team
 
@@ -45,4 +56,4 @@ Devershi Purohit	: dupurohi@usc.edu
 
 Rajdeep Kaur    	: kaurr@usc.edu
 
-Rimsha Goomer	        : goomer@usc.edu
+Rimsha Goomer	    : goomer@usc.edu
