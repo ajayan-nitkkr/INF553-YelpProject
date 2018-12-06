@@ -84,11 +84,11 @@ def predict_testdata(model, X_test):
 
 def do_feature_selection(X,y,kval):
     
-    data_chi2_scores = SelectKBest(chi2 , k=kval).fit(X, y)
+    data_chi2_scores = SelectKBest(f_classif , k=kval).fit(X, y)
     
     selected_feature_indices=data_chi2_scores.get_support(indices=True)
     
-    chi2_dataset = SelectKBest(chi2, k=kval).fit_transform(X, y)
+    chi2_dataset = SelectKBest(f_classif, k=kval).fit_transform(X, y)
     return chi2_dataset
 
 
@@ -244,7 +244,7 @@ if __name__=='__main__':
 #     k, depth, n_est, learning_rate = run_adaBoost_model() 
     
 #     k, depth, n_est, learning_rate = 4, 6, 50, 1
-    k, depth, n_est, learning_rate = 35, 2, 70, 1
+    k, depth, n_est, learning_rate = 32, 1, 50, 1
 #     k, depth, n_est, learning_rate = 26, 2, 60, 1
     
     print("\nHyper-Parameters: " + str(k) + " " + str(depth)+" " + str(n_est) + " " + str(learning_rate))
