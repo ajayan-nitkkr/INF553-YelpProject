@@ -1,5 +1,4 @@
 # INF553-Yelp Dataset Challenge
------------------------------------------------------------------------------------
 
 Objective: Predicting Restaurant Health using Yelp data and Government Inspections
 
@@ -43,7 +42,7 @@ How To run:
 
 1. git clone https://github.com/devership16/INF553-YelpProject.git
 2. cd INF553-YelpProject/src/machine_learning/
-3. python <machine_learning_model.py>
+3. python <machine_learning_model>
    Eg.: python svm_linearkernel_model.py
 	- SVM Linear_Kernel (svm_linearkernel_model.py)
 	- Linear SVC (linear_SVC.py)
