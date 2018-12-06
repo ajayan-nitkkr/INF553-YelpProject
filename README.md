@@ -1,6 +1,6 @@
 
 # INF553-Yelp Dataset Challenge
-Predicting Health Score for Businesses in the USA
+Objective: Predicting Restaurant Health using Yelp data and Government Inspections
 
 Stakeholders: Yelp, Government
 
@@ -31,7 +31,7 @@ What algorithms do you plan to employ?
 
 How you plan to evaluate? 
 1. Precision and Recall: To create a good Health Score standard.
-2. Root Mean Squared Error: Improving prediction model using validation and test data.
+2. ROC and Area Under Curve
 
 
 Possible Datasets to use: Yelp Dataset, Data provided by country government(Health)
