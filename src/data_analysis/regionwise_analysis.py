@@ -16,7 +16,8 @@ def print_data(path, data):
     return
 
 def region_wise_mean_score(path):
-    las_vegas_data = csvReader(path+"final_lasvegas_dataset.csv")
+#     las_vegas_data = csvReader(path+"final_lasvegas_dataset_v3.csv")
+    las_vegas_data = csvReader(path+"v3_with_business_id.csv")
     postal_code_avg = las_vegas_data.groupby('zip_code', as_index = False)['inspection_score'].mean()
     
     zip_code_mean = defaultdict(float)
@@ -35,9 +36,9 @@ def region_wise_mean_score(path):
     for key in under_performing_business.keys():
         under_performing_business_counts[key]=[zip_code_mean[key], len(under_performing_business[key])]
     
-    csvWriter(path + "postal_code_wise_analysis.csv", postal_code_avg)
-    print_data(path + "under_performing_business_lasVegas.csv", under_performing_business)
-    print_data(path + "under_performing_business_counts_lasVegas.csv", under_performing_business_counts)    
+    csvWriter(path + "postal_code_wise_analysis_v3.csv", postal_code_avg)
+    print_data(path + "under_performing_business_lasVegas_v3.csv", under_performing_business)
+    print_data(path + "under_performing_business_counts_lasVegas_v3.csv", under_performing_business_counts)    
     return
 
 
